@@ -27,7 +27,7 @@ public class Booking {
 		
 		BookingView.bookingDetails();
 		
-		//does it work??
+
 
 			}
 	
