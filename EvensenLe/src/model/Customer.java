@@ -114,12 +114,12 @@ public class Customer {
 	
 	public String toString(){
 		return (firstName + ";" + lastName + "; " + cprNumber + ";"  
-				+ address +";" + postCode + ";"  + mobileNumber + ";" + getUserName() + ";" + getPassword() + ";");
+				+ address + ";" + houseNumber + ";" + postCode + ";"  + mobileNumber + ";" + getUserName() + ";" + getPassword() + ";");
 	}
 	
 	public void writeCustomerToFile(){
 		String details = firstName + ";" + lastName + "; " + cprNumber + ";"  
-	+ address +";" + postCode + ";"  + mobileNumber + ";" + getUserName() + ";" + getPassword() + ";";
+	+ address + ";" + houseNumber + ";" + postCode + ";"  + mobileNumber + ";" + getUserName() + ";" + getPassword() + ";";
 		CustomerDataFile.WriteDetails("customerfile.txt", details);
 		 
 	}
