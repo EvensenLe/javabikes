@@ -3,6 +3,7 @@ package controller;
 
 import model.Customer;
 import view.BookingView;
+import view.CustomerView;
 import model.BikeDatabase;
 
 
@@ -15,17 +16,38 @@ import java.util.*;
 //CALLS METHODS FROM MODEL AND VIEW CLASSES
 
 public class Booking {
+	
+	private static Customer mrCustomer = new Customer();
+	private static BookingView welcome = new BookingView();
+	private static CustomerView cView = new CustomerView();
+	BikeDatabase bike = new BikeDatabase();
 
 	public static void main(String[] args) {
-			
+					
 		
-	
-		//WHY DO WE NEED THIS LINE IN ORDER TO PRINT OUT THE DATABASE?
-		BikeDatabase bike = new BikeDatabase();
+		//MAKE A SWITCH STATEMENT TO ASK CUSTOMER WHAT THEY WANT TO DO
+		String menuChoice = welcome.welcomeDetails();
+		int menuChoiceInt = Integer.parseInt(menuChoice);
 		
-		BookingView.welcomeDetails();
+		boolean choosing = true;
 		
-		BookingView.bookingDetails();
+		while (choosing)
+		switch (menuChoiceInt) {
+		case 1: System.out.println("Thank you for wanting to browse the catalogue.");
+		break;
+		case 2: System.out.println("Thank you for wanting to register to CPH Bikesharing");
+		mrCustomer = cView.CustomerDetails();
+		mrCustomer.writeCustomerToFile();
+		choosing = false;
+		break;
+		case 3: System.out.print("You have successfully exited the system. Have a great day.");
+		System.exit(0);
+		break;
+	    default: System.out.print("Error! Please write '1', '2' or '3'");
+	    break;
+		}
+		
+		//BookingView.bookingDetails();
 		
 //test work now!
 

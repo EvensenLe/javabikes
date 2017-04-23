@@ -19,21 +19,21 @@ public class CustomerView {
 			
 			//GET CUSTOMER DETAILS
 			Customer MrCustomer = new Customer();
-			
+			String details;
 			
 			System.out.print("Enter your first name: ");
-			String firstname = input.nextLine();
-			MrCustomer.setFirstName(firstname);
+			details = input.nextLine();
+			MrCustomer.setFirstName(details);
 			
 			System.out.print("Enter your last name: ");
-			String lastname = input.nextLine();
-			MrCustomer.setLastName(lastname);
+			details = input.nextLine();
+			MrCustomer.setLastName(details);
 			
 			System.out.println("Enter your CPR number(123456-1234):");
-			String cprNumber = input.nextLine();
+			details = input.nextLine();
 			
-			if (cprNumber.matches("^(\\d{6}-?\\d{4})$")) 
-				MrCustomer.setCprNumber(cprNumber);
+			if (details.matches("^(\\d{6}-?\\d{4})$")) 
+				MrCustomer.setCprNumber(details);
 		else 
 			System.out.println("you have entered wrong CPR number");
 			
@@ -42,22 +42,22 @@ public class CustomerView {
 			System.out.println("Enter your Telephone Number (8 digits):");
 			
 			
-			String mobileNumber = input.nextLine();
+			details = input.nextLine();
 			
-			if (mobileNumber.matches("[0-9]+") && mobileNumber.length()==8) 
-				MrCustomer.setMobileNumber(mobileNumber);
+			if (details.matches("[0-9]+") && details.length()==8) 
+				MrCustomer.setMobileNumber(details);
 			else
 				System.out.println("Invalid number");
 			
 			
   
 			System.out.print("Enter your address: ");
-		    String address = input.nextLine();
-		    MrCustomer.setAddress(address);
+		    details = input.nextLine();
+		    MrCustomer.setAddress(details);
 			
 		    System.out.println("Enter your house number:");
-			String housenumber = input.nextLine();
-			MrCustomer.setHouseNumber(housenumber);
+			details = input.nextLine();
+			MrCustomer.setHouseNumber(details);
 			
 			
 			//ASK FOR POST CODE WITHIN COPENHAGEN AREA
@@ -78,25 +78,31 @@ public class CustomerView {
 			System.out.println("Error: CBS webshop only ships within the Copenhagen region. Please try again. ");
 			}}
 
+			
+			MrCustomer.setUserName();
+			MrCustomer.setPassword();
 						
 			//GENERATE USERNAME AND PASSWORD USING SUBSTRING AND CHARAT
 			
-			MrCustomer.setUserName(firstname.charAt(0) + lastname.substring(0, 3));
+			//MrCustomer.setUserName(firstname.charAt(0) + lastname.substring(0, 3));
 		
-			MrCustomer.setPassword(lastname.substring(0, 3) + cprNumber.substring(7, 11));
+			//MrCustomer.setPassword(lastname.substring(0, 3) + cprNumber.substring(7, 11));
 			
-			System.out.println("Your username is: " + MrCustomer.getUserName());
-			System.out.println("Your password is: " + MrCustomer.getPassword());
+			//System.out.println("Your username is: " + MrCustomer.getUserName());
+			//System.out.println("Your password is: " + MrCustomer.getPassword());
 				
 			
 			
 		 
-			//PRINT OUT CUSTOMER DETAILS
+			//RETURN CUSTOMER DETAILS
 			return MrCustomer;
 			
 			
 		}
-
+		public void printCustomerDetails(Customer MrCustomer) {
+			
+			System.out.println(MrCustomer.toString());
+		}
 
 		
 		

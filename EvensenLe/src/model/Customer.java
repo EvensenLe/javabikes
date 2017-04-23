@@ -12,6 +12,19 @@ public class Customer {
 			
 		}
 	
+	public Customer (String firstName, String lastName, String address, String houseNumber, int postcode, String cprNumber, String mobileNumber) {
+	
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.address = address;
+		this.houseNumber = houseNumber;
+		this.postCode = postcode;
+		this.cprNumber = cprNumber;
+		this.mobileNumber = mobileNumber;
+		this.getUserName();
+		this.getPassword();
+	}
+	
 
 	public String getFirstName() {
 		return firstName;
@@ -71,7 +84,13 @@ public class Customer {
 	
 	
 	public String getPassword() {
-		return password;
+		
+		return password = lastName.substring(0, 3) + cprNumber.substring(7);
+		
+	}
+	
+	public void setPassword() {
+		this.password = lastName.substring(0, 3) + cprNumber.substring(7);
 	}
 
 	public void setPassword(String password) {
@@ -79,15 +98,28 @@ public class Customer {
 	}
 
 	public String getUserName() {
-		return userName;
+		return userName = firstName.charAt(0) + lastName.substring(0, 3);
+		
+	}
+	
+	public void setUserName() {
+		this.userName = firstName.charAt(0) + lastName.substring(0, 3); 
+
 	}
 
 	public void setUserName(String userName) {
+		
 		this.userName = userName;
 	}
 	
+	public String toString(){
+		return (firstName + ";" + lastName + "; " + cprNumber + ";"  
+				+ address +";" + postCode + ";"  + mobileNumber + ";" + getUserName() + ";" + getPassword() + ";");
+	}
+	
 	public void writeCustomerToFile(){
-		String details = firstName + ";" + lastName + "; " + cprNumber + ";"  + address +";" + postCode + ";"  + mobileNumber + ";" + getUserName() + ";" + getPassword() + ";";
+		String details = firstName + ";" + lastName + "; " + cprNumber + ";"  
+	+ address +";" + postCode + ";"  + mobileNumber + ";" + getUserName() + ";" + getPassword() + ";";
 		CustomerDataFile.WriteDetails("customerfile.txt", details);
 		 
 	}

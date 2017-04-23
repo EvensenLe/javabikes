@@ -78,5 +78,20 @@ public static void WriteDetails(String file, String input){
 		System.out.println("Error writing to file '" + file + "'");
 	}
 }
+
+public static void writeArrayDetails(String file, ArrayList<Customer> input){
+	try{
+		FileWriter fwriter = new FileWriter(file, true);
+		PrintWriter output = new java.io.PrintWriter(fwriter);
+		
+		for(Customer str: input) { // Write formatted output to the file
+			output.println(str);  
+		}
+		output.close();
+	}
+	catch (IOException ex) {
+		System.out.println("Error writing to file '" + file + "'");
+	}
+}
 	
 }
