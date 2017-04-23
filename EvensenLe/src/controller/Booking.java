@@ -20,7 +20,6 @@ public class Booking {
 	private static Customer mrCustomer = new Customer();
 	private static BookingView welcome = new BookingView();
 	private static CustomerView cView = new CustomerView();
-	BikeDatabase bike = new BikeDatabase();
 
 	public static void main(String[] args) {
 					
@@ -29,11 +28,16 @@ public class Booking {
 		String menuChoice = welcome.welcomeDetails();
 		int menuChoiceInt = Integer.parseInt(menuChoice);
 		
+		BikeDatabase bike = new BikeDatabase();
+
+		
 		boolean choosing = true;
 		
 		while (choosing)
 		switch (menuChoiceInt) {
 		case 1: System.out.println("Thank you for wanting to browse the catalogue.");
+		BikeDatabase.printAll();
+		choosing = false;
 		break;
 		case 2: System.out.println("Thank you for wanting to register to CPH Bikesharing");
 		mrCustomer = cView.CustomerDetails();
@@ -49,7 +53,6 @@ public class Booking {
 		
 		//BookingView.bookingDetails();
 		
-//test work now!
 
 			}
 	
