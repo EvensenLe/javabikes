@@ -30,12 +30,13 @@ public class Booking {
 		
 		BikeDatabase bike = new BikeDatabase();
 
-		
 		boolean choosing = true;
+		
+	
 		
 		while (choosing)
 		switch (menuChoiceInt) {
-		case 1: System.out.println("Thank you for wanting to browse the catalogue.");
+		case 1: System.out.println("You will now be displayed our available Javabikes");
 		BikeDatabase.printAll();
 		choosing = false;
 		break;
@@ -48,12 +49,13 @@ public class Booking {
 		System.exit(0);
 		break;
 	    default: System.out.print("Error! Please write '1', '2' or '3'");
-	    break;
+	  break;
 		}
 		
 		//BookingView.bookingDetails();
 		
-
+		return;
+		
 			}
 	
 }

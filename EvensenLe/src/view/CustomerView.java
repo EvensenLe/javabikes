@@ -81,17 +81,10 @@ public class CustomerView {
 			
 			MrCustomer.setUserName();
 			MrCustomer.setPassword();
+			
+			System.out.println("Your username is: " + MrCustomer.getUserName());
+			System.out.println("Your password is: " + MrCustomer.getPassword());
 						
-			//GENERATE USERNAME AND PASSWORD USING SUBSTRING AND CHARAT
-			
-			//MrCustomer.setUserName(firstname.charAt(0) + lastname.substring(0, 3));
-		
-			//MrCustomer.setPassword(lastname.substring(0, 3) + cprNumber.substring(7, 11));
-			
-			//System.out.println("Your username is: " + MrCustomer.getUserName());
-			//System.out.println("Your password is: " + MrCustomer.getPassword());
-				
-			
 			
 		 
 			//RETURN CUSTOMER DETAILS

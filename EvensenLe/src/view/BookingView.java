@@ -48,8 +48,10 @@ public class BookingView {
 
 	} while (!welcomeChoice);
 
-	return menuChoice;}}
-	
+	return menuChoice;}
+
+}
+
 	//public static void bookingDetails(){
 		
 	//ASK IF THE USER WANTS TO BROWSE ELECTRIC OR NORMAL BIKE

@@ -90,6 +90,7 @@ public class Customer {
 	}
 	
 	public void setPassword() {
+		//GENERATE PASSWORD USING SUBSTRING
 		this.password = lastName.substring(0, 3) + cprNumber.substring(7);
 	}
 
@@ -103,6 +104,7 @@ public class Customer {
 	}
 	
 	public void setUserName() {
+		//GENERATE USERNAME USING CHARAT AND SUBSTRING
 		this.userName = firstName.charAt(0) + lastName.substring(0, 3); 
 
 	}
