@@ -36,11 +36,16 @@ public class Booking {
 		
 		while (choosing)
 		switch (menuChoiceInt) {
-		case 1: System.out.println("You will now be displayed our available Javabikes");
+		case 1:System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"); 
+			System.out.println("The available bikes will now be displayed: ");
+			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 		BikeDatabase.printAll();
 		choosing = false;
 		break;
-		case 2: System.out.println("Thank you for wanting to register to CPH Bikesharing");
+		case 2: System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+			System.out.println("Please proceed to the registration page.");
+			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+			System.out.println("");
 		mrCustomer = cView.CustomerDetails();
 		mrCustomer.writeCustomerToFile();
 		choosing = false;

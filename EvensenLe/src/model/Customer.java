@@ -4,7 +4,21 @@ import data.CustomerDataFile;
 
 public class Customer {
 
-	private String firstName,lastName,cprNumber, address, houseNumber,  mobileNumber, userName, password;
+	private static String firstName;
+
+	private static String lastName;
+
+	private static String cprNumber;
+
+	private String address;
+
+	private String houseNumber;
+
+	private String mobileNumber;
+
+	private static String userName;
+
+	private static String password;
 	
 	private int postCode;
 
@@ -83,7 +97,7 @@ public class Customer {
 	}
 	
 	
-	public String getPassword() {
+	public static String getPassword() {
 		
 		return password = lastName.substring(0, 3) + cprNumber.substring(7);
 		
@@ -98,7 +112,7 @@ public class Customer {
 		this.password = password;
 	}
 
-	public String getUserName() {
+	public static String getUserName() {
 		return userName = firstName.charAt(0) + lastName.substring(0, 3);
 		
 	}

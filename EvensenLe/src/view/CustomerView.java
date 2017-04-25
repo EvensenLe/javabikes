@@ -21,15 +21,15 @@ public class CustomerView {
 			Customer MrCustomer = new Customer();
 			String details;
 			
-			System.out.print("Enter your first name: ");
+			System.out.print("Enter your first name:                    ");
 			details = input.nextLine();
 			MrCustomer.setFirstName(details);
 			
-			System.out.print("Enter your last name: ");
+			System.out.print("Enter your last name:                     ");
 			details = input.nextLine();
 			MrCustomer.setLastName(details);
 			
-			System.out.println("Enter your CPR number(123456-1234):");
+			System.out.print("Enter your CPR number(123456-1234):       ");
 			details = input.nextLine();
 			
 			if (details.matches("^(\\d{6}-?\\d{4})$")) 
@@ -39,7 +39,7 @@ public class CustomerView {
 			
 			
 			
-			System.out.println("Enter your Telephone Number (8 digits):");
+			System.out.print("Enter your Telephone Number (8 digits):   ");
 			
 			
 			details = input.nextLine();
@@ -51,17 +51,17 @@ public class CustomerView {
 			
 			
   
-			System.out.print("Enter your address: ");
+			System.out.print("Enter your address:                       ");
 		    details = input.nextLine();
 		    MrCustomer.setAddress(details);
 			
-		    System.out.println("Enter your house number:");
+		    System.out.print("Enter your house number:                  ");
 			details = input.nextLine();
 			MrCustomer.setHouseNumber(details);
 			
 			
 			//ASK FOR POST CODE WITHIN COPENHAGEN AREA
-			System.out.println("Enter your post code (Copenhagen area only):");
+			System.out.print("Enter your post code (CPH only):          ");
 			
 			boolean c = false; 
 			while (!c)
@@ -82,6 +82,10 @@ public class CustomerView {
 			MrCustomer.setUserName();
 			MrCustomer.setPassword();
 			
+			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+			System.out.println(" CONGRATS! YOU HAVE SUCCESSFULLY REGISTERED AS A CUSTOMER. ");
+			System.out.println("        Below you find your password and username          ");
+			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 			System.out.println("Your username is: " + MrCustomer.getUserName());
 			System.out.println("Your password is: " + MrCustomer.getPassword());
 						

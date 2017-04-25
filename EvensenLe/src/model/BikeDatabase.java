@@ -66,10 +66,10 @@ public class BikeDatabase {
 		
 	public static void printAll(){
 		System.out.println();
-		System.out.println("*NORMAL BIKES*");
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~NORMAL BIKES~~~~~~~~~~~~~~~~~~~~~~");
 		printNormalBikeDatabase();
 		System.out.println();
-		System.out.println("*ELECTRIC BIKES*");
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~ELECTRIC BIKES~~~~~~~~~~~~~~~~~~~~~");
 		printElectricBikeDatabase();
 		}
 
