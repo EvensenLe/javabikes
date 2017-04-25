@@ -2,3 +2,5 @@ Julia;Lee; 120591-1304;Møntergade;1116;61463675;JLee;Lee1304;
 Julia;Lee; 120591-1304;Møntergade;1116;61463675;JLee;Lee1304;
 Dennis;Lee; 250889-2555;Ved Kløvermarken;12;2200;61692555;DLee;Lee2555;
 Morten;Larsen; 453454-1234;Howitzvej;4;2200;12345678;MLar;Lar1234;
+Henning;Jørgensen; 123456-1234;Hello;14;1111;12345678;HJør;Jør1234;
+Thomas;Potter; 758496-6474;Solbjerg Plads;67;2300;34567823;TPot;Pot6474;

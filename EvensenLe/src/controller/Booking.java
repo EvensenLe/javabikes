@@ -4,6 +4,7 @@ package controller;
 import model.Customer;
 import view.BookingView;
 import view.CustomerView;
+import view.LogInView;
 import model.BikeDatabase;
 
 
@@ -20,6 +21,7 @@ public class Booking {
 	private static Customer mrCustomer = new Customer();
 	private static BookingView welcome = new BookingView();
 	private static CustomerView cView = new CustomerView();
+	private static LogInView logIn = new LogInView();
 
 	public static void main(String[] args) {
 					
@@ -48,6 +50,7 @@ public class Booking {
 			System.out.println("");
 		mrCustomer = cView.CustomerDetails();
 		mrCustomer.writeCustomerToFile();
+		logIn.customerHasToLogin();
 		choosing = false;
 		break;
 		case 3: System.out.print("You have successfully exited the system. Have a great day.");
