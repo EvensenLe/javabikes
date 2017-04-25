@@ -60,7 +60,7 @@ public class Booking {
 	  break;
 		}
 		
-		//BookingView.bookingDetails();
+		//BookingView.bookingDetails(); hmm
 		
 		return;
 		
