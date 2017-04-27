@@ -1,9 +1,12 @@
 package view;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Scanner;
 
-import data.CustomerDataFile;
 import model.Customer;
+import data.CustomerDataFile;
+
+
 
 public class LogInView {
 	

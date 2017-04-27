@@ -11,10 +11,6 @@ import model.BikeDatabase;
 import java.util.*;
 
 //AUTHORS; EMILIE F. EVENSEN & JULIA LEE
-//THIS SHOULD BE THE CONTROLLER CLASS	
-//THIS IS THE MAIN CLASS
-//CONTROLLER IS SUPPOSED TO BE VERY SHORT
-//CALLS METHODS FROM MODEL AND VIEW CLASSES
 
 public class Booking {
 	
@@ -61,11 +57,9 @@ public class Booking {
 	    default: System.out.print("Error! Please write '1', '2' or '3'");
 	  break;
 		}
-		
-		//BookingView.bookingDetails(); hmm
-		
+			
 		return;
 		
 			}
-	
 }
+

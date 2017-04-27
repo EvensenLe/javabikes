@@ -56,41 +56,5 @@ public class BookingView {
 
 }
 
-	//public static void bookingDetails(){
-		
-	//ASK IF THE USER WANTS TO BROWSE ELECTRIC OR NORMAL BIKE
-	//USE SWITCH STATEMENT
-	//	Scanner input = new Scanner(System.in);
-	//	boolean exit = false;
-		
-	//while (!exit){
-	//System.out.println("You will now have three options.");
-	//System.out.println("1. I would like to browse electric bikes");
-	//System.out.println("2. I would like to browse normal bikes");
-	//System.out.println("3. I don't want a Javabike, and would like to exit");
-	//String electricOrNormal = input.next();
-	
-	//switch (electricOrNormal) {
-	//case "1": System.out.println("The items for electric bikes will now be displayed");
-	//BikeDatabase.printElectricBikeDatabase();
-	//break;
-	//case "2": System.out.println("The items for normal bikes will now be displayed");
-	//BikeDatabase.printNormalBikeDatabase();
-	//exit = true;
-	//break;
-	//case "3": System.out.print("You have successfully exited the system. Have a great day.");
-	//System.exit(0);
-	//break;
-    //default: System.out.print("Error! Please write '1', '2' or '3'");
-    //break;
-	//}
-	
-	//System.out.println("Which bike would you like to rent? Please type in the bike ID");
-	
-	//ShoppingCart.printShoppingCart();
-	
 
 	
-	
-//}}
-	//}
