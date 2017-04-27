@@ -38,10 +38,12 @@ public class Booking {
 		
 		while (choosing)
 		switch (menuChoiceInt) {
-		case 1:System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"); 
-			System.out.println("The available bikes will now be displayed: ");
+		case 1: 
 			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-		BikeDatabase.printAll();
+			System.out.println("Please insert your Username and Password to log in.");
+			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+			System.out.println("");
+		logIn.customerHasToLogin();
 		choosing = false;
 		break;
 		case 2: System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");

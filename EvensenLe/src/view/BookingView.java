@@ -28,9 +28,9 @@ public class BookingView {
 			//ASK WHAT THE USER WANTS TO DO USING A SWITCH STATEMENT
 			System.out.println("You will now have three options:");
 			System.out.println("");
-			System.out.println("[1] I would like to browse the catalogue");
-			System.out.println("[2] I would like to create a profile");
-			System.out.println("[3] I don't want a Javabike, and would like to exit");
+			System.out.println("[1] Log in to existing profile");
+			System.out.println("[2] Create a profile");
+			System.out.println("[3] Exit system");
 			System.out.println("");
 				
 		

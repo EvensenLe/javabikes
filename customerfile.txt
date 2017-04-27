@@ -8,3 +8,4 @@ Fabian;Martin Hammersborg Løke; 290497-1765;Angelgade;13;1765;26988373;FMar;Mar
 Mikkel;Hafskjold ; 876542-1765;Tronvikgaten;65;1267;76543456;MHaf;Haf1765;
 Ina ;Stormoen; 298726-1765;Refsnesskogen ;19;1652;29828272;ISto;Sto1765;
 Emilie;Foss Evensen; 290392-1672;Angelgade 13;13;1765;27262524;EFos;Fos1672;
+Anniken;Evensen; 276254-2725;Tromsoveien;6;1765;27262524;AEve;Eve2725;
