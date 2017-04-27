@@ -18,15 +18,11 @@ public class ShoppingCart {
 		String itemsChosen = input.next();
 		
 		
-		
-		//HOW DO WE DISPLAY THE ITEMS THE CUSTOMER CHOSE?
-		//USING ARRAYLIST??
+	
 		
 		
 		System.out.println("Thank you for shopping at CPH Bikesharing!");
-		System.out.println("In order to rent a bike, we need your information.");
-		
-		CustomerView.CustomerDetails();	
+		System.out.println("In order to rent a bike, we need your credit card information.");
 
 		CreditCardView.getCreditCardDetails();
 	}
