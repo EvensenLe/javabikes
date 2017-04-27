@@ -40,6 +40,7 @@ public class Booking {
 			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 			System.out.println("");
 		logIn.customerHasToLogin();
+		welcome.bookingDetails();
 		choosing = false;
 		break;
 		case 2: System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -50,6 +51,7 @@ public class Booking {
 		mrCustomer.writeCustomerToFile();
 		logIn.customerHasToLogin();
 		choosing = false;
+		welcome.bookingDetails();
 		break;
 		case 3: System.out.print("You have successfully exited the system. Have a great day.");
 		System.exit(0);

@@ -9,16 +9,21 @@ public class Bikes {
 	public Bikes(int id, int price, int stockAvailable){
 		this.id = id;
 		this.price = price;
-		stockAvailable++; //so everytime a product object is created this is incremented.
-	
+		this.stockAvailable = stockAvailable;
 	}
 	
 
 
-	public Bikes(){
-		stockAvailable++; //so everytime a product object is created this is incremented.
-		}
-	
+	public int getStockAvailable() {
+		return stockAvailable;
+	}
+
+
+
+	public void setStockAvailable(int stockAvailable) {
+		this.stockAvailable = stockAvailable;
+	}
+
 
 	public int getId() {
 		return id;

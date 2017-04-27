@@ -2,6 +2,7 @@ package view;
 
 import java.util.*;
 
+
 import model.BikeDatabase;
 
 public class BookingView {
@@ -54,7 +55,22 @@ public class BookingView {
 
 	return menuChoice;}
 
-}
 
+
+public void bookingDetails() {
 
 	
+	System.out.println("You will now be able to choose and book a bike ");
+	System.out.println("");
+	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"); 
+	System.out.println("The available bikes will now be displayed: ");
+	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+	System.out.println("");
+	BikeDatabase.printAll();
+		
+
+return;}
+
+	
+
+}

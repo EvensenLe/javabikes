@@ -50,18 +50,18 @@ public class BikeDatabase {
 			
 		public static void printNormalBikeDatabase() {
 			for (NormalBike n: normalBikeList) {
-			System.out.println("ID: " + n.getId() + ", Stock Available: " + ", Price: " + n.getPrice() + ", Gender: " + n.getGender() + ", Framesize: " + n.getFramesize() + ", Color: " + n.getColor());
+			System.out.println("ID: " + n.getId() + ", Stock Available: " +n.getStockAvailable() + ", Price: " + n.getPrice() + ", Gender: " + n.getGender() + ", Framesize: " + n.getFramesize() + ", Color: " + n.getColor());
 					}
-//HOW TO PRINT OUT STOCK AVAILABILITY?
+
 		
 	}
 		
 		public static void printElectricBikeDatabase() {
 			for (ElectricBike e: electricBikeList) {
-			System.out.println("ID: " + e.getId() + ", Stock Available: " + ", Price: " + e.getPrice() + ", Gender: " + e.getGender() + ", Framesize: " + e.getFramesize() + ", Color: " + e.getColor());
+			System.out.println("ID: " + e.getId() + ", Stock Available: " + e.getStockAvailable() + ", Price: " + e.getPrice() + ", Gender: " + e.getGender() + ", Framesize: " + e.getFramesize() + ", Color: " + e.getColor());
 					}
 
-		
+		 
 	}
 		
 	public static void printAll(){
