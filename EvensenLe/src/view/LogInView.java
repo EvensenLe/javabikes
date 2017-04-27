@@ -2,20 +2,18 @@ package view;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
 import model.Customer;
 import data.CustomerDataFile;
-
 
 
 public class LogInView {
 	
 	
-	private ArrayList<Customer>customerDetails;
+	private ArrayList<Customer> customerList;
 	
 	
 	public LogInView(){
-		customerDetails = CustomerDataFile.getAllCustomerDetails();
+		customerList = CustomerDataFile.getAllCustomerDetails();
 	}
 	
 	
@@ -24,8 +22,8 @@ public class LogInView {
 				
 	 
 		//Used for holding input from the user
-				String password = "";
-				String userName = "";
+				//String password = "";
+				//String userName = "";
 				
 				//Declare a scanner object reference and create an object of it.
 		Scanner input = new Scanner(System.in);
@@ -52,19 +50,18 @@ public class LogInView {
 				//Prompt the user for username and password
 				
 				System.out.println("Type in your username: "); 
-				userName = input.nextLine();
+				String userName2 = input.nextLine();
 				
 				System.out.println("Type in your password: "); 
-				password = input.nextLine();
+				String password2 = input.nextLine();
 				
 				//Check the username and password for being correct. 
 				
-				boolean userFound = false;
 				//Here we go through the array with the usernames. 
-				for(int i = 0; i < customerDetails.size() && !loggedIn; i++){
+				for(int i = 0; i < customerList.size() && !loggedIn; i++){
 					//
-					if(userName.equalsIgnoreCase(customerDetails.get(i).getUserName()) && 
-							password.equalsIgnoreCase(customerDetails.get(i).getPassword())){
+					if(userName2.equalsIgnoreCase(customerList.get(i).getUserName()) && 
+							password2.equalsIgnoreCase(customerList.get(i).getPassword())){
 						System.out.println("You are now logged in!");
 						loggedIn = true;
 					}
@@ -75,12 +72,17 @@ public class LogInView {
 				//We stay in the loop as long the counter for tries is less than the allowed number of tries
 				//and the user is not (!) logged-in.
 			}while(counterTries < numbersOfTries && !loggedIn);
-				
 			
-			return loggedIn;
-			
+			if (counterTries == numbersOfTries) { // execute only if while loop was broken because maximum tries exceeded --> count++ nach dem loop noch assigned?
+				System.out.println("\nYou have exceeded the number of tries. Please try again after a few hours!");
+				System.exit(0);			}
 
+			
+			return loggedIn;	
+			
 }
-	
+public void printStats() {
+		
+	}
 	
 }

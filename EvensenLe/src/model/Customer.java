@@ -4,11 +4,11 @@ import data.CustomerDataFile;
 
 public class Customer {
 
-	private static String firstName;
+	private String firstName;
 
-	private static String lastName;
+	private String lastName;
 
-	private static String cprNumber;
+	private String cprNumber;
 
 	private String address;
 
@@ -16,16 +16,19 @@ public class Customer {
 
 	private String mobileNumber;
 
-	private static String userName;
+	private String userName;
 
-	private static String password;
+	private String password;
 	
 	private int postCode;
 
+	
+	//CONSTRUCTOR
 	public Customer(){
 			
 		}
 	
+	//CONSTRUCTOR WITH SPECIFICS
 	public Customer (String firstName, String lastName, String address, String houseNumber, int postcode, String cprNumber, String mobileNumber) {
 	
 		this.firstName = firstName;
@@ -97,7 +100,7 @@ public class Customer {
 	}
 	
 	
-	public static String getPassword() {
+	public String getPassword() {
 		
 		return password = lastName.substring(0, 3) + cprNumber.substring(7);
 		
@@ -112,7 +115,7 @@ public class Customer {
 		this.password = password;
 	}
 
-	public static String getUserName() {
+	public String getUserName() {
 		return userName = firstName.charAt(0) + lastName.substring(0, 3);
 		
 	}
@@ -128,13 +131,14 @@ public class Customer {
 		this.userName = userName;
 	}
 	
+	@Override
 	public String toString(){
-		return (firstName + ";" + lastName + "; " + cprNumber + ";"  
+		return (firstName + ";" + lastName + ";" + cprNumber + ";"  
 				+ address + ";" + houseNumber + ";" + postCode + ";"  + mobileNumber + ";" + getUserName() + ";" + getPassword() + ";");
 	}
 	
 	public void writeCustomerToFile(){
-		String details = firstName + ";" + lastName + "; " + cprNumber + ";"  
+		String details = firstName + ";" + lastName + ";" + cprNumber + ";"  
 	+ address + ";" + houseNumber + ";" + postCode + ";"  + mobileNumber + ";" + getUserName() + ";" + getPassword() + ";";
 		CustomerDataFile.WriteDetails("customerfile.txt", details);
 		 

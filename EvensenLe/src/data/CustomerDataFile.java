@@ -27,7 +27,6 @@ public class CustomerDataFile {
 		return input;
 	}
 	
-		//TRIED TO IMPLEMENT THE CODE TO DO TXT BUT DOESN'T WORK - NOTHING IS SAVED
 
 	public static Customer getCustomer(String line){
 		Customer customerFile = new Customer();

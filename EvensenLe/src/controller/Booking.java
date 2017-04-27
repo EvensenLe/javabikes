@@ -5,6 +5,7 @@ import model.Customer;
 import view.BookingView;
 import view.CustomerView;
 import view.LogInView;
+import view.ShoppingCart;
 import model.BikeDatabase;
 
 
@@ -18,6 +19,7 @@ public class Booking {
 	private static BookingView welcome = new BookingView();
 	private static CustomerView cView = new CustomerView();
 	private static LogInView logIn = new LogInView();
+	private static ShoppingCart shopping = new ShoppingCart();
 
 	public static void main(String[] args) {
 					
@@ -30,8 +32,6 @@ public class Booking {
 
 		boolean choosing = true;
 		
-	
-		
 		while (choosing)
 		switch (menuChoiceInt) {
 		case 1: 
@@ -40,6 +40,7 @@ public class Booking {
 			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 			System.out.println("");
 		logIn.customerHasToLogin();
+		logIn.printStats();
 		welcome.bookingDetails();
 		choosing = false;
 		break;
@@ -59,8 +60,6 @@ public class Booking {
 	    default: System.out.print("Error! Please write '1', '2' or '3'");
 	  break;
 		}
-			
-		return;
 		
 			}
 }

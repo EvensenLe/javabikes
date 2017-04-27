@@ -37,15 +37,15 @@ public class BikeDatabase {
 		
 		public BikeDatabase(){
 			//we need to add whether it's an ebike or nbike
-			addNormalBike(new NormalBike(100, 2, 199, "Women", 54, "White"));
-			addNormalBike(new NormalBike(101, 2, 199, "Women", 56, "Black"));
-			addNormalBike(new NormalBike(102, 2, 199, "Male", 56, "Blue"));
-			addNormalBike(new NormalBike(103, 2, 199, "Male", 58, "Grey"));
+			addNormalBike(new NormalBike(0, 2, 199, "Women", 54, "White"));
+			addNormalBike(new NormalBike(1, 2, 199, "Women", 56, "Black"));
+			addNormalBike(new NormalBike(2, 2, 199, "Male", 56, "Blue"));
+			addNormalBike(new NormalBike(3, 2, 199, "Male", 58, "Grey"));
 			
-			addElectricBike(new ElectricBike(200, 2, 249, "Women", 54, "Rainbow"));
-			addElectricBike(new ElectricBike(201, 2, 249, "Women", 56, "Purple"));
-			addElectricBike(new ElectricBike(202, 2, 249, "Male", 56, "Green"));
-			addElectricBike(new ElectricBike(203, 2, 249, "Male", 58, "Brown"));
+			addElectricBike(new ElectricBike(4, 2, 249, "Women", 54, "Rainbow"));
+			addElectricBike(new ElectricBike(5, 2, 249, "Women", 56, "Purple"));
+			addElectricBike(new ElectricBike(6, 2, 249, "Male", 56, "Green"));
+			addElectricBike(new ElectricBike(7, 2, 249, "Male", 58, "Brown"));
 		}
 			
 		public static void printNormalBikeDatabase() {
