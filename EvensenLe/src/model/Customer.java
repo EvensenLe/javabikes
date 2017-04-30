@@ -1,6 +1,8 @@
 package model;
 
 import data.CustomerDataFile;
+//CLASS LOOKS OK 
+//DO WE KNOW WHAT THE @OVERRIDE MEANS?
 
 public class Customer {
 

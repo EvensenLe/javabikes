@@ -1,6 +1,9 @@
 package model;
 
 public class Bikes {
+//CLASS LOOKS OK 
+//WE SHOULD HAVE A LOOK AT THE SELL PRODUCT FUNCTION, SINCE IT'S CURRENTLY NOT BEING USED? TAKE OUT?
+	
 	
 	protected int id;
 	protected int price;

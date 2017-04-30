@@ -14,6 +14,8 @@ import java.util.*;
 //AUTHORS; EMILIE F. EVENSEN & JULIA LEE
 
 public class Booking {
+
+//I THINK THIS CLASS LOOKS NICE AND NEAT. NO NEED TO REMOVE ANYTHING? IT SHOULD CREATE THE OBJECTS AND CONTAIN THE MENU	
 	
 	private static Customer mrCustomer = new Customer();
 	private static BookingView welcome = new BookingView();

@@ -2,6 +2,8 @@ package model;
 
 public class CreditCard {
 	
+//CLASS LOOKS OK 
+	
 	private String cardType, cardMonthYear, cardName, cardNumber, cardSecurityNumber;
 	
 	public String getCardType() {

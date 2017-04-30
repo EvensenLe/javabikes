@@ -37,6 +37,7 @@ public class BookingView {
 		
 	Scanner input = new Scanner(System.in);
 	
+	//OK LOOPED
 	String menuChoice;
 	boolean welcomeChoice = false;
 		

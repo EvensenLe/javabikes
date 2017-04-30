@@ -1,7 +1,7 @@
 package model;
 
 public class ElectricBike extends Bikes {
-	
+//CLASS LOOKS OK 	
 	private String color, gender;
 	private int framesize;
 	

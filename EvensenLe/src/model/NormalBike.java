@@ -1,6 +1,7 @@
 package model;
 
 public class NormalBike extends Bikes {
+//CLASS LOOKS OK 
 	
 	private String color, gender;
 	private int framesize;

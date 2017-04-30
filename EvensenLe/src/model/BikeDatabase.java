@@ -3,8 +3,9 @@ package model;
 import java.util.*;
 
 public class BikeDatabase {
-	
-	//DATABASE OF AVAILABLE PRODUCTS
+
+//DATABASE OF AVAILABLE PRODUCTS
+//CLASS LOOKS OK 
 	
 		private static ArrayList<NormalBike> normalBikeList = new ArrayList<>();
 		private static ArrayList<ElectricBike> electricBikeList = new ArrayList<>();

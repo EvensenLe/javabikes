@@ -17,6 +17,7 @@ public class CreditCardView {
 				
 				
 	//CHECK IF CUSTOMER USES MASTERCARD OR VISA
+    //lOOPED
 	System.out.println("Which card do you pay with? Please type in 'mastercard' or 'visa' (Please note that the system is case sensitive)");
 	String visaOrMastercard = input.nextLine();
 				
@@ -38,34 +39,75 @@ public class CreditCardView {
 				
 				
 	//ASK FOR CREDIT CARD NUMBER
-		System.out.println("Enter your card number (16 digits):");
-		creditCardDetails = input.nextLine();
+    //LOOPED
+			System.out.println("Enter your card number (16 digits):");
+			boolean creditCardNumber = false;
+			while (!creditCardNumber) 
 				
-			if (creditCardDetails.matches("[0-9]+") && creditCardDetails.length()==16) 
+			{
+				creditCardDetails = input.nextLine();
+				
 				MrCredit.setCardNumber(creditCardDetails);
-			else
-				System.out.println("Invalid number");
+				if (creditCardDetails.matches("[0-9]+") && creditCardDetails.length()==16) 
+				{
+					creditCardNumber = true; 
+				}
+				else 
+				{
+					System.out.println("ERROR: Invalid number");
+					System.out.println("Enter your card number (16 digits):");
+				}			
+			
+			}
 				
 				
 	//ASK FOR CREDIT CARD EXPIRATION DATE IN FORMAT MM/YY
+	//LOOPED
 		System.out.println("Enter credit card month and year in format mm/yy:");
-		creditCardDetails = input.nextLine();
+
+			boolean monthAndYear = false;
+			while (!monthAndYear) 
+			
+			{
+				creditCardDetails = input.nextLine();
 				
-			if (creditCardDetails.matches("^(\\d{2}/?\\d{2})$")) 
 				MrCredit.setCardMonthYear(creditCardDetails);
-			else 
-				System.out.println("You have entered the wrong format");
+				if (creditCardDetails.matches("^(\\d{2}/?\\d{2})$")) 
+				{
+					creditCardNumber = true; 
+				}
+				else 
+				{
+					System.out.println("ERROR: You have entered the wrong format");
+					System.out.println("Enter credit card month and year in format mm/yy:");
+				}			
+			
+			}
 				
 				
 		//ASK FOR CREDIT CARD SECURITY NUMBER CVC
+		//LOOPED
 		System.out.println("Enter your credit card security number CVC (3 digits):");
 		creditCardDetails = input.nextLine();
-				
-			if (creditCardDetails.matches("[0-9]+") && creditCardDetails.length()==3) 
-				MrCredit.setCardNumber(creditCardDetails);
-			else
-				System.out.println("Invalid number");
+		
+		boolean securityNumber = false;
+		while (securityNumber) 
+		
+		{
+			creditCardDetails = input.nextLine();
 			
+			MrCredit.setCardSecurityNumber(creditCardDetails);
+			if (creditCardDetails.matches("^(\\d{2}/?\\d{2})$")) 
+			{
+				creditCardNumber = true; 
+			}
+			else 
+			{
+				System.out.println("ERROR: You have entered the wrong format");
+				System.out.println("Enter your credit card security number CVC (3 digits):");
+			}			
+		
+		}
 			
 		 //RETURN CREDIT CARD DETAILS
 		return MrCredit;
