@@ -22,7 +22,7 @@ public class Customer {
 
 	private String password;
 	
-	private int postCode;
+	private String postCode;
 
 	
 	//CONSTRUCTOR
@@ -31,7 +31,7 @@ public class Customer {
 		}
 	
 	//CONSTRUCTOR WITH SPECIFICS
-	public Customer (String firstName, String lastName, String address, String houseNumber, int postcode, String cprNumber, String mobileNumber) {
+	public Customer (String firstName, String lastName, String address, String houseNumber, String postcode, String cprNumber, String mobileNumber) {
 	
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -85,11 +85,11 @@ public class Customer {
 		this.houseNumber = houseNumber;
 	}
 
-	public int getPostCode() {
+	public String getPostCode() {
 		return postCode;
 	}
 
-	public void setPostCode(int postCode) {
+	public void setPostCode(String postCode) {
 		this.postCode = postCode;
 	}
 

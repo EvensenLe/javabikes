@@ -41,9 +41,11 @@ public class CustomerView {
 			System.out.print("Enter your CPR number(123456-1234):       ");
 			
 			{		
-				MrCustomer.setCprNumber(details);
 				details = input.nextLine();
+				MrCustomer.setCprNumber(details);
 				
+				//USING REGEX (REGULAR EXPRESSIONS) TO MATCH
+				//6 DIGITS FOLLOWED BY DASH AND THEN 4 DIGITS
 				if (details.matches("^(\\d{6}-?\\d{4})$")) 
 				{
 				cprNumberCorrect = true; 
@@ -66,7 +68,8 @@ public class CustomerView {
 				MrCustomer.setMobileNumber(details);
 				details = input.nextLine();
 				
-				if (details.matches("[0-9]+") && details.length()==8) 
+				//8 DIGITS
+				if (details.matches("^(\\d{8})$")) 
 				{
 				mobileNumberCorrect = true; 
 				}
@@ -97,12 +100,15 @@ public class CustomerView {
 			boolean postCodeCorrect = false;
 			while (!postCodeCorrect) 
 			{		
-				MrCustomer.setPostCode(input.nextInt());
-
-				if (MrCustomer.getPostCode() <= 2500 && MrCustomer.getPostCode() > 1000)
+				MrCustomer.setPostCode(details);
+				details = input.nextLine();
+				
+				//REGEX CHECKS IF INPUT MATCHES 1000-2500
+				if (details.matches("^(1[0-9][0-9][0-9]|2[0-4][0-9][0-9]|(2500))$"))
 				{
 				postCodeCorrect = true; 
 				}
+				
 				else 
 				{
 				System.out.println("Error: CBS webshop only ships within the Copenhagen region. Please try again. ");

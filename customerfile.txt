@@ -20,3 +20,5 @@ Emilie ;Foss ;290492-1664;Angelgade;13;0;27262524;EFos;Fos1664;
 Emilie;Foss;290402-1776;Angelgade;13;1765;27262524;EFos;Fos1776;
 Caroline;Navestad;282726-1726;Nes;7;1765;27262524;CNav;Nav1726;
 Mathilde;Stentorp;Stentorp;Landskrona;6;1765;272625-2726;MSte;Step;
+Morten;Nielsen;Nielsen;Hallevej;5;tgr;120591-1304;MNie;Nie;
+Carsten;Resen;350967-2367;Mosevej;28;4ref;350967-2367;CRes;Res2367;
