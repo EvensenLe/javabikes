@@ -8,6 +8,7 @@ import view.LogInView;
 import view.Receipt;
 import view.ShoppingCart;
 import model.BikeDatabase;
+import model.CreditCard;
 
 import java.io.IOException;
 import java.util.*;
@@ -44,6 +45,7 @@ public class Booking {
 			System.out.println("");
 		mrCustomer = cView.CustomerDetails();
 		mrCustomer.writeCustomerToFile();
+		mrCustomer.writeCustomerToReceipt();
 		choosing = false;
 		break;
 		case 2: 
@@ -52,7 +54,6 @@ public class Booking {
 			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 			System.out.println("");
 		logIn.customerHasToLogin();
-		logIn.printStats();
 		welcome.bookingDetails();
 		shopping.ShoppingCart();
 		receipt.printReceipt(); 

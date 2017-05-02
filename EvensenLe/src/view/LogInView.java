@@ -81,8 +81,6 @@ public class LogInView {
 			return loggedIn;	
 			
 }
-public void printStats() {
-		
-	}
+
 	
 }

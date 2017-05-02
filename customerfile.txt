@@ -1,2 +1,8 @@
 Julia;Lee;120591-1304;Møntergade;1116;61463675;JLee;Lee1304;
-Anders;Madsen;240767-2355;Hallevej;67;67;240767-2355;AMad;Mad2355;
+Mads;Andersson;465386-1265;Howitzvej;58;2400;58694532;MAnd;And1265;
+Dennis;Lee;250898-2555;Ved Kløvermarken;12;2300;61692555;DLee;Lee2555;
+Mads;Jensen;475864-2954;Allersrovej;36;2100;37584968;MJen;Jen2954;
+Mester;Jakob;385748-3758;Vestergade;56;2000;48573648;MJak;Jak3758;
+Jules;Anderson;384758-4758;Teasvej;34;2000;37465869;JAnd;And4758;
+Hanne;Mikaelsen;274859-4837;Jisster;3;2000;37485964;HMik;Mik4837;
+Jolene;Jolene;333333-3333;Lalaland;5;2000;33333333;JJol;Jol3333;

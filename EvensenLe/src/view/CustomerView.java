@@ -65,8 +65,8 @@ public class CustomerView {
 			boolean mobileNumberCorrect  = false;
 			while (!mobileNumberCorrect ) 
 			{		
-				MrCustomer.setMobileNumber(details);
 				details = input.nextLine();
+				MrCustomer.setMobileNumber(details);
 				
 				//8 DIGITS
 				if (details.matches("^(\\d{8})$")) 
@@ -100,8 +100,8 @@ public class CustomerView {
 			boolean postCodeCorrect = false;
 			while (!postCodeCorrect) 
 			{		
-				MrCustomer.setPostCode(details);
 				details = input.nextLine();
+				MrCustomer.setPostCode(details);
 				
 				//REGEX CHECKS IF INPUT MATCHES 1000-2500
 				if (details.matches("^(1[0-9][0-9][0-9]|2[0-4][0-9][0-9]|(2500))$"))
@@ -131,11 +131,12 @@ public class CustomerView {
 			System.out.println("Your password is: " + MrCustomer.getPassword());
 						
 			
-		 
+			
+			
 			//RETURN CUSTOMER DETAILS
 			return MrCustomer;
 			
-			
+
 		}
 		public void printCustomerDetails(Customer MrCustomer) {
 			

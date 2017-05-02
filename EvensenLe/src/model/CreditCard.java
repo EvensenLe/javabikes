@@ -1,5 +1,7 @@
 package model;
 
+import data.CustomerDataFile;
+
 public class CreditCard {
 	
 //CLASS LOOKS OK 
@@ -37,5 +39,4 @@ public class CreditCard {
 		this.cardSecurityNumber = cardSecurityNumber;
 	}
 	
-
 }

@@ -143,5 +143,12 @@ public class Customer {
 		CustomerDataFile.WriteDetails("customerfile.txt", details);
 		 
 	}
+	
+	public void writeCustomerToReceipt(){
+		String receipt = "Name: " + firstName + ". Last Name: " + lastName + ". CPR: " + cprNumber + ". Address: "  
+	+ address + " " + houseNumber + ", " + postCode + ". Mobile: "  + mobileNumber + ". Username: " + getUserName() + ". Password: " + getPassword() ;
+		CustomerDataFile.WriteDetails("receiptfile.txt", receipt);
+		 
+	}
 
 	}

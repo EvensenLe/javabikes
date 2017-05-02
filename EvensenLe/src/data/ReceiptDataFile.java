@@ -1,14 +1,17 @@
 package data;
 
-
-import java.util.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 import model.Customer;
 
-import java.io.*;
-
-public class CustomerDataFile {
-
+public class ReceiptDataFile {
+	
 	public static Scanner readDetails(String file){
 		Scanner input = new Scanner(System.in);
 		
@@ -32,7 +35,7 @@ public class CustomerDataFile {
 		Customer customerFile = new Customer();
 		
 		// FOR EVERYTIME THERE IS A ";" IT TURNS THE VALUES TO A STRING
-			    String[] value = line.split(";");
+			    String[] value = line.split(" ");
 			   	    	   
 			// CHANGES THE STRING TYPE TO THE CORRECT FORMAT
 			    customerFile.setFirstName(value[0]);
@@ -51,7 +54,7 @@ public class CustomerDataFile {
 	
 	public static ArrayList<Customer> getAllCustomerDetails(){
 		ArrayList<Customer> customerList = new ArrayList<Customer>();
-		Scanner input = readDetails("customerfile.txt");
+		Scanner input = readDetails("receiptfile.txt");
 		
 
 		// checking each line 
@@ -61,6 +64,11 @@ public class CustomerDataFile {
 		
 		return customerList;
 	}
+	
+
+	
+
+	
 	
 
 
@@ -85,8 +93,6 @@ public static void writeArrayDetails(String file, ArrayList<Customer> input){
 		
 		for(Customer str: input) { // Write formatted output to the file
 			output.println(str);  
-			
-
 		}
 		output.close();
 	}
@@ -95,4 +101,6 @@ public static void writeArrayDetails(String file, ArrayList<Customer> input){
 	}
 }
 	
+
+
 }

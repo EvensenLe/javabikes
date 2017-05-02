@@ -20,13 +20,15 @@ public class Receipt {
 	
 	public void printReceipt() throws IOException {
 		
-		try (Stream<String> stream = Files.lines(Paths.get("receiptfile.txt"))) {
-	        stream.forEach(System.out::println);
+		
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		System.out.println("            THIS IS YOUR CBS BIKESHARING RECEIPT           ");
+		System.out.println("          Below you will see your personal details         ");
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+	  
 	        
-	        
-	        System.out.println("Thank you for booking a bike");
-	        System.out.println("Name: ");
-	        
+	        try (Stream<String> stream = Files.lines(Paths.get("receiptfile.txt"))) {
+		        stream.forEach(System.out::println);
 	}
 		
 	
