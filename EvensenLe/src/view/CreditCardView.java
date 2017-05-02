@@ -74,7 +74,7 @@ public class CreditCardView {
 				MrCredit.setCardMonthYear(creditCardDetails);
 				if (creditCardDetails.matches("^(\\d{2}/?\\d{2})$")) 
 				{
-					creditCardNumber = true; 
+					monthAndYear = true; 
 				}
 				else 
 				{
@@ -91,15 +91,16 @@ public class CreditCardView {
 		creditCardDetails = input.nextLine();
 		
 		boolean securityNumber = false;
-		while (securityNumber) 
+		while (!securityNumber) 
 		
 		{
 			creditCardDetails = input.nextLine();
 			
 			MrCredit.setCardSecurityNumber(creditCardDetails);
-			if (creditCardDetails.matches("^(\\d{2}/?\\d{2})$")) 
+			if (creditCardDetails.matches("^(\\d{3})$")) 
+	
 			{
-				creditCardNumber = true; 
+				securityNumber = true; 
 			}
 			else 
 			{
@@ -113,6 +114,8 @@ public class CreditCardView {
 		return MrCredit;
 				
 		//SHOW RECEIPT
+		
+		
 				
 			}
 			
@@ -123,6 +126,8 @@ public class CreditCardView {
 
 		}
 				
+			
+			
 			
 
 }

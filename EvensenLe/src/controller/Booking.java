@@ -5,10 +5,11 @@ import model.Customer;
 import view.BookingView;
 import view.CustomerView;
 import view.LogInView;
+import view.Receipt;
 import view.ShoppingCart;
 import model.BikeDatabase;
 
-
+import java.io.IOException;
 import java.util.*;
 
 //AUTHORS; EMILIE F. EVENSEN & JULIA LEE
@@ -22,8 +23,9 @@ public class Booking {
 	private static CustomerView cView = new CustomerView();
 	private static LogInView logIn = new LogInView();
 	private static ShoppingCart shopping = new ShoppingCart();
+	private static Receipt receipt = new Receipt();
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 					
 		
 		//MAKE A SWITCH STATEMENT TO ASK CUSTOMER WHAT THEY WANT TO DO
@@ -53,6 +55,7 @@ public class Booking {
 		logIn.printStats();
 		welcome.bookingDetails();
 		shopping.ShoppingCart();
+		receipt.printReceipt(); 
 		choosing = false;
 		break;
 		case 3: System.out.print("You have successfully exited the system. Have a great day.");

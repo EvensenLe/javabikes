@@ -20,6 +20,8 @@ public class ShoppingCart {
 		
 		System.out.println("Which bike would you like to rent? Please type in the bike ID.");
 		System.out.println("If you want to rent more than one bike, please seperate the ID with space.");
+		
+			
 		boolean bikeChoice = false;
 		while (!bikeChoice) { 
 			
@@ -50,6 +52,7 @@ public class ShoppingCart {
 		System.out.println("In order to rent a bike, we need your credit card information.");
 		
 		CreditCardView.getCreditCardDetails();
+		
 		}
 	}
 	

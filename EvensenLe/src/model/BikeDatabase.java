@@ -58,11 +58,21 @@ public class BikeDatabase {
 		
 		public static void printElectricBikeDatabase() {
 			for (ElectricBike e: electricBikeList) {
-			System.out.println("ID: " + e.getId() + ", Stock Available: " + e.getStockAvailable() + ", Price: " + e.getPrice() + ", Gender: " + e.getGender() + ", Framesize: " + e.getFramesize() + ", Color: " + e.getColor());
+			System.out.println("ID: " + e.getId() + ", Stock Available: " + e.getStockAvailable() + ", Price: " + e.getPrice() + ", Gender: " + e.getGender() + ", Framesize: " + e.getFramesize() + ", Color: " + e.getColor());}
 					}
+			
+			public static void printChosen() {
+				
+			Scanner input = new Scanner(System.in);
+			System.out.print("Which bike would you like?");
+			int choice = input.nextInt();
+			
+			
+			}
+	               
 
-		 
-	}
+		
+	
 		
 	public static void printAll(){
 		System.out.println();
@@ -71,6 +81,7 @@ public class BikeDatabase {
 		System.out.println();
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~ELECTRIC BIKES~~~~~~~~~~~~~~~~~~~~~");
 		printElectricBikeDatabase();
+		printChosen();
 		}
 
 }
