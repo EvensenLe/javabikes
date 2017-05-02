@@ -36,25 +36,21 @@ public class Booking {
 		
 		while (choosing)
 		switch (menuChoiceInt) {
-		case 1: 
+		case 1: System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+			System.out.println("Please proceed to the registration page.");
+			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+			System.out.println("");
+		mrCustomer = cView.CustomerDetails();
+		mrCustomer.writeCustomerToFile();
+		choosing = false;
+		break;
+		case 2: 
 			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 			System.out.println("Please insert your Username and Password to log in.");
 			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 			System.out.println("");
 		logIn.customerHasToLogin();
 		logIn.printStats();
-		welcome.bookingDetails();
-		shopping.ShoppingCart();
-
-		choosing = false;
-		break;
-		case 2: System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-			System.out.println("Please proceed to the registration page.");
-			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-			System.out.println("");
-		mrCustomer = cView.CustomerDetails();
-		mrCustomer.writeCustomerToFile();
-		logIn.customerHasToLogin();
 		welcome.bookingDetails();
 		shopping.ShoppingCart();
 		choosing = false;

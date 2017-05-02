@@ -1,26 +1,2 @@
 Julia;Lee;120591-1304;Møntergade;1116;61463675;JLee;Lee1304;
-Julia;Lee;120591-1304;Møntergade;1116;61463675;JLee;Lee1304;
-Dennis;Lee;250889-2555;Ved Kløvermarken;12;2200;61692555;DLee;Lee2555;
-Morten;Larsen;453454-1234;Howitzvej;4;2200;12345678;MLar;Lar1234;
-Henning;Jørgensen;123456-1234;Hello;14;1111;12345678;HJør;Jør1234;
-Thomas;Potter;758496-6474;Solbjerg Plads;67;2300;34567823;TPot;Pot6474;
-Fabian;Martin Hammersborg Løke;290497-1765;Angelgade;13;1765;26988373;FMar;Mar1765;
-Mikkel;Hafskjold;876542-1765;Tronvikgaten;65;1267;76543456;MHaf;Haf1765;
-Ina ;Stormoen;298726-1765;Refsnesskogen ;19;1652;29828272;ISto;Sto1765;
-Emilie;Foss Evensen;290392-1672;Angelgade 13;13;1765;27262524;EFos;Fos1672;
-Anniken;Evensen;276254-2725;Tromsoveien;6;1765;27262524;AEve;Eve2725;
-Emilie;Evensen;290492-1664;Angelgade;13;1765;27262524;EEve;Eve1664;
-Martine;Walland;123456-1623;Tronvikveien;;1765;17161514;MWal;Wal1623;
-Emilie;Evensen;290492-1664;Angelgade;13;1765;17161514;EEve;Eve1664;
-Emilie;Evensen;290392-1662;Angelgade;13;1765;27262524;EEve;Eve1662;
-Emilie;Foss;290492-1773;Angelgade;13;1765;28272625;EFos;Fos1773;
-Emilie;Foss ;290492-1664;Angelgade;13;1765;28272625;EFos;Fos1664;
-Emilie;Foss;290402-1664;Angelgade;13;1765;27262524;EFos;Fos1664;
-Emilie ;Foss ;290492-1664;Angelgade;13;0;27262524;EFos;Fos1664;
-Emilie;Foss;290402-1776;Angelgade;13;1765;27262524;EFos;Fos1776;
-Caroline;Navestad;282726-1726;Nes;7;1765;27262524;CNav;Nav1726;
-Mathilde;Stentorp;Stentorp;Landskrona;6;1765;272625-2726;MSte;Step;
-Morten;Nielsen;Nielsen;Hallevej;5;tgr;120591-1304;MNie;Nie;
-Carsten;Resen;350967-2367;Mosevej;28;4ref;350967-2367;CRes;Res2367;
-Ahmed;Lalaland;450737-1264;Yesstreet;687;4rwe;450737-1264;ALal;Lal1264;
-rgdv;htgrvsdc;454444-4444;rgfdvz;343;3000;454444-4444;rhtg;htg4444;
+

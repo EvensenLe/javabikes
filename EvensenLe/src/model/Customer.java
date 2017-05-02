@@ -31,7 +31,7 @@ public class Customer {
 		}
 	
 	//CONSTRUCTOR WITH SPECIFICS
-	public Customer (String firstName, String lastName, String address, String houseNumber, String postcode, String cprNumber, String mobileNumber) {
+	public Customer (String firstName, String lastName, String address, String houseNumber, String postcode, String cprNumber, String mobileNumber, String userName, String password) {
 	
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -103,14 +103,13 @@ public class Customer {
 	
 	
 	public String getPassword() {
-		
-		return password = lastName.substring(0, 3) + cprNumber.substring(7);
+		return password = lastName.substring(0,3) + cprNumber.substring(7);
 		
 	}
 	
 	public void setPassword() {
 		//GENERATE PASSWORD USING SUBSTRING
-		this.password = lastName.substring(0, 3) + cprNumber.substring(7);
+		this.password = lastName.substring(0,3) + cprNumber.substring(7);
 	}
 
 	public void setPassword(String password) {
@@ -118,18 +117,17 @@ public class Customer {
 	}
 
 	public String getUserName() {
-		return userName = firstName.charAt(0) + lastName.substring(0, 3);
+		return userName = firstName.charAt(0) + lastName.substring(0,3);
 		
 	}
 	
 	public void setUserName() {
 		//GENERATE USERNAME USING CHARAT AND SUBSTRING
-		this.userName = firstName.charAt(0) + lastName.substring(0, 3); 
+		this.userName = firstName.charAt(0) + lastName.substring(0,3); 
 
 	}
 
 	public void setUserName(String userName) {
-		
 		this.userName = userName;
 	}
 	
