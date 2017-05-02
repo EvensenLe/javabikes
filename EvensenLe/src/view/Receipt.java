@@ -15,6 +15,9 @@ public class Receipt {
 	public Receipt() {
 	}
 	
+	private static Customer mrCustomer = new Customer();
+
+	
 	public void printReceipt() throws IOException {
 		
 		try (Stream<String> stream = Files.lines(Paths.get("receiptfile.txt"))) {
@@ -22,7 +25,8 @@ public class Receipt {
 	        
 	        
 	        System.out.println("Thank you for booking a bike");
-	        System.out.println("Name: " + CreditCardView.getCreditCardDetails());
+	        System.out.println("Name: ");
+	        
 	}
 		
 	
