@@ -73,7 +73,8 @@ public class BikeDatabase {
 
 		
 	
-		
+		//WE NEED TO DIVIDE THIS INTO A SWITCH STATEMENT
+			//CHANGE THE ID OF THE ELECTRIC BIKES
 	public static void printAll(){
 		System.out.println();
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~NORMAL BIKES~~~~~~~~~~~~~~~~~~~~~~");
@@ -83,5 +84,18 @@ public class BikeDatabase {
 		printElectricBikeDatabase();
 		printChosen();
 		}
+	
+	//AFTER THE CUSTOMER HAS CHOSEN THE BIKE
+
+	
+	public void testMethod(int index)
+	{
+		//GETS THE INDEX OF ELECTRIC BIKE
+		ElectricBike b = getElectricBikeList().get(index);
+		
+		//YOU CAN PRINT OUT WHATEVER YOU LIKE
+		System.out.println(b.getPrice());
+		
+	}
 
 }
