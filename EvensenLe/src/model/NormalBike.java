@@ -40,4 +40,8 @@ this.gender = gender;
 		this.framesize = framesize;
 	}
 
+	public String displayNormalBike() {
+		return ("ID: " + this.getId() + ", Stock Available: " + this.getStockAvailable() + ", Price: " + this.getPrice() + ", Gender: " + this.getGender() + ", Framesize: " + this.getFramesize() + ", Color: " + this.getColor());
+				}
+	
 }

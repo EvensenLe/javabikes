@@ -72,6 +72,32 @@ public void bookingDetails() {
 
 return;}
 
-	
+//MAKE A NEW METHOD WITH SWITCH STATEMENT WHETHER THE CUSTOMER WANTS TO BOOK A BIKE
 
-}
+public void PrintbookingDetails() {
+
+	Scanner input = new Scanner(System.in);
+
+	System.out.println("Would you like to book a bike? ");
+	System.out.println("");
+	System.out.println("[1] Yes");
+	System.out.println("[2] No");
+	System.out.println("");
+	int bookingAnswer = input.nextInt();
+	
+	boolean bookingBike = true;
+	
+	while (bookingBike)
+	switch (bookingAnswer) {
+	case 1: bookingDetails();
+	
+	break;
+	case 2: System.out.println("We're sorry you don't want to book a bike.");
+	System.out.println("Please come again another time. You are now logged out!");
+		System.exit(0);
+
+		
+
+return;}
+
+}}

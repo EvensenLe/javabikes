@@ -141,8 +141,6 @@ public class CustomerView {
 			
 			System.out.println(MrCustomer.toString());
 		}
-
-		
 		
 	
 }

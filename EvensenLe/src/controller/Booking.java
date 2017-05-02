@@ -44,6 +44,8 @@ public class Booking {
 		logIn.customerHasToLogin();
 		logIn.printStats();
 		welcome.bookingDetails();
+		shopping.ShoppingCart();
+
 		choosing = false;
 		break;
 		case 2: System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -53,8 +55,9 @@ public class Booking {
 		mrCustomer = cView.CustomerDetails();
 		mrCustomer.writeCustomerToFile();
 		logIn.customerHasToLogin();
-		choosing = false;
 		welcome.bookingDetails();
+		shopping.ShoppingCart();
+		choosing = false;
 		break;
 		case 3: System.out.print("You have successfully exited the system. Have a great day.");
 		System.exit(0);

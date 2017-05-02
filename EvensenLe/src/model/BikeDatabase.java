@@ -37,7 +37,6 @@ public class BikeDatabase {
 		}
 		
 		public BikeDatabase(){
-			//we need to add whether it's an ebike or nbike
 			addNormalBike(new NormalBike(0, 2, 199, "Women", 54, "White"));
 			addNormalBike(new NormalBike(1, 2, 199, "Women", 56, "Black"));
 			addNormalBike(new NormalBike(2, 2, 199, "Male", 56, "Blue"));

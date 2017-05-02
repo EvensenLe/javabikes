@@ -8,7 +8,6 @@ import model.Customer;
 import java.io.*;
 
 public class CustomerDataFile {
-//SINCE THIS CLASS IS A DIRECT COPY OF HER CODE I HAVE NOT CHANGED ANYTHING
 
 	public static Scanner readDetails(String file){
 		Scanner input = new Scanner(System.in);
