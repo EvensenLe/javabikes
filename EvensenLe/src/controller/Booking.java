@@ -42,6 +42,7 @@ public class Booking {
 		welcome.bookBike();
 		bd.testMethod(0);
 		welcome.pickUpBike();
+		receipt.printReceipt();
 		choosing = false;
 		break;
 		case 2: 

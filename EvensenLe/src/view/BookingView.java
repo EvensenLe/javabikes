@@ -95,7 +95,7 @@ public void pickUpBike() {
 	System.out.println("   At what location would you like to pick up the bike?    ");
 	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"); 
 	System.out.println("Please type in:");
-	System.out.println("'K' for Copengagen Central Station");
+	System.out.println("'K' for Copenhagen Central Station");
 	System.out.println("'V' for Copenhagen Vestebro");
 	System.out.println("'N' for Copenhagen Norrebro");
 	

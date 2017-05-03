@@ -110,13 +110,11 @@ public class BikeDatabase {
 				System.out.println("The price for bike ID " + d.getId() + " is " + d.getPrice() + "DKK");
 			
 		
-			
-		
 			else {
 			System.out.println("Error: Wrong input!");
 			System.out.print("Enter bike number 0, 1, 2 or 3:          ");
 			}
-
+			{bikeChoice = true;}
 			break;
 			
 		

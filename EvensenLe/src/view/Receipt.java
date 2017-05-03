@@ -28,11 +28,8 @@ public class Receipt {
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 	  
 
-	    System.out.print(mrBike.getId());   
-		
-	        try (Stream<String> stream = Files.lines(Paths.get("receiptfile.txt"))) {
-		        stream.forEach(System.out::println);
-	}
+	    
+	
 		System.out.println("         ---------------------------------------------     ");
 		System.out.println("                            RECEIPT                        ");
 		System.out.println("         ---------------------------------------------     ");

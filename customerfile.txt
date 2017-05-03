@@ -3,3 +3,7 @@ emilie;foss;272625-2725;angelgade;13;1654;27262524;efos;fos2725;
 emilie;foss;282726-2625;angelgade;13;1765;27262524;efos;fos2625;
 Emilie;Foss;292827-2827;Angelgade;13;1765;27262542;EFos;Fos2827;
 Emilie;Foss;272625-1716;Angelgade;1;1765;27262524;EFos;Fos1716;
+Mads;Madsen;343434-3434;Lalal;4;1100;34343434;MMad;Mad3434;
+Julia;Madsen;343434-3434;Møllevej;4;2222;34343434;JMad;Mad3434;
+Hans;Hansen;343434-3434;Trollevej;3;2000;27272727;HHan;Han3434;
+Mads;Jørgensen;394837-3434;Tinkerbell Street;3;2000;33333333;MJør;Jør3434;
