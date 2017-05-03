@@ -3,16 +3,16 @@ package model;
 public class NormalBike extends Bikes {
 //CLASS LOOKS OK 
 	
-	private String color, gender;
+	private String color;
 	private int framesize;
 	
-	public NormalBike(int id, int stockAvailable, int price, String gender, int framesize, String color) 
+	public NormalBike(int id, int price, int stockAvailable, String gender, int framesize, String color) 
 	
 	{
-		super(id, price, stockAvailable);
+		super(id, price, stockAvailable, gender);
 this.framesize = framesize;
 this.color = color; 
-this.gender = gender; 
+
 
 	}
 

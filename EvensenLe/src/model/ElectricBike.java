@@ -1,44 +1,39 @@
 package model;
 
 public class ElectricBike extends Bikes {
-//CLASS LOOKS OK 	
-	private String color, gender;
-	private int framesize;
 	
-	ElectricBike(int id, int stockAvailable, int price, String gender, int framesize, String color) 
+	private String batteryCharge; 
+	private int kmRange;
+	
+	ElectricBike(int id, int price, int stockAvailable, String gender, String batteryCharge, int kmRange) 
 	
 	{
-		super(id, price, stockAvailable);
-		this.framesize = framesize;
-		this.color = color; 
-		this.gender = gender; 
+		super(id, price, stockAvailable, gender);
+		this.batteryCharge = batteryCharge;
+		this.kmRange = kmRange;
 
 	}
 
-	public String getColor() {
-		return color;
+	public String getBatteryCharge() {
+		return batteryCharge;
 	}
 
-	public void setColor(String color) {
-		this.color = color;
+	public void setBatteryCharge(String batteryCharge) {
+		this.batteryCharge = batteryCharge;
 	}
 
-	public String getGender() {
-		return gender;
+	public int getKmRange() {
+		return kmRange;
 	}
 
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
-
-	public int getFramesize() {
-		return framesize;
-	}
-
-	public void setFramesize(int framesize) {
-		this.framesize = framesize;
+	public void setKmRange(int kmRange) {
+		this.kmRange = kmRange;
 	}
 	
+	public String displayElectricBike() {
+		return ("ID: " + this.getId() + ", Stock Available: " + this.getStockAvailable() + ", Price: " + this.getPrice() + ", Battery charge: " + this.getBatteryCharge() + ", KM range: " + this.getKmRange());
+				}
 	
-
 }
+
+

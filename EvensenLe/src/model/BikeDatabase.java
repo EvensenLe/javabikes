@@ -5,7 +5,6 @@ import java.util.*;
 public class BikeDatabase {
 
 //DATABASE OF AVAILABLE PRODUCTS
-//CLASS LOOKS OK 
 	
 		private static ArrayList<NormalBike> normalBikeList = new ArrayList<>();
 		private static ArrayList<ElectricBike> electricBikeList = new ArrayList<>();
@@ -37,15 +36,15 @@ public class BikeDatabase {
 		}
 		
 		public BikeDatabase(){
-			addNormalBike(new NormalBike(0, 2, 199, "Women", 54, "White"));
-			addNormalBike(new NormalBike(1, 2, 199, "Women", 56, "Black"));
-			addNormalBike(new NormalBike(2, 2, 199, "Male", 56, "Blue"));
-			addNormalBike(new NormalBike(3, 2, 199, "Male", 58, "Grey"));
+			addNormalBike(new NormalBike(0, 199, 2, "Women", 54, "White"));
+			addNormalBike(new NormalBike(1, 199, 2, "Women", 56, "Black"));
+			addNormalBike(new NormalBike(2, 199, 2, "Male", 56, "Blue"));
+			addNormalBike(new NormalBike(3, 199, 2, "Male", 58, "Grey"));
 			
-			addElectricBike(new ElectricBike(0, 2, 209, "Women", 54, "Rainbow"));
-			addElectricBike(new ElectricBike(1, 2, 219, "Women", 56, "Purple"));
-			addElectricBike(new ElectricBike(2, 2, 259, "Male", 56, "Green"));
-			addElectricBike(new ElectricBike(3, 2, 249, "Male", 58, "Brown"));
+			addElectricBike(new ElectricBike(0, 209, 2, "Women", "100%", 54));
+			addElectricBike(new ElectricBike(1, 219, 2, "Women", "88%", 56));
+			addElectricBike(new ElectricBike(2, 259, 2, "Men", "95%", 56));
+			addElectricBike(new ElectricBike(3, 249, 2, "Men", "90%", 58));
 		}
 			
 		public static void printNormalBikeDatabase() {
@@ -58,7 +57,7 @@ public class BikeDatabase {
 		
 		public static void printElectricBikeDatabase() {
 			for (ElectricBike e: electricBikeList) {
-			System.out.println("ID: " + e.getId() + ", Stock Available: " + e.getStockAvailable() + ", Price: " + e.getPrice() + ", Gender: " + e.getGender() + ", Framesize: " + e.getFramesize() + ", Color: " + e.getColor());}
+			System.out.println("ID: " + e.getId() + ", Stock Available: " + e.getStockAvailable() + ", Price: " + e.getPrice() + ", Gender: " + e.getGender() + ", Battery charge: " + e.getBatteryCharge() + ", KM range " + e.getKmRange());}
 					}
 			
 			public static void printChosen() {
@@ -73,8 +72,8 @@ public class BikeDatabase {
 
 		
 	
-		//WE NEED TO DIVIDE THIS INTO A SWITCH STATEMENT
-			//CHANGE THE ID OF THE ELECTRIC BIKES
+	//WE NEED TO DIVIDE THIS INTO A SWITCH STATEMENT
+	//CHANGE THE ID OF THE ELECTRIC BIKES FROM 0-4
 	public static void printAll(){
 		System.out.println();
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~NORMAL BIKES~~~~~~~~~~~~~~~~~~~~~~");
