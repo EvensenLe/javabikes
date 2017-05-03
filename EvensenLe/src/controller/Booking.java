@@ -17,8 +17,6 @@ import java.util.*;
 
 public class Booking {
 
-//I THINK THIS CLASS LOOKS NICE AND NEAT. NO NEED TO REMOVE ANYTHING? IT SHOULD CREATE THE OBJECTS AND CONTAIN THE MENU	
-	
 	private static Customer mrCustomer = new Customer();
 	private static BookingView welcome = new BookingView();
 	private static CustomerView cView = new CustomerView();
@@ -31,7 +29,7 @@ public class Booking {
 					
 		bd.testMethod(0);
 		
-		//MAKE A SWITCH STATEMENT TO ASK CUSTOMER WHAT THEY WANT TO DO
+		//MAIN MENU
 		String menuChoice = welcome.welcomeDetails();
 		int menuChoiceInt = Integer.parseInt(menuChoice);
 		
@@ -41,20 +39,13 @@ public class Booking {
 		
 		while (choosing)
 		switch (menuChoiceInt) {
-		case 1: System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-			System.out.println("Please proceed to the registration page.");
-			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-			System.out.println("");
+		case 1: 
 		mrCustomer = cView.CustomerDetails();
 		mrCustomer.writeCustomerToFile();
 		mrCustomer.writeCustomerToReceipt();
 		choosing = false;
 		break;
 		case 2: 
-			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-			System.out.println("Please insert your Username and Password to log in.");
-			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-			System.out.println("");
 		logIn.customerHasToLogin();
 		welcome.bookingDetails();
 		shopping.ShoppingCart();

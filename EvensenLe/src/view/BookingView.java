@@ -20,6 +20,7 @@ public class BookingView {
 			System.out.println("---- (*)/ (*)  (*)/ (*)  (*)/ (*)  (*)/ (*)  (*)/ (*)  ----");
 			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");	
 			
+			//PRINT OUT WELCOME MENU
 			System.out.println("");
 			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 			System.out.println("               WELCOME TO CPH BIKESHARING!                 ");
@@ -37,7 +38,7 @@ public class BookingView {
 		
 	Scanner input = new Scanner(System.in);
 	
-	//OK LOOPED
+	//CHECK USER INPUT 
 	String menuChoice;
 	boolean welcomeChoice = false;
 		
@@ -54,7 +55,9 @@ public class BookingView {
 
 	} while (!welcomeChoice);
 
-	return menuChoice;}
+	return menuChoice;
+	}
+
 
 
 
@@ -71,6 +74,7 @@ public void bookingDetails() {
 		
 
 return;}
+
 
 //MAKE A NEW METHOD WITH SWITCH STATEMENT WHETHER THE CUSTOMER WANTS TO BOOK A BIKE
 

@@ -19,8 +19,7 @@ public class LogInView {
 	
 	
 	public boolean customerHasToLogin(){
-				
-	 
+
 		//Used for holding input from the user
 				//String password = "";
 				//String userName = "";

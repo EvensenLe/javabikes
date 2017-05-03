@@ -16,6 +16,10 @@ public class CustomerView {
 		public static Customer CustomerDetails(){
 			
 			Scanner input = new Scanner(System.in);
+			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+			System.out.println("Please proceed to the registration page.");
+			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+			System.out.println("");
 			
 			//GET CUSTOMER DETAILS
 			Customer MrCustomer = new Customer();
