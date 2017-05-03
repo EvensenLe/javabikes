@@ -91,33 +91,34 @@ public class BikeDatabase {
 		
 		//GETS THE INDEX OF ELECTRIC BIKE
 				
-		int bike;
 		
 		boolean bikeChoice = false;
 		while (!bikeChoice) 
 		{	
 			System.out.println("CHOOSE A BIKE");
-			index = input.nextInt();
+			int bike = input.nextInt();
 			
-			if (index == 0){
+			if (bike == 0)
 				System.out.println("The price for bike ID " + a.getId() + " is " + a.getPrice() + "DKK");
-			}
-			if (index == 1){
+			
+			else if (bike == 1)
 				System.out.println("The price for bike ID " + b.getId() + " is " + b.getPrice() + "DKK");
-			}
-			if (index == 2){
+			
+			else if (bike == 2)
 				System.out.println("The price for bike ID " + c.getId() + " is " + c.getPrice() + "DKK");
-			}
-			if (index == 3){
+			
+			else if (bike == 3)
 				System.out.println("The price for bike ID " + d.getId() + " is " + d.getPrice() + "DKK");
 			
-			bikeChoice = true; 
-			}
+		
 			
-			else
-			{System.out.println("Error: Wrong input!");
+		
+			else {
+			System.out.println("Error: Wrong input!");
 			System.out.print("Enter bike number 0, 1, 2 or 3:          ");
 			}
+			
+			break;
 		}
 		
 		
