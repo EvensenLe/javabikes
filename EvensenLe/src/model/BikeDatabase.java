@@ -60,15 +60,6 @@ public class BikeDatabase {
 			for (ElectricBike e: electricBikeList) {
 			System.out.println("ID: " + e.getId() + ", Stock Available: " + e.getStockAvailable() + ", Price: " + e.getPrice() + ", Gender: " + e.getGender() + ", Framesize: " + e.getFramesize() + ", Color: " + e.getColor());}
 					}
-			
-			public static void printChosen() {
-				
-			Scanner input = new Scanner(System.in);
-			System.out.print("Which bike would you like?");
-			int choice = input.nextInt();
-			
-			
-			}
 	               
 
 		
@@ -82,7 +73,6 @@ public class BikeDatabase {
 		System.out.println();
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~ELECTRIC BIKES~~~~~~~~~~~~~~~~~~~~~");
 		printElectricBikeDatabase();
-		printChosen();
 		}
 	
 	//AFTER THE CUSTOMER HAS CHOSEN THE BIKE
@@ -94,20 +84,38 @@ public class BikeDatabase {
 	{
 		Scanner input = new Scanner(System.in);
 		
-		System.out.println("CHOOSE A BIKE");
-		int bike = input.nextInt();
+		
+		//GETS THE INDEX OF ELECTRIC BIKE
+				
+		int bike;
+		
+		boolean bikeChoice = false;
+		while (!bikeChoice) 
+		{	
+			System.out.println("CHOOSE A BIKE");
+			bike = input.nextInt();
+			
+			if (bike <= 3)
+				
+			{
+			bikeChoice = true; 
+			}
+			
+			else 
+			{System.out.println("Error: Wrong input!");
+			System.out.print("Enter bike number 0, 1, 2 or 3:          ");
+			}
+		}
+		
 		
 		bike = index;
 		
 		
-		//GETS THE INDEX OF ELECTRIC BIKE
-		ElectricBike b = getElectricBikeList().get(index);
 		
-
+		ElectricBike b = getElectricBikeList().get(3);
 		
 		//YOU CAN PRINT OUT WHATEVER YOU LIKE
 		System.out.println("The price for bike ID " + b.getId() + " is " + b.getPrice() + "DKK");
-		
 	}
 
 }
