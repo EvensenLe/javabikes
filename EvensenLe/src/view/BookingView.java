@@ -10,6 +10,8 @@ public class BookingView {
 	public BookingView() {
 	}
 	
+	private static BikeDatabase bd = new BikeDatabase();
+	
 	public String welcomeDetails() {
 		
 		
@@ -61,13 +63,14 @@ public class BookingView {
 
 
 //CREATE MENU FOR BOOKING A BIKE IF LOGGED IN 
-public void bookingDetails() {
+public void browseBike() {
 
 
 	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"); 
+	System.out.println("                         BROWSING                          ");
 	System.out.println("      You will now be able to browse available bikes       ");
 	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-	System.out.println("");	
+	BikeDatabase.printAll(); 
 
 
 	return;
@@ -81,7 +84,7 @@ public void bookBike() {
 	System.out.println("           Type in the bike ID to reserve bike             ");
 	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"); 
 	System.out.print("Type in ID here: "); 
-
+	bd.choiceElectricBike(0);
 
 	return;
 	}
@@ -97,7 +100,7 @@ public void pickUpBike() {
 	System.out.println("Please type in:");
 	System.out.println("'K' for Copenhagen Central Station");
 	System.out.println("'V' for Copenhagen Vestebro");
-	System.out.println("'N' for Copenhagen Norrebro");
+	System.out.println("'N' for Copenhagen Nørrebro");
 	
 	System.out.print("Type in location here: "); 
 	String location = input.nextLine();
@@ -105,9 +108,9 @@ public void pickUpBike() {
 		switch (location) {
 		case "K": System.out.println("--> Your bike will be ready for pick-up at Copenhagen Central Station in 20 minutes");
 		break;
-		case "V": System.out.println("--> Your bike will be ready for pick-up at Vesterbo in 20 minutes");
+		case "V": System.out.println("--> Your bike will be ready for pick-up at Istedgade, Vesterbro in 20 minutes");
 		break;
-		case "N": System.out.println("--> Your bike will be ready for pick-up at Norrebro in 20 minutes");
+		case "N": System.out.println("--> Your bike will be ready for pick-up at Ravnsborggade, Nørrebro in 20 minutes");
 		break;
 		default: System.out.println("Please follow the instructions above. Type in 'K', 'V', or 'N'");
 		break;
@@ -115,4 +118,11 @@ public void pickUpBike() {
 	
 	return;
 	}
+
+public void printBooking() {
+	browseBike();
+	bookBike();
+	pickUpBike();
+	
+}
 }

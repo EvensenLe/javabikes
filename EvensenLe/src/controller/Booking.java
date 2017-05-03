@@ -16,18 +16,17 @@ import java.util.*;
 public class Booking {
 
 	private static Customer mrCustomer = new Customer();
-	private static BookingView welcome = new BookingView();
+	private static BookingView booking = new BookingView();
 	private static CustomerView cView = new CustomerView();
 	private static LogInView logIn = new LogInView();
-	private static ShoppingCart shopping = new ShoppingCart();
 	private static Receipt receipt = new Receipt();
-	private static BikeDatabase bd = new BikeDatabase();
+	
 
 	public static void main(String[] args) throws IOException {
 	
 		
 		//MAIN MENU
-		String menuChoice = welcome.welcomeDetails();
+		String menuChoice = booking.welcomeDetails();
 		int menuChoiceInt = Integer.parseInt(menuChoice);
 		boolean choosing = true;
 		
@@ -37,12 +36,14 @@ public class Booking {
 		mrCustomer = cView.CustomerDetails();
 		mrCustomer.writeCustomerToFile();
 		mrCustomer.writeCustomerToReceipt();
-		menuFlow();
+		booking.printBooking();
+		receipt.printReceipt();
 		choosing = false;
 		break;
 		case 2: 
 		logIn.customerHasToLogin();
-		menuFlow();
+		booking.printBooking();
+		receipt.printReceipt();
 		choosing = false;
 		break;
 		case 3: System.out.print("You have successfully exited the system. Have a great day.");
@@ -53,15 +54,6 @@ public class Booking {
 		}
 	
 		  }
-	
-	public static void menuFlow() throws IOException {
-		welcome.bookingDetails();
-		BikeDatabase.printAll(); 
-		welcome.bookBike();
-		bd.testMethod(0);
-		welcome.pickUpBike();
-		receipt.printReceipt();
-		
-	}
+
         }
 

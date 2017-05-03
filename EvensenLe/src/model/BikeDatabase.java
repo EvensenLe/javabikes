@@ -75,11 +75,12 @@ public class BikeDatabase {
 		System.out.println();
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~ELECTRIC BIKES~~~~~~~~~~~~~~~~~~~~~");
 		printElectricBikeDatabase();
+		System.out.println();
 		}
 	
 	//AFTER THE CUSTOMER HAS CHOSEN THE BIKE
 	
-	public void testMethod(int index)
+	public void choiceElectricBike(int index)
 	{
 		ElectricBike a = getElectricBikeList().get(0);
 		ElectricBike b = getElectricBikeList().get(1);
