@@ -1,6 +1,5 @@
 package model;
 
-import data.ReadAndWrite;
 import data.ReceiptDataFile;
 
 public class ElectricBike extends Bikes {
@@ -48,7 +47,7 @@ public class ElectricBike extends Bikes {
 	
 	/** method to write to file */
 	public void writeToFile(){
-		String receipt = this.getId() + ", Stock Available: " + this.getStockAvailable() + ", Price: " + this.getPrice() + ", Battery charge: " + this.getBatteryCharge() + ", KM range: " + this.getKmRange();
+		String receipt = this.getId() + ", Stock Available: " + getStockAvailable() + ", Price: " + this.getPrice() + ", Battery charge: " + this.getBatteryCharge() + ", KM range: " + this.getKmRange();
 		ReceiptDataFile.writeArrayEBikeDetails("receiptfile.txt", receipt);
 	}
 	

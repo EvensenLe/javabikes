@@ -27,15 +27,37 @@ public class Receipt {
 		System.out.println("          Below you will see your personal details         ");
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 	  
+
 	    System.out.print(mrBike.getId());   
 		
 	        try (Stream<String> stream = Files.lines(Paths.get("receiptfile.txt"))) {
 		        stream.forEach(System.out::println);
 	}
+		System.out.println("         ---------------------------------------------     ");
+		System.out.println("                            RECEIPT                        ");
+		System.out.println("         ---------------------------------------------     ");
+
+		System.out.println("-------- __@      __@       __@       __@      __~@  ------");
+		System.out.println("----- _``|<,_   ``|<,,_   ``|<,<,_  ``|<,<,_ ``|<,<,_ -----");
+		System.out.println("---- (*)/ (*)  (*)/ (*)  (*)/ (*)  (*)/ (*)  (*)/ (*)  ----");
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+	    System.out.println("                       YOUR INFORMATION:                 \n");
+	   
+	
+	   
+		        try (Stream<String> stream = Files.lines(Paths.get("receiptfile.txt"))) {
+			        stream.forEach(System.out::println);
+				
+		System.out.println("         ---------------------------------------------\n");
+		System.out.println("             Thank you for shopping with JavaBikes    \n");
+		System.out.println("                       See you again!                 \n");
+		System.out.println("         ---------------------------------------------\n");
+	        }
 		
 	
 		
 		return;
 	}
-	
-}
+
+
+	}

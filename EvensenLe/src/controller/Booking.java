@@ -29,7 +29,6 @@ public class Booking {
 		//MAIN MENU
 		String menuChoice = welcome.welcomeDetails();
 		int menuChoiceInt = Integer.parseInt(menuChoice);
-		
 		boolean choosing = true;
 		
 		while (choosing)
