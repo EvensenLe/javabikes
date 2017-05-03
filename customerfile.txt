@@ -7,3 +7,4 @@ Mads;Madsen;343434-3434;Lalal;4;1100;34343434;MMad;Mad3434;
 Julia;Madsen;343434-3434;Møllevej;4;2222;34343434;JMad;Mad3434;
 Hans;Hansen;343434-3434;Trollevej;3;2000;27272727;HHan;Han3434;
 Mads;Jørgensen;394837-3434;Tinkerbell Street;3;2000;33333333;MJør;Jør3434;
+Lis;Sørensen;343434-3434;Snydevej;5;1000;29292929;LSør;Sør3434;

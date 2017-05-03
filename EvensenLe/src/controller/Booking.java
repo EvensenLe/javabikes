@@ -37,22 +37,12 @@ public class Booking {
 		mrCustomer = cView.CustomerDetails();
 		mrCustomer.writeCustomerToFile();
 		mrCustomer.writeCustomerToReceipt();
-		welcome.bookingDetails();
-		BikeDatabase.printAll();//It prints the array twice?
-		welcome.bookBike();
-		bd.testMethod(0);
-		welcome.pickUpBike();
-		receipt.printReceipt();
+		menuFlow();
 		choosing = false;
 		break;
 		case 2: 
 		logIn.customerHasToLogin();
-		welcome.bookingDetails();
-		BikeDatabase.printAll(); //It prints the array twice?
-		welcome.bookBike();
-		bd.testMethod(0);
-		welcome.pickUpBike();
-		receipt.printReceipt(); 
+		menuFlow();
 		choosing = false;
 		break;
 		case 3: System.out.print("You have successfully exited the system. Have a great day.");
@@ -61,7 +51,17 @@ public class Booking {
 	    default: System.out.print("Error! Please write '1', '2' or '3'");
 	    break;
 		}
-		
+	
 		  }
+	
+	public static void menuFlow() throws IOException {
+		welcome.bookingDetails();
+		BikeDatabase.printAll(); 
+		welcome.bookBike();
+		bd.testMethod(0);
+		welcome.pickUpBike();
+		receipt.printReceipt();
+		
+	}
         }
 

@@ -3,3 +3,4 @@ Name: Mads. Last Name: Madsen. CPR: 343434-3434. Address: Lalal 4, 1100. Mobile:
 Name: Julia. Last Name: Madsen. CPR: 343434-3434. Address: Møllevej 4, 2222. Mobile: 34343434. Username: JMad. Password: Mad3434
 Name: Hans. Last Name: Hansen. CPR: 343434-3434. Address: Trollevej 3, 2000. Mobile: 27272727. Username: HHan. Password: Han3434
 Name: Mads. Last Name: Jørgensen. CPR: 394837-3434. Address: Tinkerbell Street 3, 2000. Mobile: 33333333. Username: MJør. Password: Jør3434
+Name: Lis. Last Name: Sørensen. CPR: 343434-3434. Address: Snydevej 5, 1000. Mobile: 29292929. Username: LSør. Password: Sør3434
