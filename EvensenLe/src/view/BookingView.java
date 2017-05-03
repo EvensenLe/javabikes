@@ -60,7 +60,7 @@ public class BookingView {
 
 
 
-
+//CREATE MENU FOR BOOKING A BIKE IF LOGGED IN 
 public void bookingDetails() {
 
 	

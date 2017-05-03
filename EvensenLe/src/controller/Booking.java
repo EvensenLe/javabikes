@@ -1,5 +1,5 @@
 package controller;
-
+//AUTHORS; EMILIE F. EVENSEN & JULIA LEE
 
 import model.Customer;
 import view.BookingView;
@@ -12,8 +12,6 @@ import model.CreditCard;
 
 import java.io.IOException;
 import java.util.*;
-
-//AUTHORS; EMILIE F. EVENSEN & JULIA LEE
 
 public class Booking {
 
@@ -56,9 +54,9 @@ public class Booking {
 		System.exit(0);
 		break;
 	    default: System.out.print("Error! Please write '1', '2' or '3'");
-	  break;
+	    break;
 		}
 		
-			}
-}
+		  }
+        }
 
