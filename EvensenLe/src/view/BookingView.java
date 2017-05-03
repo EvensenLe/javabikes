@@ -63,45 +63,56 @@ public class BookingView {
 //CREATE MENU FOR BOOKING A BIKE IF LOGGED IN 
 public void bookingDetails() {
 
-	
-	System.out.println("You will now be able to choose and book a bike ");
-	System.out.println("");
+
 	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"); 
-	System.out.println("The available bikes will now be displayed: ");
+	System.out.println("      You will now be able to browse available bikes       ");
 	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-	System.out.println("");
-	BikeDatabase.printAll();
-		
-
-return;}
+	System.out.println("");	
 
 
-//MAKE A NEW METHOD WITH SWITCH STATEMENT WHETHER THE CUSTOMER WANTS TO BOOK A BIKE
+	return;
+	}
 
-public void PrintbookingDetails() {
+public void bookBike() {
 
-	Scanner input = new Scanner(System.in);
 
-	System.out.println("Would you like to book a bike? ");
-	System.out.println("");
-	System.out.println("[1] Yes");
-	System.out.println("[2] No");
-	System.out.println("");
-	int bookingAnswer = input.nextInt();
+	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"); 
+	System.out.println("                        BOOKING                            "); 
+	System.out.println("           Type in the bike ID to reserve bike             ");
+	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"); 
+	System.out.print("Type in ID here: "); 
+
+
+	return;
+	}
+
+
+public void pickUpBike() {
+	Scanner input = new Scanner(System.in);		
+
+	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"); 
+	System.out.println("                     BIKE PICK UP                          "); 
+	System.out.println("   At what location would you like to pick up the bike?    ");
+	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"); 
+	System.out.println("Please type in:");
+	System.out.println("'K' for Copengagen Central Station");
+	System.out.println("'V' for Copenhagen Vestebro");
+	System.out.println("'N' for Copenhagen Norrebro");
 	
-	boolean bookingBike = true;
+	System.out.print("Type in location here: "); 
+	String location = input.nextLine();
 	
-	while (bookingBike)
-	switch (bookingAnswer) {
-	case 1: bookingDetails();
+		switch (location) {
+		case "K": System.out.println("--> Your bike will be ready for pick-up at Copenhagen Central Station in 20 minutes");
+		break;
+		case "V": System.out.println("--> Your bike will be ready for pick-up at Vesterbo in 20 minutes");
+		break;
+		case "N": System.out.println("--> Your bike will be ready for pick-up at Norrebro in 20 minutes");
+		break;
+		default: System.out.println("Please follow the instructions above. Type in 'K', 'V', or 'N'");
+		break;
+		} 
 	
-	break;
-	case 2: System.out.println("We're sorry you don't want to book a bike.");
-	System.out.println("Please come again another time. You are now logged out!");
-		System.exit(0);
-
-		
-
-return;}
-
-}}
+	return;
+	}
+}

@@ -95,7 +95,6 @@ public class BikeDatabase {
 		boolean bikeChoice = false;
 		while (!bikeChoice) 
 		{	
-			System.out.println("CHOOSE A BIKE");
 			int bike = input.nextInt();
 			
 			if (bike == 0)

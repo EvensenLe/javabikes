@@ -24,8 +24,7 @@ public class Booking {
 	private static BikeDatabase bd = new BikeDatabase();
 
 	public static void main(String[] args) throws IOException {
-					
-		bd.testMethod(0);
+	
 		
 		//MAIN MENU
 		String menuChoice = welcome.welcomeDetails();
@@ -41,12 +40,20 @@ public class Booking {
 		mrCustomer = cView.CustomerDetails();
 		mrCustomer.writeCustomerToFile();
 		mrCustomer.writeCustomerToReceipt();
+		welcome.bookingDetails();
+		BikeDatabase.printAll();//It prints the array twice?
+		welcome.bookBike();
+		bd.testMethod(0);
+		welcome.pickUpBike();
 		choosing = false;
 		break;
 		case 2: 
 		logIn.customerHasToLogin();
 		welcome.bookingDetails();
-		shopping.ShoppingCart();
+		BikeDatabase.printAll(); //It prints the array twice?
+		welcome.bookBike();
+		bd.testMethod(0);
+		welcome.pickUpBike();
 		receipt.printReceipt(); 
 		choosing = false;
 		break;

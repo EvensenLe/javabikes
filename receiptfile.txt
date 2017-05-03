@@ -1,9 +1,3 @@
-THIS IS THE RECEIPT FILE
-Name: Jennifer. Last Name: Lopez. CPR: 468375-2486. Address: Bootystreet45, 45. Mobile: 468375-2486. Username: JLop. Password: Lop2486;
-Name: Mads. Last Name: Andersson. CPR: 465386-1265. Address: Howitzvej58, 2400. Mobile: 58694532. Username: MAnd. Password: And1265
-Name: Dennis. Last Name: Lee. CPR: 250898-2555. Address: Ved Kløvermarken12, 2300. Mobile: 61692555. Username: DLee. Password: Lee2555
-Name: Mads. Last Name: Jensen. CPR: 475864-2954. Address: Allersrovej 36, 2100. Mobile: 37584968. Username: MJen. Password: Jen2954
-Name: Mester. Last Name: Jakob. CPR: 385748-3758. Address: Vestergade 56, 2000. Mobile: 48573648. Username: MJak. Password: Jak3758
-Name: Jules. Last Name: Anderson. CPR: 384758-4758. Address: Teasvej 34, 2000. Mobile: 37465869. Username: JAnd. Password: And4758
-Name: Hanne. Last Name: Mikaelsen. CPR: 274859-4837. Address: Jisster 3, 2000. Mobile: 37485964. Username: HMik. Password: Mik4837
-Name: Jolene. Last Name: Jolene. CPR: 333333-3333. Address: Lalaland 5, 2000. Mobile: 33333333. Username: JJol. Password: Jol3333
+YOUR PERSONAL DETAILS:
+Name: Emilie. Last Name: Foss. CPR: 290492-1664. Address: Angelgade 13, 1765. Mobile: 27262524. Username: EFos. Password: Fos1664
+Name: Emilie. Last Name: Foss. CPR: 192021-2625. Address: Angelgade 13, 1765. Mobile: 28272622. Username: EFos. Password: Fos2625
