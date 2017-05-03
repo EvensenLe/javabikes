@@ -8,7 +8,9 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import model.Bikes;
 import model.Customer;
+import model.ElectricBike;
 
 public class ReceiptDataFile {
 	
@@ -29,7 +31,7 @@ public class ReceiptDataFile {
 	    }
 		return input;
 	}
-	
+	//CUSTOMER
 
 	public static Customer getCustomer(String line){
 		Customer customerFile = new Customer();
@@ -67,7 +69,38 @@ public class ReceiptDataFile {
 	
 
 	
+//BIKE
+	public static ElectricBike getEBike(String line){
+		ElectricBike ebikeFile = new ElectricBike();
+		
+		// FOR EVERYTIME THERE IS A ";" IT TURNS THE VALUES TO A STRING
+			    String[] value = line.split(" ");
+			   	    	   
+			// CHANGES THE STRING TYPE TO THE CORRECT FORMAT
+			    ebikeFile.setId(Integer.parseInt(value[0]));
+			    ebikeFile.setGender(value[1]);
+			    ebikeFile.setPrice(Integer.parseInt(value[2]));
+			    ebikeFile.setBatteryCharge(value[3]);
+			    ebikeFile.setKmRange(Integer.parseInt(value[4]));
+		
+				
+				
+	     return ebikeFile;
 
+	}
+	
+	public static ArrayList<ElectricBike> getAlleBikeDetails(){
+		ArrayList<ElectricBike> ebikeList = new ArrayList<ElectricBike>();
+		Scanner input = readDetails("receiptfile.txt");
+		
+
+		// checking each line 
+		while (input.hasNextLine()) {
+			ebikeList.add(getEBike(input.nextLine()));//passing each line to the method getCustomer which returns a customer
+			} 								//then added to a ArrayList
+		
+		return ebikeList;
+	}
 	
 	
 
@@ -92,6 +125,21 @@ public static void writeArrayDetails(String file, ArrayList<Customer> input){
 		PrintWriter output = new java.io.PrintWriter(fwriter);
 		
 		for(Customer str: input) { // Write formatted output to the file
+			output.println(str);  
+		}
+		output.close();
+	}
+	catch (IOException ex) {
+		System.out.println("Error writing to file '" + file + "'");
+	}
+}
+
+public static void writeArrayEBikeDetails(String file, ArrayList<ElectricBike> input){
+	try{
+		FileWriter fwriter = new FileWriter(file, true);
+		PrintWriter output = new java.io.PrintWriter(fwriter);
+		
+		for(ElectricBike str: input) { // Write formatted output to the file
 			output.println(str);  
 		}
 		output.close();

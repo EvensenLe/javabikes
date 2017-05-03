@@ -6,6 +6,8 @@ public class BikeDatabase {
 
 //DATABASE OF AVAILABLE PRODUCTS
 	
+	
+	
 		private static ArrayList<NormalBike> normalBikeList = new ArrayList<>();
 		private static ArrayList<ElectricBike> electricBikeList = new ArrayList<>();
 		
@@ -45,6 +47,8 @@ public class BikeDatabase {
 			addElectricBike(new ElectricBike(1, 219, 2, "Women", "88%", 56));
 			addElectricBike(new ElectricBike(2, 259, 2, "Men", "95%", 56));
 			addElectricBike(new ElectricBike(3, 249, 2, "Men", "90%", 58));
+			
+		
 		}
 			
 		public static void printNormalBikeDatabase() {
@@ -64,7 +68,6 @@ public class BikeDatabase {
 		
 	
 	//WE NEED TO DIVIDE THIS INTO A SWITCH STATEMENT
-	//CHANGE THE ID OF THE ELECTRIC BIKES FROM 0-4
 	public static void printAll(){
 		System.out.println();
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~NORMAL BIKES~~~~~~~~~~~~~~~~~~~~~~");
@@ -75,9 +78,6 @@ public class BikeDatabase {
 		}
 	
 	//AFTER THE CUSTOMER HAS CHOSEN THE BIKE
-
-	
-	
 	
 	public void testMethod(int index)
 	{
@@ -90,12 +90,12 @@ public class BikeDatabase {
 		
 		
 		//GETS THE INDEX OF ELECTRIC BIKE
-				
+		int bike = input.nextInt();
 		
 		boolean bikeChoice = false;
 		while (!bikeChoice) 
 		{	
-			int bike = input.nextInt();
+			
 			
 			if (bike == 0)
 				System.out.println("The price for bike ID " + a.getId() + " is " + a.getPrice() + "DKK");
@@ -116,12 +116,16 @@ public class BikeDatabase {
 			System.out.println("Error: Wrong input!");
 			System.out.print("Enter bike number 0, 1, 2 or 3:          ");
 			}
-			
+
 			break;
+			
+		
 		}
 		
 		
-	
-	}
+		
 
+	}			
+
+	
 }

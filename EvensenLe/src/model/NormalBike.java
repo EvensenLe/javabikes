@@ -24,13 +24,6 @@ this.color = color;
 		this.color = color;
 	}
 
-	public String getGender() {
-		return gender;
-	}
-
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
 
 	public int getFramesize() {
 		return framesize;
@@ -39,9 +32,9 @@ this.color = color;
 	public void setFramesize(int framesize) {
 		this.framesize = framesize;
 	}
-
+	
 	public String displayNormalBike() {
 		return ("ID: " + this.getId() + ", Stock Available: " + this.getStockAvailable() + ", Price: " + this.getPrice() + ", Gender: " + this.getGender() + ", Framesize: " + this.getFramesize() + ", Color: " + this.getColor());
-				}
+			}
 	
 }

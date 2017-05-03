@@ -30,8 +30,6 @@ public class Booking {
 		String menuChoice = welcome.welcomeDetails();
 		int menuChoiceInt = Integer.parseInt(menuChoice);
 		
-		BikeDatabase bike = new BikeDatabase();
-
 		boolean choosing = true;
 		
 		while (choosing)

@@ -17,6 +17,10 @@ public class Bikes {
 		this.gender = gender; 
 	}	
 
+	public Bikes() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public String getGender() {
 		return gender;
 	}
