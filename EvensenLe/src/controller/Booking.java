@@ -25,9 +25,11 @@ public class Booking {
 	private static LogInView logIn = new LogInView();
 	private static ShoppingCart shopping = new ShoppingCart();
 	private static Receipt receipt = new Receipt();
+	private static BikeDatabase bd = new BikeDatabase();
 
 	public static void main(String[] args) throws IOException {
 					
+		bd.testMethod(0);
 		
 		//MAKE A SWITCH STATEMENT TO ASK CUSTOMER WHAT THEY WANT TO DO
 		String menuChoice = welcome.welcomeDetails();

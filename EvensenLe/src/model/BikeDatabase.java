@@ -42,10 +42,10 @@ public class BikeDatabase {
 			addNormalBike(new NormalBike(2, 2, 199, "Male", 56, "Blue"));
 			addNormalBike(new NormalBike(3, 2, 199, "Male", 58, "Grey"));
 			
-			addElectricBike(new ElectricBike(4, 2, 249, "Women", 54, "Rainbow"));
-			addElectricBike(new ElectricBike(5, 2, 249, "Women", 56, "Purple"));
-			addElectricBike(new ElectricBike(6, 2, 249, "Male", 56, "Green"));
-			addElectricBike(new ElectricBike(7, 2, 249, "Male", 58, "Brown"));
+			addElectricBike(new ElectricBike(0, 2, 209, "Women", 54, "Rainbow"));
+			addElectricBike(new ElectricBike(1, 2, 219, "Women", 56, "Purple"));
+			addElectricBike(new ElectricBike(2, 2, 259, "Male", 56, "Green"));
+			addElectricBike(new ElectricBike(3, 2, 249, "Male", 58, "Brown"));
 		}
 			
 		public static void printNormalBikeDatabase() {
@@ -88,13 +88,25 @@ public class BikeDatabase {
 	//AFTER THE CUSTOMER HAS CHOSEN THE BIKE
 
 	
+	
+	
 	public void testMethod(int index)
 	{
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("CHOOSE A BIKE");
+		int bike = input.nextInt();
+		
+		bike = index;
+		
+		
 		//GETS THE INDEX OF ELECTRIC BIKE
 		ElectricBike b = getElectricBikeList().get(index);
 		
+
+		
 		//YOU CAN PRINT OUT WHATEVER YOU LIKE
-		System.out.println(b.getPrice());
+		System.out.println("The price for bike ID " + b.getId() + " is " + b.getPrice() + "DKK");
 		
 	}
 
