@@ -36,6 +36,7 @@ public class ReceiptDataFile {
 		
 		// FOR EVERYTIME THERE IS A ";" IT TURNS THE VALUES TO A STRING
 			    String[] value = line.split(" ");
+			
 			   	    	   
 			// CHANGES THE STRING TYPE TO THE CORRECT FORMAT
 			    customerFile.setFirstName(value[0]);
@@ -46,7 +47,7 @@ public class ReceiptDataFile {
 				customerFile.setMobileNumber(value[5]);
 				customerFile.setUserName(value[6]);
 				customerFile.setPassword(value[7]);
-				
+			
 				
 	     return customerFile;
 
@@ -65,12 +66,6 @@ public class ReceiptDataFile {
 		return customerList;
 	}
 	
-
-	
-
-	
-	
-
 
 public static void WriteDetails(String file, String input){
 	try{

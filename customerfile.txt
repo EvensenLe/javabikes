@@ -1,2 +1,5 @@
 Julia;Lee;120591-1304;Møntergade;1116;61463675;JLee;Lee1304;
-Emilie;Foss;192021-2625;Angelgade;13;1765;28272622;EFos;Fos2625;
+emilie;foss;272625-2725;angelgade;13;1654;27262524;efos;fos2725;
+emilie;foss;282726-2625;angelgade;13;1765;27262524;efos;fos2625;
+Emilie;Foss;292827-2827;Angelgade;13;1765;27262542;EFos;Fos2827;
+Emilie;Foss;272625-1716;Angelgade;1;1765;27262524;EFos;Fos1716;

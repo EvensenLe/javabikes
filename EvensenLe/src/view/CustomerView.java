@@ -28,8 +28,8 @@ public class CustomerView {
 			//FIRST NAME
 			//NO CHECK
 			System.out.print("Enter your first name:                    ");
-			details = input.nextLine();
-			MrCustomer.setFirstName(details);
+			String firstname = input.nextLine();
+			MrCustomer.setFirstName(firstname);
 			
 			//LAST NAME
 			//NO CHECK
