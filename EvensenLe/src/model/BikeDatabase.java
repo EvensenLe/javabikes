@@ -81,6 +81,11 @@ public class BikeDatabase {
 	
 	public void testMethod(int index)
 	{
+		ElectricBike a = getElectricBikeList().get(0);
+		ElectricBike b = getElectricBikeList().get(1);
+		ElectricBike c = getElectricBikeList().get(2);
+		ElectricBike d = getElectricBikeList().get(3);
+		
 		Scanner input = new Scanner(System.in);
 		
 		
@@ -92,29 +97,31 @@ public class BikeDatabase {
 		while (!bikeChoice) 
 		{	
 			System.out.println("CHOOSE A BIKE");
-			bike = input.nextInt();
+			index = input.nextInt();
 			
-			if (bike <= 3)
-				
-			{
+			if (index == 0){
+				System.out.println("The price for bike ID " + a.getId() + " is " + a.getPrice() + "DKK");
+			}
+			if (index == 1){
+				System.out.println("The price for bike ID " + b.getId() + " is " + b.getPrice() + "DKK");
+			}
+			if (index == 2){
+				System.out.println("The price for bike ID " + c.getId() + " is " + c.getPrice() + "DKK");
+			}
+			if (index == 3){
+				System.out.println("The price for bike ID " + d.getId() + " is " + d.getPrice() + "DKK");
+			
 			bikeChoice = true; 
 			}
 			
-			else 
+			else
 			{System.out.println("Error: Wrong input!");
 			System.out.print("Enter bike number 0, 1, 2 or 3:          ");
 			}
 		}
 		
 		
-		bike = index;
-		
-		
-		
-		ElectricBike b = getElectricBikeList().get(3);
-		
-		//YOU CAN PRINT OUT WHATEVER YOU LIKE
-		System.out.println("The price for bike ID " + b.getId() + " is " + b.getPrice() + "DKK");
+	
 	}
 
 }
