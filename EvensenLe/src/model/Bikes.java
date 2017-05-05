@@ -5,12 +5,12 @@ public class Bikes {
 //WE SHOULD HAVE A LOOK AT THE SELL PRODUCT FUNCTION, SINCE IT'S CURRENTLY NOT BEING USED? TAKE OUT?
 	
 	
-	protected int id;
+	protected String id;
 	protected int price;
 	protected int stockAvailable;
 	protected String gender;
 	
-	public Bikes(int id, int price, int stockAvailable, String gender){
+	public Bikes(String id, int price, int stockAvailable, String gender){
 		this.id = id;
 		this.price = price;
 		this.stockAvailable = stockAvailable;
@@ -18,7 +18,6 @@ public class Bikes {
 	}	
 
 	public Bikes() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public String getGender() {
@@ -41,11 +40,11 @@ public class Bikes {
 	}
 
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
@@ -59,6 +58,7 @@ public class Bikes {
 	public void sellProduct() {
 		stockAvailable--;
 	}
+	
 
 
 }

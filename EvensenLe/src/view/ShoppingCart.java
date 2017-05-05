@@ -25,11 +25,11 @@ public class ShoppingCart {
 		boolean bikeChoice = false;
 		while (!bikeChoice) { 
 			
-			NormalBike normalbike = new NormalBike(0, 0, 0, null, 0, null);
+			NormalBike normalbike = new NormalBike(null, 0, 0, null, 0, null);
 			
 		//ASK THE USER TO CHOOSE WHICH BIKES HE/SHE WANTS
 		
-		int bikeChosen = input.nextInt();
+		String bikeChosen = input.next();
 
 		for (NormalBike Normalbike: printBikeList)
 		{

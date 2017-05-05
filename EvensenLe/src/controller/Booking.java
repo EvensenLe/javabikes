@@ -1,11 +1,16 @@
 package controller;
 //AUTHORS; EMILIE F. EVENSEN & JULIA LEE
 
+import model.BikeDatabase;
+import model.Bikes;
 import model.Customer;
+import model.NormalBike;
 import view.BookingView;
 import view.CustomerView;
 import view.LogInView;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Booking {
 
@@ -17,7 +22,11 @@ public class Booking {
 	
 
 	public static void main(String[] args) throws IOException {
-	
+		
+ArrayList<NormalBike> normalbike = new ArrayList<NormalBike>();
+		
+		Scanner input = new Scanner(System.in);
+		
 		
 		//MAIN MENU
 		String menuChoice = booking.welcomeDetails();

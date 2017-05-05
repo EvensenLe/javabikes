@@ -10,6 +10,7 @@ public class BikeDatabase {
 	
 		private static ArrayList<NormalBike> normalBikeList = new ArrayList<>();
 		private static ArrayList<ElectricBike> electricBikeList = new ArrayList<>();
+	
 		
 		public ArrayList<NormalBike> getNormalBikeList() {
 			return normalBikeList;
@@ -38,15 +39,15 @@ public class BikeDatabase {
 		}
 		
 		public BikeDatabase(){
-			addNormalBike(new NormalBike(0, 199, 2, "Women", 54, "White"));
-			addNormalBike(new NormalBike(1, 199, 2, "Women", 56, "Black"));
-			addNormalBike(new NormalBike(2, 199, 2, "Male", 56, "Blue"));
-			addNormalBike(new NormalBike(3, 199, 2, "Male", 58, "Grey"));
+			addNormalBike(new NormalBike("0", 199, 2, "Women", 54, "White"));
+			addNormalBike(new NormalBike("1", 199, 2, "Women", 56, "Black"));
+			addNormalBike(new NormalBike("2", 199, 2, "Male", 56, "Blue"));
+			addNormalBike(new NormalBike("3", 199, 2, "Male", 58, "Grey"));
 			
-			addElectricBike(new ElectricBike(4, 209, 2, "Women", "100%", 54));
-			addElectricBike(new ElectricBike(5, 219, 2, "Women", "88%", 56));
-			addElectricBike(new ElectricBike(6, 259, 2, "Men", "95%", 56));
-			addElectricBike(new ElectricBike(7, 249, 2, "Men", "90%", 58));
+			addElectricBike(new ElectricBike("4", 209, 2, "Women", "100%", 54));
+			addElectricBike(new ElectricBike("5", 219, 2, "Women", "88%", 56));
+			addElectricBike(new ElectricBike("6", 259, 2, "Men", "95%", 56));
+			addElectricBike(new ElectricBike("7", 249, 2, "Men", "90%", 58));
 			
 		
 		}
@@ -61,4 +62,30 @@ public class BikeDatabase {
 			for (ElectricBike e: electricBikeList) {
 			System.out.println("ID: " + e.getId() + ", Stock Available: " + e.getStockAvailable() + ", Price: " + e.getPrice() + ", Gender: " + e.getGender() + ", Battery charge: " + e.getBatteryCharge() + ", KM range " + e.getKmRange());}
 					}
+		
+		public static void normalBikeChosen() {
+			Scanner input = new Scanner(System.in);
+			System.out.println("Type in the bike ID");
+			String checkId = input.next();
+			
+			for (NormalBike n: normalBikeList) {
+				
+				if (n.getId().equals(checkId))
+						System.out.println("Your bike chosen is: " + n.displayNormalBike());
+				
+			}
+					}
+		public static void electricBikeChosen() {
+			Scanner input = new Scanner(System.in);
+			System.out.println("Type in the bike ID");
+			String checkId = input.next();
+			
+			for (ElectricBike e: electricBikeList) {
+				
+				if (e.getId().equals(checkId))
+						System.out.println("Your bike chosen is: " + e.displayElectricBike());
+				
+			}
+					}
+
 }

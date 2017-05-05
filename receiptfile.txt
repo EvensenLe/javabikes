@@ -1,2 +1,11 @@
 YOUR PERSONAL DETAILS:
 
+Name: Anders
+Last Name: Madsen
+CPR: 121212-1212
+Address: Hallevej
+HouseNumber: 34
+PostCode: 1000
+Mobile: 12345678
+Username: AMad
+Password: Mad1212

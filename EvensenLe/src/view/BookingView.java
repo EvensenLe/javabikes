@@ -5,10 +5,10 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
 import java.util.stream.Stream;
-
 import model.BikeDatabase;
-import model.ElectricBike;
-import model.NormalBike;
+import model.Bikes;
+import model.Customer;
+
 
 public class BookingView {
 
@@ -56,7 +56,7 @@ public class BookingView {
 		menuChoice = input.nextLine();
 
 		//CHECK IF THE CHOICE INPUT ONLY MATCHES 1, 2 OR 3
-		if (!menuChoice.matches("^[123]$"))
+		if (!menuChoice.matches("^[1234]$"))
 			System.out.println("Invalid input. Please try again.\n");
 		else
 			welcomeChoice = true;
@@ -93,70 +93,70 @@ public void browseBike() {
 
 
 public void bookBike() {
+	
+	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"); 
+	System.out.println("                       BIKE TYPE                           "); 
+	System.out.println("        Type in the type of bike you wish to book          ");
+	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");  
+	
+	//ASK WHAT THE USER WANTS TO DO USING A SWITCH STATEMENT
+	System.out.println("You will now have three options:");
+	System.out.println("");
+	System.out.println("[1] Normal bikes");
+	System.out.println("[2] Electric bikes");
+	System.out.println("");
+		
+
+Scanner input = new Scanner(System.in);
+
+//CHECK USER INPUT 
+String bikeChoice;
+boolean welcomeChoice = false;
 
 
-	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"); 
-	System.out.println("                        BOOKING                            "); 
-	System.out.println("           Type in the bike ID to reserve bike             ");
-	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"); 
-	System.out.print("Type in ID here: "); 
+do {System.out.println("Please type in the option number:");
+
+bikeChoice = input.nextLine();
+
+//CHECK IF THE CHOICE INPUT ONLY MATCHES 1, 2 OR 3
+if (!bikeChoice.matches("^[12]$"))
+	System.out.println("Invalid input. Please try again.\n");
+else
+	welcomeChoice = true;
+
+} while (!welcomeChoice);
+
+int menuChoiceInt = Integer.parseInt(bikeChoice);
+boolean choosing = true;
+
+while (choosing)
+switch (menuChoiceInt) {
+case 1: 
+BikeDatabase.normalBikeChosen();
+choosing = false;
+break;
+case 2: 
+BikeDatabase.electricBikeChosen();
+choosing = false;
+break;
+default: System.out.print("Error! Please write '1' or '2'");
+break;
+}
+
+
+System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"); 
+System.out.println("                        BOOKING                            "); 
+System.out.println("           Type in the bike ID to reserve bike             ");
+System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");  
 	
-	
-		NormalBike a = bd.getNormalBikeList().get(0);
-		NormalBike b = bd.getNormalBikeList().get(1);
-		NormalBike c = bd.getNormalBikeList().get(2);
-		NormalBike d = bd.getNormalBikeList().get(3);
-		ElectricBike e = bd.getElectricBikeList().get(0);
-		ElectricBike f = bd.getElectricBikeList().get(1);
-		ElectricBike g = bd.getElectricBikeList().get(2);
-		ElectricBike h = bd.getElectricBikeList().get(3);
 		
-		Scanner input = new Scanner(System.in);
-		
-		
-		//GETS THE INDEX OF ELECTRIC BIKE
-		int bike = input.nextInt();
-		
-		boolean bikeChoice = false;
-		while (!bikeChoice) 
-		{	
+	//bd.bikeChosen();
+
+//WHICH ONE IS CORRECT TO USE? 
 			
-			
-			if (bike == 0)
-				System.out.println("The price for bike ID " + a.getId() + " is " + a.getPrice() + "DKK");
-			
-			else if (bike == 1)
-				System.out.println("The price for bike ID " + b.getId() + " is " + b.getPrice() + "DKK");
-			
-			else if (bike == 2)
-				System.out.println("The price for bike ID " + c.getId() + " is " + c.getPrice() + "DKK");
-			
-			else if (bike == 3)
-				System.out.println("The price for bike ID " + d.getId() + " is " + d.getPrice() + "DKK");
-			
-			else if (bike == 4)
-				System.out.println("The price for bike ID " + e.getId() + " is " + e.getPrice() + "DKK");
-			
-			else if (bike == 5)
-				System.out.println("The price for bike ID " + f.getId() + " is " + f.getPrice() + "DKK");
-			
-			else if (bike == 6)
-				System.out.println("The price for bike ID " + g.getId() + " is " + g.getPrice() + "DKK");
-			
-			else if (bike == 7)
-				System.out.println("The price for bike ID " + h.getId() + " is " + h.getPrice() + "DKK");
-			
-			else {
-			System.out.println("Error: Wrong input!");
-			System.out.print("Enter bike number 0-7:          ");
-			}
-			{bikeChoice = true;}
-			break;
-			
-		
 		}
 
-	}			
+				
 
 
 public void pickUpBike() {
@@ -213,6 +213,10 @@ public void printReceipt() throws IOException {
     
     try (Stream<String> stream = Files.lines(Paths.get("receiptfile.txt"))) {
 		        stream.forEach(System.out::println);
+		    //NEED TO DELETE FILE AFTER EACH CUSTOMER
+		        //CURRENT BIKE
+		        //CURRENT CUSTOMER
+		        //HOW TO PRINT OUT?
 			
 	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 	System.out.println("             Thank you for shopping with JavaBikes         ");
@@ -231,6 +235,11 @@ public void printBooking() throws IOException {
 	printReceipt();
 	
 	
+}
+
+
+void Invoice(Bikes currentBike, Customer currentCustomer){
+	Customer mrCustomer = currentCustomer;
 	
-}
-}
+	currentBike.getId();
+}}

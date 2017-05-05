@@ -6,7 +6,7 @@ public class ElectricBike extends Bikes {
 	private String batteryCharge; 
 	private int kmRange;
 	
-	ElectricBike(int id, int price, int stockAvailable, String gender, String batteryCharge, int kmRange) 
+	ElectricBike(String id, int price, int stockAvailable, String gender, String batteryCharge, int kmRange) 
 	
 	{
 		super(id, price, stockAvailable, gender);
@@ -34,6 +34,12 @@ public class ElectricBike extends Bikes {
 	public void setKmRange(int kmRange) {
 		this.kmRange = kmRange;
 	}
+	
+	public String displayElectricBike() {
+		return ("ID: " + this.getId() + ", Stock Available: " + this.getStockAvailable() + ", Price: " + this.getPrice() + 
+				", Gender: " + this.getGender() + ", Battery Charge: " + this.getBatteryCharge() + ", KM Range: " + this.getKmRange());
+			}
+	
 }
 	
 
