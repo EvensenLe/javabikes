@@ -94,6 +94,7 @@ public class DataFiles {
 
 		return managerList;
 }
+	
 
 
 
@@ -143,5 +144,17 @@ public static void writeManagerArrayDetails(String file, ArrayList<Manager> inpu
 	catch (IOException ex) {
 		System.out.println("Error writing to file '" + file + "'");
 	}
+}
+
+/** delete a file */
+public static void deleteFile(String file) { // delete old txt.
+	// try {
+	File oldFile = new java.io.File(file);
+		 if (oldFile.exists()) { // replace by try catch?
+			oldFile.delete();
+		 }
+	// catch (FileNotFoundException ex){ // catch if file not found
+	// 	System.out.println("Error reading the file'" + file + "'");
+	 //}
 }
 }

@@ -43,10 +43,10 @@ public class BikeDatabase {
 			addNormalBike(new NormalBike(2, 199, 2, "Male", 56, "Blue"));
 			addNormalBike(new NormalBike(3, 199, 2, "Male", 58, "Grey"));
 			
-			addElectricBike(new ElectricBike(0, 209, 2, "Women", "100%", 54));
-			addElectricBike(new ElectricBike(1, 219, 2, "Women", "88%", 56));
-			addElectricBike(new ElectricBike(2, 259, 2, "Men", "95%", 56));
-			addElectricBike(new ElectricBike(3, 249, 2, "Men", "90%", 58));
+			addElectricBike(new ElectricBike(4, 209, 2, "Women", "100%", 54));
+			addElectricBike(new ElectricBike(5, 219, 2, "Women", "88%", 56));
+			addElectricBike(new ElectricBike(6, 259, 2, "Men", "95%", 56));
+			addElectricBike(new ElectricBike(7, 249, 2, "Men", "90%", 58));
 			
 		
 		}
@@ -55,76 +55,10 @@ public class BikeDatabase {
 			for (NormalBike n: normalBikeList) {
 			System.out.println("ID: " + n.getId() + ", Stock Available: " +n.getStockAvailable() + ", Price: " + n.getPrice() + ", Gender: " + n.getGender() + ", Framesize: " + n.getFramesize() + ", Color: " + n.getColor());
 					}
-
-		
 	}
 		
 		public static void printElectricBikeDatabase() {
 			for (ElectricBike e: electricBikeList) {
 			System.out.println("ID: " + e.getId() + ", Stock Available: " + e.getStockAvailable() + ", Price: " + e.getPrice() + ", Gender: " + e.getGender() + ", Battery charge: " + e.getBatteryCharge() + ", KM range " + e.getKmRange());}
 					}
-	               
-
-		
-	
-	//WE NEED TO DIVIDE THIS INTO A SWITCH STATEMENT
-	public static void printAll(){
-		System.out.println();
-		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~NORMAL BIKES~~~~~~~~~~~~~~~~~~~~~~");
-		printNormalBikeDatabase();
-		System.out.println();
-		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~ELECTRIC BIKES~~~~~~~~~~~~~~~~~~~~~");
-		printElectricBikeDatabase();
-		System.out.println();
-		}
-	
-	//AFTER THE CUSTOMER HAS CHOSEN THE BIKE
-	
-	public void choiceElectricBike(int index)
-	{
-		ElectricBike a = getElectricBikeList().get(0);
-		ElectricBike b = getElectricBikeList().get(1);
-		ElectricBike c = getElectricBikeList().get(2);
-		ElectricBike d = getElectricBikeList().get(3);
-		
-		Scanner input = new Scanner(System.in);
-		
-		
-		//GETS THE INDEX OF ELECTRIC BIKE
-		int bike = input.nextInt();
-		
-		boolean bikeChoice = false;
-		while (!bikeChoice) 
-		{	
-			
-			
-			if (bike == 0)
-				System.out.println("The price for bike ID " + a.getId() + " is " + a.getPrice() + "DKK");
-			
-			else if (bike == 1)
-				System.out.println("The price for bike ID " + b.getId() + " is " + b.getPrice() + "DKK");
-			
-			else if (bike == 2)
-				System.out.println("The price for bike ID " + c.getId() + " is " + c.getPrice() + "DKK");
-			
-			else if (bike == 3)
-				System.out.println("The price for bike ID " + d.getId() + " is " + d.getPrice() + "DKK");
-			
-		
-			else {
-			System.out.println("Error: Wrong input!");
-			System.out.print("Enter bike number 0, 1, 2 or 3:          ");
-			}
-			{bikeChoice = true;}
-			break;
-			
-		
-		}
-		
-		
-		
-
-	}			
-
-	
 }

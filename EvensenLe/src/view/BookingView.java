@@ -7,6 +7,8 @@ import java.util.*;
 import java.util.stream.Stream;
 
 import model.BikeDatabase;
+import model.ElectricBike;
+import model.NormalBike;
 
 public class BookingView {
 
@@ -73,11 +75,21 @@ public void browseBike() {
 	System.out.println("                         BROWSING                          ");
 	System.out.println("      You will now be able to browse available bikes       ");
 	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-	BikeDatabase.printAll(); 
-
-
-	return;
+	
+	System.out.println();
+	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~NORMAL BIKES~~~~~~~~~~~~~~~~~~~~~~");
+	BikeDatabase.printNormalBikeDatabase();
+	System.out.println();
+	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~ELECTRIC BIKES~~~~~~~~~~~~~~~~~~~~~");
+	BikeDatabase.printElectricBikeDatabase();
+	System.out.println();
+	
+	
+	
 	}
+	 
+
+
 
 public void bookBike() {
 
@@ -87,10 +99,63 @@ public void bookBike() {
 	System.out.println("           Type in the bike ID to reserve bike             ");
 	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"); 
 	System.out.print("Type in ID here: "); 
-	bd.choiceElectricBike(0);
+	
+	
+		NormalBike a = bd.getNormalBikeList().get(0);
+		NormalBike b = bd.getNormalBikeList().get(1);
+		NormalBike c = bd.getNormalBikeList().get(2);
+		NormalBike d = bd.getNormalBikeList().get(3);
+		ElectricBike e = bd.getElectricBikeList().get(0);
+		ElectricBike f = bd.getElectricBikeList().get(1);
+		ElectricBike g = bd.getElectricBikeList().get(2);
+		ElectricBike h = bd.getElectricBikeList().get(3);
+		
+		Scanner input = new Scanner(System.in);
+		
+		
+		//GETS THE INDEX OF ELECTRIC BIKE
+		int bike = input.nextInt();
+		
+		boolean bikeChoice = false;
+		while (!bikeChoice) 
+		{	
+			
+			
+			if (bike == 0)
+				System.out.println("The price for bike ID " + a.getId() + " is " + a.getPrice() + "DKK");
+			
+			else if (bike == 1)
+				System.out.println("The price for bike ID " + b.getId() + " is " + b.getPrice() + "DKK");
+			
+			else if (bike == 2)
+				System.out.println("The price for bike ID " + c.getId() + " is " + c.getPrice() + "DKK");
+			
+			else if (bike == 3)
+				System.out.println("The price for bike ID " + d.getId() + " is " + d.getPrice() + "DKK");
+			
+			else if (bike == 4)
+				System.out.println("The price for bike ID " + e.getId() + " is " + e.getPrice() + "DKK");
+			
+			else if (bike == 5)
+				System.out.println("The price for bike ID " + f.getId() + " is " + f.getPrice() + "DKK");
+			
+			else if (bike == 6)
+				System.out.println("The price for bike ID " + g.getId() + " is " + g.getPrice() + "DKK");
+			
+			else if (bike == 7)
+				System.out.println("The price for bike ID " + h.getId() + " is " + h.getPrice() + "DKK");
+			
+			else {
+			System.out.println("Error: Wrong input!");
+			System.out.print("Enter bike number 0-7:          ");
+			}
+			{bikeChoice = true;}
+			break;
+			
+		
+		}
 
-	return;
-	}
+	}			
 
 
 public void pickUpBike() {

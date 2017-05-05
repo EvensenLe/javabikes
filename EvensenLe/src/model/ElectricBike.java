@@ -1,6 +1,5 @@
 package model;
 
-import data.ReceiptDataFile;
 
 public class ElectricBike extends Bikes {
 	
@@ -35,20 +34,6 @@ public class ElectricBike extends Bikes {
 	public void setKmRange(int kmRange) {
 		this.kmRange = kmRange;
 	}
-	
-	public String displayElectricBike() {
-		return ("ID: " + this.getId() + ", Stock Available: " + this.getStockAvailable() + ", Price: " + this.getPrice() + ", Battery charge: " + this.getBatteryCharge() + ", KM range: " + this.getKmRange());
-				}
-	
-	@Override
-	public String toString() {
-		return (this.getId() + ", Stock Available: " + this.getStockAvailable() + ", Price: " + this.getPrice() + ", Battery charge: " + this.getBatteryCharge() + ", KM range: " + this.getKmRange());
-	}
-/*
-	/** method to write to file */
-	//public void writeToFile(){
-		//String receipt = this.getId() + ", Stock Available: " + getStockAvailable() + ", Price: " + this.getPrice() + ", Battery charge: " + this.getBatteryCharge() + ", KM range: " + this.getKmRange();
-	//	ReceiptDataFile.writeArrayEBikeDetails("receiptfile.txt", receipt);
-	}
+}
 	
 

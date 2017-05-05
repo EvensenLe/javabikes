@@ -21,7 +21,7 @@ public class LogInView {
 	}
 	
 	
-	
+	//CUSTOMER LOGIN
 	public boolean customerHasToLogin(){
 
 		//Used for holding input from the user
@@ -85,7 +85,7 @@ public class LogInView {
 			
 }
 	
-	
+	//MANAGER LOGIN
 	public boolean managerHasToLogin(){
 
 				
@@ -145,6 +145,54 @@ public class LogInView {
 			return loggedIn;	
 			
 }
+	
+	
+	//MANAGER EDIT
+	
+	public int getIndexEditCustomer(int phone) {
+		int j = 0;
+		for (int i = 0; i < customerList.size(); i++) {
+			j =	customerList.indexOf(customerList.get(i).getMobileNumber());	
+		}	
+		return j+1;
+	}
+	public void editCustomer() {
+		int choice;
+		Customer customer = new Customer();
+		Scanner input = new Scanner (System.in);
+		
+		System.out.print("Please enter the phone number of the Customer you want to edit:\t");
+		int phone = input.nextInt();
+		customer = customerList.get(getIndexEditCustomer(phone));
+		
+		
+		do {
+			
+		System.out.print("Which information would you like to change?");
+		input.nextLine();
+		String category = input.nextLine();
+		System.out.print("\nChange " + category + " to: ");
+		String change = input.nextLine();
+		
+			switch (category) {
+			
+			case "username": customer.setUserName(change);break;
+			case "password": customer.setPassword(change);break;
+			default: System.out.print("Wrong Entry");break;
+			} 
+			
+			customerList.set(getIndexEditCustomer(phone), customer);
+			
+			System.out.print("Do you want to change another detail? If yes press 1: ");
+			choice = input.nextInt();
+		} while (choice == 1);
+		
+		DataFiles.writeArrayDetails("customerfile.txt", customerList);
+		
+		return;
+	}}
+
+
 
 	
-}
+

@@ -40,6 +40,7 @@ public class Booking {
 		break;
 		case 3: 
 			logIn.managerHasToLogin();
+			logIn.editCustomer();
 			choosing = false;
 			break;
 		case 4: System.out.print("You have successfully exited the system. Have a great day.");
