@@ -1,6 +1,5 @@
 package model;
 
-import data.CustomerDataFile;
 
 public class CreditCard {
 	

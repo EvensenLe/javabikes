@@ -1,6 +1,6 @@
 package model;
 
-import data.CustomerDataFile;
+import data.DataFiles;
 //CLASS LOOKS OK 
 //DO WE KNOW WHAT THE @OVERRIDE MEANS?
 
@@ -140,14 +140,14 @@ public class Customer {
 	public void writeCustomerToFile(){
 		String details = firstName + ";" + lastName + ";" + cprNumber + ";"  
 	+ address + ";" + houseNumber + ";" + postCode + ";"  + mobileNumber + ";" + getUserName() + ";" + getPassword() + ";";
-		CustomerDataFile.WriteDetails("customerfile.txt", details);
+		DataFiles.WriteDetails("customerfile.txt", details);
 		 
 	}
 	
 	public void writeCustomerToReceipt(){
 		String receipt = "Name: " + firstName + System.lineSeparator() + "Last Name: " + lastName + System.lineSeparator() + "CPR: " + cprNumber + System.lineSeparator() + "Address: "  
 	+ address + System.lineSeparator() + "HouseNumber: " + houseNumber + System.lineSeparator() + "PostCode: " + postCode + System.lineSeparator() + "Mobile: "  + mobileNumber + System.lineSeparator() + "Username: " + getUserName() + System.lineSeparator() + "Password: " + getPassword() ;
-		CustomerDataFile.WriteDetails("receiptfile.txt", receipt);
+		DataFiles.WriteDetails("receiptfile.txt", receipt);
 		 
 	}
 

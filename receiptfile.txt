@@ -1,10 +1,1 @@
 YOUR PERSONAL DETAILS:
-Name: Emilie
-Last Name: Foss
-CPR: 290942-1728
-Address: Angelgade
-HouseNumber: 13
-PostCode: 1765
-Mobile: 27262524
-Username: EFos
-Password: Fos1728
