@@ -105,6 +105,7 @@ public class CreditCardView {
 	
 			{
 				securityNumber = true; 
+				System.out.println(" ++ Your payment was successfully authorized ++ ");
 			}
 			else 
 			{

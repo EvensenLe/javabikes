@@ -1,20 +1,2 @@
 YOUR PERSONAL DETAILS:
 
-Name: Jaja
-Last Name: Lala
-CPR: 121212-1212
-Address: uybjn
-HouseNumber: 12
-PostCode: 1212
-Mobile: 12121212
-Username: JLal
-Password: Lal1212
-Name: Jules
-Last Name: Lee
-CPR: 121212-1212
-Address: lalal
-HouseNumber: 12
-PostCode: 1212
-Mobile: 12121212
-Username: JLee
-Password: Lee1212
