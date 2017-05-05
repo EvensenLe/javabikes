@@ -36,15 +36,15 @@ public class CustomerDataFile {
 			   	    	   
 			// CHANGES THE STRING TYPE TO THE CORRECT FORMAT
 			    customerFile.setFirstName(value[0]);
-				customerFile.setLastName(value[1]);
+				customerFile.setLastName(value[1]);	
 				customerFile.setCprNumber(value[2]);
 				customerFile.setAddress(value[3]);
 				customerFile.setHouseNumber(value[4]);
 				customerFile.setMobileNumber(value[5]);
 				customerFile.setUserName(value[6]);
-				customerFile.setPassword(value[7]);
-				
-				
+				customerFile.setPassword(value[7]); 
+	
+					
 	     return customerFile;
 
 	}

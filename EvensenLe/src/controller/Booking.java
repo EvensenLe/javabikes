@@ -5,12 +5,7 @@ import model.Customer;
 import view.BookingView;
 import view.CustomerView;
 import view.LogInView;
-import view.ShoppingCart;
-import model.BikeDatabase;
-import model.CreditCard;
-
 import java.io.IOException;
-import java.util.*;
 
 public class Booking {
 

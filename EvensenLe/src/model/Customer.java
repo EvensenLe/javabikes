@@ -145,8 +145,8 @@ public class Customer {
 	}
 	
 	public void writeCustomerToReceipt(){
-		String receipt = "Name: " + firstName + ". Last Name: " + lastName + ". CPR: " + cprNumber + ". Address: "  
-	+ address + " " + houseNumber + ", " + postCode + ". Mobile: "  + mobileNumber + ". Username: " + getUserName() + ". Password: " + getPassword() ;
+		String receipt = "Name: " + firstName + System.lineSeparator() + "Last Name: " + lastName + System.lineSeparator() + "CPR: " + cprNumber + System.lineSeparator() + "Address: "  
+	+ address + System.lineSeparator() + "HouseNumber: " + houseNumber + System.lineSeparator() + "PostCode: " + postCode + System.lineSeparator() + "Mobile: "  + mobileNumber + System.lineSeparator() + "Username: " + getUserName() + System.lineSeparator() + "Password: " + getPassword() ;
 		CustomerDataFile.WriteDetails("receiptfile.txt", receipt);
 		 
 	}

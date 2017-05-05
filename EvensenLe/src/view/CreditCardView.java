@@ -18,8 +18,13 @@ public class CreditCardView {
 				
 	//CHECK IF CUSTOMER USES MASTERCARD OR VISA
     //lOOPED
-	System.out.println("Which card do you pay with? Please type in 'mastercard' or 'visa' (Please note that the system is case sensitive)");
-	String visaOrMastercard = input.nextLine();
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		System.out.println("                         CHECK OUT                         ");
+		System.out.println("         Which type of card would you like to pay with?    ");
+		System.out.println("            Please type in 'mastercard' or 'visa'          ");                                  
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		
+		String visaOrMastercard = input.nextLine();
 				
 		switch (visaOrMastercard) {
 		case "visa": System.out.print("You will now be asked to enter your card information");
@@ -33,7 +38,7 @@ public class CreditCardView {
 			}
 				
 	//ASK FOR CREDIT CARD NAME
-		System.out.print("Enter name on credit card: ");
+		System.out.print("Enter your full name on credit card: ");
 		creditCardDetails = input.nextLine();
 		MrCredit.setCardName(creditCardDetails);
 				
@@ -88,7 +93,6 @@ public class CreditCardView {
 		//ASK FOR CREDIT CARD SECURITY NUMBER CVC
 		//LOOPED
 		System.out.println("Enter your credit card security number CVC (3 digits):");
-		creditCardDetails = input.nextLine();
 		
 		boolean securityNumber = false;
 		while (!securityNumber) 
@@ -105,7 +109,6 @@ public class CreditCardView {
 			else 
 			{
 				System.out.println("ERROR: You have entered the wrong format");
-				System.out.println("Enter your credit card security number CVC (3 digits):");
 			}			
 		
 		}
@@ -113,21 +116,13 @@ public class CreditCardView {
 		 //RETURN CREDIT CARD DETAILS
 		return MrCredit;
 				
-		//SHOW RECEIPT
-		
-		
-				
 			}
-			
-			
+		
 
 			public void printCreditCardDetails(CreditCard MrCredit) {
 				System.out.println(MrCredit.toString());
 
 		}
-				
-			
-			
 			
 
 }

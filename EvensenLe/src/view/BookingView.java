@@ -99,7 +99,7 @@ public void pickUpBike() {
 	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"); 
 	System.out.println("                     BIKE PICK UP                          "); 
 	System.out.println("   At what location would you like to pick up the bike?    ");
-	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"); 
+	System.out.println("");
 	System.out.println("Please type in:");
 	System.out.println("'K' for Copenhagen Central Station");
 	System.out.println("'V' for Copenhagen Vestebro");
@@ -107,6 +107,8 @@ public void pickUpBike() {
 	
 	System.out.print("Type in location here: "); 
 	String location = input.nextLine();
+	
+	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"); 
 	
 		switch (location) {
 		case "K": System.out.println("--> Your bike will be ready for pick-up at Copenhagen Central Station in 20 minutes");
@@ -130,12 +132,8 @@ public void printReceipt() throws IOException {
 	System.out.println("            THIS IS YOUR CBS BIKESHARING RECEIPT           ");
 	System.out.println("                                                           ");
 	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-  
-
-    
-
 	System.out.println(" --------------------------------------------------------- ");
-	System.out.println("                            RECEIPT                        ");
+	System.out.println("                         RECEIPT                           ");
 	System.out.println(" --------------------------------------------------------- ");
 
 	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -145,7 +143,9 @@ public void printReceipt() throws IOException {
 	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
     System.out.println("                       YOUR INFORMATION:                   ");
 
-	        try (Stream<String> stream = Files.lines(Paths.get("receiptfile.txt"))) {
+	        
+    
+    try (Stream<String> stream = Files.lines(Paths.get("receiptfile.txt"))) {
 		        stream.forEach(System.out::println);
 			
 	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
