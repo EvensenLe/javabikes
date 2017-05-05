@@ -5,7 +5,6 @@ import model.Customer;
 import view.BookingView;
 import view.CustomerView;
 import view.LogInView;
-import view.Receipt;
 import view.ShoppingCart;
 import model.BikeDatabase;
 import model.CreditCard;
@@ -19,7 +18,7 @@ public class Booking {
 	private static BookingView booking = new BookingView();
 	private static CustomerView cView = new CustomerView();
 	private static LogInView logIn = new LogInView();
-	private static Receipt receipt = new Receipt();
+
 	
 
 	public static void main(String[] args) throws IOException {
@@ -37,13 +36,11 @@ public class Booking {
 		mrCustomer.writeCustomerToFile();
 		mrCustomer.writeCustomerToReceipt();
 		booking.printBooking();
-		receipt.printReceipt();
 		choosing = false;
 		break;
 		case 2: 
 		logIn.customerHasToLogin();
 		booking.printBooking();
-		receipt.printReceipt();
 		choosing = false;
 		break;
 		case 3: System.out.print("You have successfully exited the system. Have a great day.");

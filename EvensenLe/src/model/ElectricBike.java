@@ -44,13 +44,11 @@ public class ElectricBike extends Bikes {
 	public String toString() {
 		return (this.getId() + ", Stock Available: " + this.getStockAvailable() + ", Price: " + this.getPrice() + ", Battery charge: " + this.getBatteryCharge() + ", KM range: " + this.getKmRange());
 	}
-	
+/*
 	/** method to write to file */
-	public void writeToFile(){
-		String receipt = this.getId() + ", Stock Available: " + getStockAvailable() + ", Price: " + this.getPrice() + ", Battery charge: " + this.getBatteryCharge() + ", KM range: " + this.getKmRange();
-		ReceiptDataFile.writeArrayEBikeDetails("receiptfile.txt", receipt);
+	//public void writeToFile(){
+		//String receipt = this.getId() + ", Stock Available: " + getStockAvailable() + ", Price: " + this.getPrice() + ", Battery charge: " + this.getBatteryCharge() + ", KM range: " + this.getKmRange();
+	//	ReceiptDataFile.writeArrayEBikeDetails("receiptfile.txt", receipt);
 	}
 	
-}
-
 

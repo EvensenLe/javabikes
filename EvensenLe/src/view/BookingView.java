@@ -1,7 +1,10 @@
 package view;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
-
+import java.util.stream.Stream;
 
 import model.BikeDatabase;
 
@@ -119,10 +122,49 @@ public void pickUpBike() {
 	return;
 	}
 
-public void printBooking() {
+
+public void printReceipt() throws IOException {
+	
+	
+	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+	System.out.println("            THIS IS YOUR CBS BIKESHARING RECEIPT           ");
+	System.out.println("                                                           ");
+	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+  
+
+    
+
+	System.out.println(" --------------------------------------------------------- ");
+	System.out.println("                            RECEIPT                        ");
+	System.out.println(" --------------------------------------------------------- ");
+
+	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+	System.out.println("         __@      __@       __@       __@      __~@        ");
+	System.out.println("      _``|<,_   ``|<,,_   ``|<,<,_  ``|<,<,_ ``|<,<,_      ");
+	System.out.println("     (*)/ (*)  (*)/ (*)  (*)/ (*)  (*)/ (*)  (*)/ (*)      ");
+	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    System.out.println("                       YOUR INFORMATION:                   ");
+
+	        try (Stream<String> stream = Files.lines(Paths.get("receiptfile.txt"))) {
+		        stream.forEach(System.out::println);
+			
+	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+	System.out.println("             Thank you for shopping with JavaBikes         ");
+	System.out.println("                       See you again!                      ");
+	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        }
+
+	return;
+}
+
+public void printBooking() throws IOException {
 	browseBike();
 	bookBike();
 	pickUpBike();
+	CreditCardView.getCreditCardDetails(); 
+	printReceipt();
+	
+	
 	
 }
 }
