@@ -18,7 +18,7 @@ public class BookingView {
 	private static BikeDatabase bd = new BikeDatabase();
 	
 	public String welcomeDetails() {
-		
+
 		
 			//PRINT OUT LOGO
 			System.out.println("~~~~~~~~~~~~~~~~    CPH BIKESHARING AS    ~~~~~~~~~~~~~~~~~");
@@ -217,6 +217,7 @@ public void printReceipt() throws IOException {
 		        //CURRENT BIKE
 		        //CURRENT CUSTOMER
 		        //HOW TO PRINT OUT?
+		        System.out.println(BikeDatabase.getBikeReceipt());
 			
 	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 	System.out.println("             Thank you for shopping with JavaBikes         ");

@@ -28,6 +28,7 @@ ArrayList<NormalBike> normalbike = new ArrayList<NormalBike>();
 		Scanner input = new Scanner(System.in);
 		
 		
+		
 		//MAIN MENU
 		String menuChoice = booking.welcomeDetails();
 		int menuChoiceInt = Integer.parseInt(menuChoice);

@@ -1,11 +1,11 @@
 YOUR PERSONAL DETAILS:
 
-Name: Anders
-Last Name: Madsen
-CPR: 121212-1212
-Address: Hallevej
-HouseNumber: 34
-PostCode: 1000
+Name: Julia
+Last Name: Lee
+CPR: 120591-1304
+Address: Møntergade
+HouseNumber: 4
+PostCode: 1100
 Mobile: 12345678
-Username: AMad
-Password: Mad1212
+Username: JLee
+Password: Lee1304

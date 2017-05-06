@@ -10,6 +10,7 @@ public class BikeDatabase {
 	
 		private static ArrayList<NormalBike> normalBikeList = new ArrayList<>();
 		private static ArrayList<ElectricBike> electricBikeList = new ArrayList<>();
+		private static String bikeReceipt; 
 	
 		
 		public ArrayList<NormalBike> getNormalBikeList() {
@@ -63,18 +64,29 @@ public class BikeDatabase {
 			System.out.println("ID: " + e.getId() + ", Stock Available: " + e.getStockAvailable() + ", Price: " + e.getPrice() + ", Gender: " + e.getGender() + ", Battery charge: " + e.getBatteryCharge() + ", KM range " + e.getKmRange());}
 					}
 		
-		public static void normalBikeChosen() {
+		public static void normalBikeChosen() 
+		{
 			Scanner input = new Scanner(System.in);
 			System.out.println("Type in the bike ID");
 			String checkId = input.next();
 			
-			for (NormalBike n: normalBikeList) {
-				
+			for (NormalBike n: normalBikeList) 
+			{	
 				if (n.getId().equals(checkId))
-						System.out.println("Your bike chosen is: " + n.displayNormalBike());
-				
+				{
+					System.out.println("Your bike chosen is: " + n.displayNormalBike());
+					bikeReceipt = n.displayNormalBike();
+				}
 			}
-					}
+		}
+		
+		public static String getBikeReceipt() {
+			return bikeReceipt;
+		}
+		
+		public static void setBikeReceipt(String bikeReceipt) {
+			BikeDatabase.bikeReceipt = bikeReceipt;
+		}
 		public static void electricBikeChosen() {
 			Scanner input = new Scanner(System.in);
 			System.out.println("Type in the bike ID");
