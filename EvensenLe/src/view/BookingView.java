@@ -39,8 +39,7 @@ public class BookingView {
 			System.out.println("");
 			System.out.println("[1] Create a profile");
 			System.out.println("[2] I want to book a bike with an existing account");
-			System.out.println("[3] I want to log in as a manager");
-			System.out.println("[4] Exit system");
+			System.out.println("[3] Exit system");
 			System.out.println("");
 				
 		
@@ -56,7 +55,7 @@ public class BookingView {
 		menuChoice = input.nextLine();
 
 		//CHECK IF THE CHOICE INPUT ONLY MATCHES 1, 2 OR 3
-		if (!menuChoice.matches("^[1234]$"))
+		if (!menuChoice.matches("^[123]$"))
 			System.out.println("Invalid input. Please try again.\n");
 		else
 			welcomeChoice = true;

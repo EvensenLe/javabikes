@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import model.Customer;
-import model.Manager;
 
 public class DataFiles {
 	
@@ -65,36 +64,7 @@ public class DataFiles {
 		
 		return customerList;
 	}
-	
-	//MANAGER
-		public static Manager getManager(String line){
-			Manager managerFile = new Manager();
-			
-			// FOR EVERYTIME THERE IS A ";" IT TURNS THE VALUES TO A STRING
-				    String[] value = line.split(";");
-				   	    	   
-				// CHANGES THE STRING TYPE TO THE CORRECT FORMAT
-				    managerFile.setManagerUsername(value[0]);
-					managerFile.setManagerPassword(value[1]);
-					
-					
-		     return managerFile;
 
-		}
-	//ARRAYLIST MANAGER
-	public static ArrayList<Manager> getAllManagerDetails(){
-		ArrayList<Manager> managerList = new ArrayList<Manager>();
-		Scanner input = readDetails("managerfile.txt");
-
-
-		// checking each line 
-		while (input.hasNextLine()) {
-			managerList.add(getManager(input.nextLine()));//passing each line to the method getCustomer which returns a customer
-		} 								//then added to a ArrayList
-
-		return managerList;
-}
-	
 
 
 
@@ -129,22 +99,7 @@ public static void writeArrayDetails(String file, ArrayList<Customer> input){
 	}
 }
 
-public static void writeManagerArrayDetails(String file, ArrayList<Manager> input){
-	try{
-		FileWriter fwriter = new FileWriter(file, true);
-		PrintWriter output = new java.io.PrintWriter(fwriter);
-		
-		for(Manager str: input) { // Write formatted output to the file
-			output.println(str);  
-			
 
-		}
-		output.close();
-	}
-	catch (IOException ex) {
-		System.out.println("Error writing to file '" + file + "'");
-	}
-}
 
 /** delete a file */
 public static void deleteFile(String file) { // delete old txt.

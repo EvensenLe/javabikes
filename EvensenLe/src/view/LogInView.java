@@ -5,19 +5,19 @@ import java.util.Scanner;
 
 import data.DataFiles;
 import model.Customer;
-import model.Manager;
+
 
 
 public class LogInView {
 	
 	
 	private ArrayList<Customer> customerList;
-	private ArrayList<Manager> managerList;
+	
 	
 	
 	public LogInView(){
 		customerList = DataFiles.getAllCustomerDetails();
-		managerList = DataFiles.getAllManagerDetails();
+	
 	}
 	
 	
@@ -83,114 +83,7 @@ public class LogInView {
 			
 			return loggedIn;	
 			
-}
-	
-	//MANAGER LOGIN
-	public boolean managerHasToLogin(){
-
-				
-				//Declare a scanner object reference and create an object of it.
-		Scanner input = new Scanner(System.in);
-	
-		//Here we create variables to determine the number of log'in attempts, 
-				//a counter to count the number of tries and a sentinel variable, 
-				//which is used to break the loop if the user gets logged in. 
-				
-				int numbersOfTries = 3;  //The number of tries to log-in.
-				int counterTries = 0;  //The counter for the loop
-				boolean loggedIn = false;  //Sentinel value - breaks the loop
-				
-				//The do-while loop starts, everything in the curly-braces are executed in the loop. 
-				
-				System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-				System.out.println("         PLEASE LOG IN IN ORDER TO EDIT A CUSTOMER         ");
-				System.out.println("                 You have three attempts.                  ");
-				System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-
-			
-			do{
-				counterTries++;
-				
-				//Prompt the user for username and password
-				
-				System.out.println("Type in your username: "); 
-				String managerUsername = input.nextLine();
-				
-				System.out.println("Type in your password: "); 
-				String managerPassword = input.nextLine();
-				
-				//Check the username and password for being correct. 
-				
-				//Here we go through the array with the usernames. 
-				for(int i = 0; i < managerList.size() && !loggedIn; i++){
-					//
-					if(managerUsername.equalsIgnoreCase(managerList.get(i).getManagerUsername()) && 
-							managerPassword.equalsIgnoreCase(managerList.get(i).getManagerPassword())){
-						System.out.println("You are now logged in!");
-						loggedIn = true;
-					}
-				}
-				if(!loggedIn){
-					System.out.println("Your password and/or username is wrong. Please try again.");
-				}
-				//We stay in the loop as long the counter for tries is less than the allowed number of tries
-				//and the user is not (!) logged-in.
-			}while(counterTries < numbersOfTries && !loggedIn);
-			
-			if (counterTries == numbersOfTries) { // execute only if while loop was broken because maximum tries exceeded --> count++ nach dem loop noch assigned?
-				System.out.println("\nYou have exceeded the number of tries. Please try again after a few hours!");
-				System.exit(0);			}
-
-			
-			return loggedIn;	
-			
-}
-	
-	
-	//MANAGER EDIT
-	
-	public int getIndexEditCustomer(int phone) {
-		int j = 0;
-		for (int i = 0; i < customerList.size(); i++) {
-			j =	customerList.indexOf(customerList.get(i).getMobileNumber());	
-		}	
-		return j+1;
-	}
-	public void editCustomer() {
-		int choice;
-		Customer customer = new Customer();
-		Scanner input = new Scanner (System.in);
-		
-		System.out.print("Please enter the phone number of the Customer you want to edit:\t");
-		int phone = input.nextInt();
-		customer = customerList.get(getIndexEditCustomer(phone));
-		
-		
-		do {
-			
-		System.out.print("Which information would you like to change?");
-		input.nextLine();
-		String category = input.nextLine();
-		System.out.print("\nChange " + category + " to: ");
-		String change = input.nextLine();
-		
-			switch (category) {
-			
-			case "username": customer.setUserName(change);break;
-			case "password": customer.setPassword(change);break;
-			default: System.out.print("Wrong Entry");break;
-			} 
-			
-			customerList.set(getIndexEditCustomer(phone), customer);
-			
-			System.out.print("Do you want to change another detail? If yes press 1: ");
-			choice = input.nextInt();
-		} while (choice == 1);
-		
-		DataFiles.writeArrayDetails("customerfile.txt", customerList);
-		
-		return;
-	}}
+}}
 
 
 

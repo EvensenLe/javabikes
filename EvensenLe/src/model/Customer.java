@@ -28,7 +28,7 @@ public class Customer {
 	//CONSTRUCTOR
 	public Customer(){
 			
-		}
+	}
 	
 	//CONSTRUCTOR WITH SPECIFICS
 	public Customer (String firstName, String lastName, String address, String houseNumber, String postcode, String cprNumber, String mobileNumber, String userName, String password) {

@@ -48,12 +48,7 @@ ArrayList<NormalBike> normalbike = new ArrayList<NormalBike>();
 		booking.printBooking();
 		choosing = false;
 		break;
-		case 3: 
-			logIn.managerHasToLogin();
-			logIn.editCustomer();
-			choosing = false;
-			break;
-		case 4: System.out.print("You have successfully exited the system. Have a great day.");
+		case 3: System.out.println("You have successfully exited the system. Have a great day.");
 		System.exit(0);
 		break;
 	    default: System.out.print("Error! Please write '1', '2' or '3'");
