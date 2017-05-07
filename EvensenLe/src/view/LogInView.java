@@ -20,6 +20,50 @@ public class LogInView {
 	
 	}
 	
+	public String welcomeDetails() {
+
+
+
+
+		System.out.println("~~~~~~~~~~~~~~~~    CPH BIKESHARING AS    ~~~~~~~~~~~~~~~~~\n"
+				+ "-------- __@      __@       __@       __@      __~@  ------\n"
+				+ "----- _``|<,_   ``|<,,_   ``|<,<,_  ``|<,<,_ ``|<,<,_ -----\n"
+				+ "---- (*)/ (*)  (*)/ (*)  (*)/ (*)  (*)/ (*)  (*)/ (*)  ----\n"
+				+ "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+				+ ""
+				+ "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+				+ "               WELCOME TO CPH BIKESHARING!                 \n"
+				+ "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+				+ "You will now have three options:\n"
+				+ ""
+				+ "[1] Create a profile\n"
+				+ "[2] I want to book a bike with an existing account\n"
+				+ "[3] Exit system\n"
+				+"");
+
+
+		Scanner input = new Scanner(System.in);
+
+		//CHECK USER INPUT 
+		String menuChoice;
+		boolean welcomeChoice = false;
+
+
+		do {System.out.println("Please type in the option number:\n");
+
+		menuChoice = input.nextLine();
+
+		//CHECK IF THE CHOICE INPUT ONLY MATCHES 1, 2 OR 3
+		if (!menuChoice.matches("^[123]$"))
+			System.out.println("Invalid input. Please try again.\n");
+		else
+			welcomeChoice = true;
+
+		} while (!welcomeChoice);
+
+		return menuChoice;
+	}
+	
 	
 	//CUSTOMER LOGIN
 	public boolean customerHasToLogin(){

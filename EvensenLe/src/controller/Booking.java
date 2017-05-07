@@ -30,7 +30,7 @@ ArrayList<NormalBike> normalbike = new ArrayList<NormalBike>();
 		
 		
 		//MAIN MENU
-		String menuChoice = booking.welcomeDetails();
+		String menuChoice = logIn.welcomeDetails();
 		int menuChoiceInt = Integer.parseInt(menuChoice);
 		boolean choosing = true;
 		
