@@ -10,7 +10,8 @@ public class BikeDatabase {
 	
 		private static ArrayList<NormalBike> normalBikeList = new ArrayList<>();
 		private static ArrayList<ElectricBike> electricBikeList = new ArrayList<>();
-		private static String bikeReceipt; 
+		private static String normalBikeReceipt; 
+		private static String electricBikeReceipt; 
 	
 		
 		public ArrayList<NormalBike> getNormalBikeList() {
@@ -40,15 +41,15 @@ public class BikeDatabase {
 		}
 		
 		public BikeDatabase(){
-			addNormalBike(new NormalBike("0", 199, 2, "Women", 54, "White"));
-			addNormalBike(new NormalBike("1", 199, 2, "Women", 56, "Black"));
-			addNormalBike(new NormalBike("2", 199, 2, "Male", 56, "Blue"));
-			addNormalBike(new NormalBike("3", 199, 2, "Male", 58, "Grey"));
+			addNormalBike(new NormalBike("Normal Bike", "0", 199, 2, "Women", 54, "White"));
+			addNormalBike(new NormalBike("Normal Bike", "1", 199, 2, "Women", 56, "Black"));
+			addNormalBike(new NormalBike("Normal Bike", "2", 199, 2, "Male", 56, "Blue"));
+			addNormalBike(new NormalBike("Normal Bike", "3", 199, 2, "Male", 58, "Grey"));
 			
-			addElectricBike(new ElectricBike("4", 209, 2, "Women", "100%", 54));
-			addElectricBike(new ElectricBike("5", 219, 2, "Women", "88%", 56));
-			addElectricBike(new ElectricBike("6", 259, 2, "Men", "95%", 56));
-			addElectricBike(new ElectricBike("7", 249, 2, "Men", "90%", 58));
+			addElectricBike(new ElectricBike("Electric Bike", "4", 209, 2, "Women", "100%", 54));
+			addElectricBike(new ElectricBike("Electric Bike", "5", 219, 2, "Women", "88%", 56));
+			addElectricBike(new ElectricBike("Electric Bike", "6", 259, 2, "Men", "95%", 56));
+			addElectricBike(new ElectricBike("Electric Bike", "7", 249, 2, "Men", "90%", 58));
 			
 		
 		}
@@ -75,18 +76,19 @@ public class BikeDatabase {
 				if (n.getId().equals(checkId))
 				{
 					System.out.println("Your bike chosen is: " + n.displayNormalBike());
-					bikeReceipt = n.displayNormalBike();
+					normalBikeReceipt = n.displayNormalBike();
 				}
 			}
 		}
 		
-		public static String getBikeReceipt() {
-			return bikeReceipt;
+		public static String getNormalBikeReceipt() {
+			return normalBikeReceipt;
 		}
 		
-		public static void setBikeReceipt(String bikeReceipt) {
-			BikeDatabase.bikeReceipt = bikeReceipt;
+		public static void setNormalBikeReceipt(String normalBikeReceipt) {
+			BikeDatabase.normalBikeReceipt = normalBikeReceipt;
 		}
+		
 		public static void electricBikeChosen() {
 			Scanner input = new Scanner(System.in);
 			System.out.println("Type in the bike ID");
@@ -96,8 +98,16 @@ public class BikeDatabase {
 				
 				if (e.getId().equals(checkId))
 						System.out.println("Your bike chosen is: " + e.displayElectricBike());
-				
+				electricBikeReceipt = e.displayElectricBike();
 			}
 					}
+		
+		public static String getElectricBikeReceipt() {
+			return electricBikeReceipt;
+		}
+		
+		public static void setElectricBikeReceipt(String electricBikeReceipt) {
+			BikeDatabase.electricBikeReceipt = electricBikeReceipt;
+		}
 
 }

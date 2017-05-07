@@ -138,8 +138,6 @@ case 2:
 BikeDatabase.electricBikeChosen();
 choosing = false;
 break;
-default: System.out.print("Error! Please write '1' or '2'");
-break;
 }
 
 
@@ -216,7 +214,8 @@ public void printReceipt() throws IOException {
 		        //CURRENT BIKE
 		        //CURRENT CUSTOMER
 		        //HOW TO PRINT OUT?
-		        System.out.println(BikeDatabase.getBikeReceipt());
+		        System.out.println(BikeDatabase.getNormalBikeReceipt());
+		        System.out.println(BikeDatabase.getElectricBikeReceipt());
 			
 	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 	System.out.println("             Thank you for shopping with JavaBikes         ");
