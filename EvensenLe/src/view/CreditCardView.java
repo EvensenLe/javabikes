@@ -6,7 +6,17 @@ import model.CreditCard;
 
 public class CreditCardView {
 
-	//the view class handles all input and output
+	static //the view class handles all input and output
+	String confirmation;
+	
+	public static String getConfirmation() {
+		return confirmation;
+	}
+
+	public void setConfirmation(String confirmation) {
+		CreditCardView.confirmation = confirmation;
+	}
+
 
 	public static CreditCard getCreditCardDetails(){
 		Scanner input = new Scanner(System.in);
@@ -14,6 +24,8 @@ public class CreditCardView {
 		//GET CREDIT CARD DETAILS
 		String creditCardDetails;
 		CreditCard MrCredit = new CreditCard();
+		
+		
 
 
 		//CHECK IF CUSTOMER USES MASTERCARD OR VISA
@@ -39,9 +51,10 @@ public class CreditCardView {
 
 		//ASK FOR CREDIT CARD NAME
 		System.out.print("Enter your full name on credit card: ");
-		creditCardDetails = input.nextLine();
-		MrCredit.setCardName(creditCardDetails);
-
+		String creditCardname = input.nextLine();
+		MrCredit.setCardName(creditCardname);
+		
+		
 
 		//ASK FOR CREDIT CARD NUMBER
 		//LOOPED
@@ -113,7 +126,9 @@ public class CreditCardView {
 			}			
 
 		}
-
+		
+		
+		confirmation = MrCredit.displayCreditCardInfo();
 
 		//RETURN CREDIT CARD DETAILS
 		return MrCredit;

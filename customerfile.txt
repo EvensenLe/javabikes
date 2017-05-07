@@ -1,1 +1,3 @@
 Julia;Lee;120591-1304;Møntergade;4;1100;12345678;JLee;Lee1304;
+Emilie;Evensen;121212-1212;segdvz;12;1000;12121212;EEve;Eve1212;
+Anders;Madsen;121212-1212;Lalal;12;1212;12121212;AMad;Mad1212;

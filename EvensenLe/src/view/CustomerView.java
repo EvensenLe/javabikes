@@ -144,6 +144,7 @@ public class CustomerView {
 		public void printCustomerDetails(Customer MrCustomer) {
 			
 			System.out.println(MrCustomer.toString());
+			return;
 		}
 		
 	

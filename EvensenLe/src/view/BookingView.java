@@ -3,10 +3,12 @@ package view;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.stream.Stream;
 import model.BikeDatabase;
+import model.CreditCard;
 import view.LogInView;
 
 
@@ -16,6 +18,7 @@ public class BookingView {
 	}
 
 	private static BikeDatabase bd = new BikeDatabase();
+	private static CreditCard cd = new CreditCard();
 
 	public void bookBike() {
 
@@ -99,7 +102,7 @@ public class BookingView {
 	}
 
 
-	public void printReceipt() throws IOException {
+	public void printReceipt()  {
 
 
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
@@ -112,28 +115,27 @@ public class BookingView {
 		                  +"     (*)/ (*)  (*)/ (*)  (*)/ (*)  (*)/ (*)  (*)/ (*)      \n"
 		                  +"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 		                
+		
 
-		//try (Stream<String> stream = Files.lines(Paths.get("receiptfile.txt"))) {
-			//stream.forEach(System.out::println);
 		System.out.println(""
 				+""
-				+ "CUSTOMER INFO: "
+				+ "CUSTOMER CONFIRMATION: "
 				+ "");
-		System.out.println(LogInView.getReceipt());
-		
+		System.out.println(CreditCardView.getConfirmation());
+		//System.out.println(LogInView.getReceipt());
+	
 		System.out.println(""
 				+""
 				+ "BIKE RESERVED: "
 				+ "");
-		
         System.out.println(BikeDatabase.getBikeReceipt());
  
 
         System.out.print(""
         		+ "Your bike is reserved for 24 hours which commenced on: ");
-        Calendar cal = Calendar.getInstance();
-        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
-        System.out.println( sdf.format(cal.getTime()) );
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        Date date = new Date();
+        System.out.println(dateFormat.format(date));
         System.out.println("");
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
 			              +"             Thank you for shopping with JavaBikes         \n"

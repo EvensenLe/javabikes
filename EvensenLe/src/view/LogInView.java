@@ -8,16 +8,15 @@ import model.Customer;
 
 public class LogInView {
 	
-	private static String receipt;
+	//private static String receipt;
 	
-	public static String getReceipt() {
+	/*public static String getReceipt() {
 		return receipt;
 	}
 
 	public static void setReceipt(String receipt) {
 		LogInView.receipt = receipt;
-	}
-
+	}*/
 
 	private static ArrayList<Customer> customerList;
 	
@@ -28,8 +27,6 @@ public class LogInView {
 	}
 	
 	public void welcomeDetails() {
-
-
 
 
 		System.out.println("~~~~~~~~~~~~~~~~    CPH BIKESHARING AS    ~~~~~~~~~~~~~~~~~\n"
@@ -92,9 +89,9 @@ public class LogInView {
 					//
 					if(userName2.equalsIgnoreCase(customerList.get(i).getUserName()) && 
 							password2.equalsIgnoreCase(customerList.get(i).getPassword())){
-						System.out.println("You are now logged in!");
-						System.out.println("These are your info:\n" + customerList.get(i).displayCustomer());
-						receipt = customerList.get(i).displayCustomer();
+						System.out.println("You are now logged in!\n");
+						System.out.println("Your customer info:\n" + customerList.get(i).displayCustomer());
+						//receipt = customerList.get(i).displayCustomer();
 						loggedIn = true;
 					}
 				}
@@ -105,7 +102,7 @@ public class LogInView {
 				//and the user is not (!) logged-in.
 			}while(counterTries < numbersOfTries && !loggedIn);
 			
-			if (counterTries == numbersOfTries) { // execute only if while loop was broken because maximum tries exceeded --> count++ nach dem loop noch assigned?
+			if (counterTries == numbersOfTries) { 
 				System.out.println("\nYou have exceeded the number of tries. Please try again after a few hours!");
 				System.exit(0);			}
 
