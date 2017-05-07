@@ -3,16 +3,15 @@ package model;
 
 public class CreditCard {
 
-	//CLASS LOOKS OK 
 
 	private String cardType, cardMonthYear, cardName, cardNumber, cardSecurityNumber;
-	
+
 	public CreditCard(){
-		
+
 	}
-	
+
 	public CreditCard (String cardType, String cardMonthYear, String cardName, String cardNumber, String cardSecurityNumber) {
-		
+
 		this.cardType = cardType;
 		this.cardMonthYear = cardMonthYear;
 		this.cardName = cardName;
@@ -21,7 +20,7 @@ public class CreditCard {
 
 	}
 
-	
+
 	public String getCardType() {
 		return cardType;
 	}
@@ -54,5 +53,5 @@ public class CreditCard {
 	}
 	public String displayCreditCardInfo() {
 		return ("Name: " + this.getCardName() + System.lineSeparator() + "Card Number: " + this.getCardNumber().substring(0,4) + " XXXX XXXX XXXX" + System.lineSeparator());
-			}
 	}
+}

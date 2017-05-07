@@ -6,9 +6,9 @@ import model.CreditCard;
 
 public class CreditCardView {
 
-	static //the view class handles all input and output
+	static 
 	String confirmation;
-	
+
 	public static String getConfirmation() {
 		return confirmation;
 	}
@@ -24,12 +24,9 @@ public class CreditCardView {
 		//GET CREDIT CARD DETAILS
 		String creditCardDetails;
 		CreditCard MrCredit = new CreditCard();
-		
-		
-
 
 		//CHECK IF CUSTOMER USES MASTERCARD OR VISA
-		//lOOPED
+		//USE SWITCH STATEMENT
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 		System.out.println("                         CHECK OUT                         ");
 		System.out.println("         Which type of card would you like to pay with?    ");
@@ -53,11 +50,12 @@ public class CreditCardView {
 		System.out.print("Enter your full name on credit card: ");
 		String creditCardname = input.nextLine();
 		MrCredit.setCardName(creditCardname);
-		
-		
+
+
 
 		//ASK FOR CREDIT CARD NUMBER
-		//LOOPED
+		//BOOLEAN
+		//IF ELSE STATEMENT 
 		System.out.println("Enter your card number (16 digits):");
 		boolean creditCardNumber = false;
 		while (!creditCardNumber) 
@@ -80,7 +78,8 @@ public class CreditCardView {
 
 
 		//ASK FOR CREDIT CARD EXPIRATION DATE IN FORMAT MM/YY
-		//LOOPED
+		//BOOLEAN
+		//IF ELSE STATEMENT 
 		System.out.println("Enter credit card month and year in format mm/yy:");
 
 		boolean monthAndYear = false;
@@ -104,7 +103,8 @@ public class CreditCardView {
 
 
 		//ASK FOR CREDIT CARD SECURITY NUMBER CVC
-		//LOOPED
+		//BOOLEAN
+		//IF ELSE STATEMENT 
 		System.out.println("Enter your credit card security number CVC (3 digits):");
 
 		boolean securityNumber = false;
@@ -126,8 +126,7 @@ public class CreditCardView {
 			}			
 
 		}
-		
-		
+
 		confirmation = MrCredit.displayCreditCardInfo();
 
 		//RETURN CREDIT CARD DETAILS

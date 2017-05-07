@@ -1,15 +1,13 @@
 package model;
 
 public class Bikes {
-//CLASS LOOKS OK 
-//WE SHOULD HAVE A LOOK AT THE SELL PRODUCT FUNCTION, SINCE IT'S CURRENTLY NOT BEING USED? TAKE OUT?
-	
+
 	protected String type;
 	protected String id;
 	protected int price;
 	protected int stockAvailable;
 	protected String gender;
-	
+
 	public Bikes(String type, String id, int price, int stockAvailable, String gender){
 		this.type = type;
 		this.id = id;
@@ -67,7 +65,7 @@ public class Bikes {
 	public void sellProduct() {
 		stockAvailable--;
 	}
-	
+
 
 
 }

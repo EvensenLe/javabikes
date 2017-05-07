@@ -15,41 +15,41 @@ public class Booking {
 	private static CustomerView cView = new CustomerView();
 	private static LogInView logIn = new LogInView();
 
-	
+
 
 	public static void main(String[] args) throws IOException {
-		
-		
+
+
 		Scanner input = new Scanner(System.in);
-		
+
 		//MAIN MENU
 		logIn.welcomeDetails();
 		boolean choice = true;
 		while (choice) {
 			String menuChoice = input.nextLine();
-		switch (menuChoice) {
-		case "1": 
-		mrCustomer = CustomerView.CustomerDetails();
-		mrCustomer.writeCustomerToFile();
-		//mrCustomer.writeCustomerToReceipt();
-		//LogInView.customerHasToLogin();
-		booking.printBooking();
-		choice = false;
-		break;
-		case "2": 
-		LogInView.customerHasToLogin();
-		booking.printBooking();
-		choice = false;
-		break;
-		case "3": System.out.println("You have successfully exited the system. Have a great day.");
-		System.exit(0);
-		break;
-	    default: System.out.print("Error! Please write '1', '2' or '3'");
-	    break;
+			switch (menuChoice) {
+			case "1": 
+				mrCustomer = CustomerView.CustomerDetails();
+				mrCustomer.writeCustomerToFile();
+				//mrCustomer.writeCustomerToReceipt();
+				//LogInView.customerHasToLogin();
+				booking.printBooking();
+				choice = false;
+				break;
+			case "2": 
+				LogInView.customerHasToLogin();
+				booking.printBooking();
+				choice = false;
+				break;
+			case "3": System.out.println("You have successfully exited the system. Have a great day.");
+			System.exit(0);
+			break;
+			default: System.out.print("Error! Please write '1', '2' or '3'");
+			break;
+			}
 		}
-		}
-	
-		  }
 
-        }
+	}
+
+}
 

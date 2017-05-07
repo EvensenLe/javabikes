@@ -91,7 +91,7 @@ public class BikeDatabase {
 		
 		public static void electricBikeChosen() {
 			Scanner input = new Scanner(System.in);
-			System.out.println("Type in the bike ID here:             ");
+			System.out.println("Type in the bike ID here: \n");
 			String checkId = input.next();
 			
 			for (ElectricBike e: electricBikeList) {

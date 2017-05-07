@@ -1,8 +1,6 @@
 package model;
 
 import data.DataFiles;
-//CLASS LOOKS OK 
-//DO WE KNOW WHAT THE @OVERRIDE MEANS?
 
 public class Customer {
 
@@ -16,15 +14,15 @@ public class Customer {
 	private String password;
 	private String postCode;
 
-	
+
 	//CONSTRUCTOR
 	public Customer(){
-			
+
 	}
-	
+
 	//CONSTRUCTOR WITH SPECIFICS
 	public Customer (String firstName, String lastName, String address, String houseNumber, String postcode, String cprNumber, String mobileNumber, String userName, String password) {
-	
+
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.address = address;
@@ -35,7 +33,7 @@ public class Customer {
 		this.getUserName();
 		this.getPassword();
 	}
-	
+
 
 	public String getFirstName() {
 		return firstName;
@@ -92,13 +90,13 @@ public class Customer {
 	public void setMobileNumber(String mobileNumber) {
 		this.mobileNumber = mobileNumber;
 	}
-	
-	
+
+
 	public String getPassword() {
 		return password = lastName.substring(0,3) + cprNumber.substring(7);
-		
+
 	}
-	
+
 	public void setPassword() {
 		//GENERATE PASSWORD USING SUBSTRING
 		this.password = lastName.substring(0,3) + cprNumber.substring(7);
@@ -110,9 +108,9 @@ public class Customer {
 
 	public String getUserName() {
 		return userName = firstName.charAt(0) + lastName.substring(0,3);
-		
+
 	}
-	
+
 	public void setUserName() {
 		//GENERATE USERNAME USING CHARAT AND SUBSTRING
 		this.userName = firstName.charAt(0) + lastName.substring(0,3); 
@@ -122,24 +120,24 @@ public class Customer {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-	
+    //OVERRIDE
 	@Override
 	public String toString(){
 		return (firstName + ";" + lastName + ";" + cprNumber + ";"  
 				+ address + ";" + houseNumber + ";" + postCode + ";"  + mobileNumber + ";" + getUserName() + ";" + getPassword() + ";");
 	}
-	
+
 	public void writeCustomerToFile(){
 		String details = firstName + ";" + lastName + ";" + cprNumber + ";"  
-	+ address + ";" + houseNumber + ";" + postCode + ";"  + mobileNumber + ";" + getUserName() + ";" + getPassword() + ";";
+				+ address + ";" + houseNumber + ";" + postCode + ";"  + mobileNumber + ";" + getUserName() + ";" + getPassword() + ";";
 		DataFiles.WriteDetails("customerfile.txt", details);
-		 
+
 	}
-	
-	
+
+
 	public String displayCustomer() {
 		return ("Name: " + firstName + System.lineSeparator() + "Last Name: " + lastName + System.lineSeparator() + "CPR: " + cprNumber + System.lineSeparator() + "Address: "  
 				+ address + System.lineSeparator() + "HouseNumber: " + houseNumber + System.lineSeparator() + "PostCode: " + postCode + System.lineSeparator() + "Mobile: "  + mobileNumber + System.lineSeparator() + "Username: " + getUserName() + System.lineSeparator() + "Password: " + getPassword());
-			}
-
 	}
+
+}
