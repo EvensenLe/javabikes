@@ -39,12 +39,12 @@ public class BikeDatabase {
 			
 		}
 		
-		public static String getNormalBikeReceipt() {
+		public static String getBikeReceipt() {
 			return bikeReceipt;
 		}
 		
-		public static void setNormalBikeReceipt(String normalBikeReceipt) {
-			BikeDatabase.bikeReceipt = normalBikeReceipt;
+		public static void setBikeReceipt(String bikeReceipt) {
+			BikeDatabase.bikeReceipt = bikeReceipt;
 		}
 		
 		public BikeDatabase(){

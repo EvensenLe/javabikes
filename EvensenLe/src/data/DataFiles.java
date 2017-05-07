@@ -43,9 +43,10 @@ public class DataFiles {
 				customerFile.setCprNumber(value[2]);
 				customerFile.setAddress(value[3]);
 				customerFile.setHouseNumber(value[4]);
-				customerFile.setMobileNumber(value[5]);
-				customerFile.setUserName(value[6]);
-				customerFile.setPassword(value[7]);
+				customerFile.setPostCode(value[5]);
+				customerFile.setMobileNumber(value[6]);
+				customerFile.setUserName(value[7]);
+				customerFile.setPassword(value[8]);
 				
 				
 	     return customerFile;

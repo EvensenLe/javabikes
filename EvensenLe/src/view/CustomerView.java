@@ -135,9 +135,9 @@ public class CustomerView {
 			System.out.println("Your password is: " + MrCustomer.getPassword());
 			
 			
-			
 			//RETURN CUSTOMER DETAILS
 			return MrCustomer;
+			
 			
 
 		}

@@ -7,6 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.stream.Stream;
 import model.BikeDatabase;
+import view.LogInView;
 
 
 public class BookingView {
@@ -112,15 +113,21 @@ public class BookingView {
 		                  +"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 		                
 
-		try (Stream<String> stream = Files.lines(Paths.get("receiptfile.txt"))) {
-			stream.forEach(System.out::println);
+		//try (Stream<String> stream = Files.lines(Paths.get("receiptfile.txt"))) {
+			//stream.forEach(System.out::println);
+		System.out.println(""
+				+""
+				+ "CUSTOMER INFO: "
+				+ "");
+		System.out.println(LogInView.getReceipt());
 		
 		System.out.println(""
 				+""
 				+ "BIKE RESERVED: "
 				+ "");
 		
-        System.out.println(BikeDatabase.getNormalBikeReceipt());
+        System.out.println(BikeDatabase.getBikeReceipt());
+ 
 
         System.out.print(""
         		+ "Your bike is reserved for 24 hours which commenced on: ");
@@ -139,8 +146,6 @@ public class BookingView {
 			              +"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 		}
 
-		return;
-	}
 
 	public void printBooking() throws IOException {
 		bookBike();

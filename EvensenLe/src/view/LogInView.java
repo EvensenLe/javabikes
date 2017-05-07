@@ -8,9 +8,20 @@ import model.Customer;
 
 public class LogInView {
 	
+	private static String receipt;
 	
-	private ArrayList<Customer> customerList;
+	public static String getReceipt() {
+		return receipt;
+	}
+
+	public static void setReceipt(String receipt) {
+		LogInView.receipt = receipt;
+	}
+
+
+	private static ArrayList<Customer> customerList;
 	
+
 	public LogInView(){
 		customerList = DataFiles.getAllCustomerDetails();
 	
@@ -39,11 +50,9 @@ public class LogInView {
 	
 	
 	//CUSTOMER LOGIN
-	public boolean customerHasToLogin(){
+	public static boolean customerHasToLogin(){
 
-		//Used for holding input from the user
-				//String password = "";
-				//String userName = "";
+		
 				
 				//Declare a scanner object reference and create an object of it.
 		Scanner input = new Scanner(System.in);
@@ -75,6 +84,7 @@ public class LogInView {
 				System.out.println("Type in your password: "); 
 				String password2 = input.nextLine();
 				
+				
 				//Check the username and password for being correct. 
 				
 				//Here we go through the array with the usernames. 
@@ -83,6 +93,8 @@ public class LogInView {
 					if(userName2.equalsIgnoreCase(customerList.get(i).getUserName()) && 
 							password2.equalsIgnoreCase(customerList.get(i).getPassword())){
 						System.out.println("You are now logged in!");
+						System.out.println("These are your info:\n" + customerList.get(i).displayCustomer());
+						receipt = customerList.get(i).displayCustomer();
 						loggedIn = true;
 					}
 				}

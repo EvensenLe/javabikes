@@ -29,14 +29,15 @@ public class Booking {
 			String menuChoice = input.nextLine();
 		switch (menuChoice) {
 		case "1": 
-		mrCustomer = cView.CustomerDetails();
+		mrCustomer = CustomerView.CustomerDetails();
 		mrCustomer.writeCustomerToFile();
-		mrCustomer.writeCustomerToReceipt();
+		//mrCustomer.writeCustomerToReceipt();
+		//LogInView.customerHasToLogin();
 		booking.printBooking();
 		choice = false;
 		break;
 		case "2": 
-		logIn.customerHasToLogin();
+		LogInView.customerHasToLogin();
 		booking.printBooking();
 		choice = false;
 		break;
