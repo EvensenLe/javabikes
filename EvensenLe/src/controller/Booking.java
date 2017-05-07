@@ -1,6 +1,6 @@
 package controller;
 //AUTHORS; EMILIE F. EVENSEN & JULIA LEE
-
+//MAIN CLASS
 import model.Customer;
 import view.BookingView;
 import view.CustomerView;
