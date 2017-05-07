@@ -133,9 +133,5 @@ public class CreditCardView {
 	}
 
 
-	public void printCreditCardDetails(CreditCard MrCredit) {
-		System.out.println(MrCredit.toString());
-
-	}
 
 }

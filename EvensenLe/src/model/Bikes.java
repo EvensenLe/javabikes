@@ -2,11 +2,9 @@ package model;
 
 public class Bikes {
 
-	protected String type;
-	protected String id;
-	protected int price;
-	protected int stockAvailable;
-	protected String gender;
+	protected String type, id, gender;
+	protected int price, stockAvailable;
+
 
 	public Bikes(String type, String id, int price, int stockAvailable, String gender){
 		this.type = type;

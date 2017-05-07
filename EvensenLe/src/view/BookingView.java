@@ -12,8 +12,7 @@ public class BookingView {
 	public BookingView() {
 	}
 
-	private static BikeDatabase bd = new BikeDatabase();
-	private static CreditCard cd = new CreditCard();
+	private static BikeDatabase bikedatabase = new BikeDatabase();
 
 	private void bookBike() {
 

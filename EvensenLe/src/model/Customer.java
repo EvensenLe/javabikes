@@ -4,16 +4,7 @@ import data.DataFiles;
 
 public class Customer {
 
-	private String firstName;
-	private String lastName;
-	private String cprNumber;
-	private String address;
-	private String houseNumber;
-	private String mobileNumber;
-	private String userName;
-	private String password;
-	private String postCode;
-
+	private String firstName, lastName, cprNumber, address, houseNumber, postCode, mobileNumber, userName, password;
 
 	//CONSTRUCTOR
 	public Customer(){
@@ -120,12 +111,8 @@ public class Customer {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-	//OVERRIDE
-	@Override
-	public String toString(){
-		return (firstName + ";" + lastName + ";" + cprNumber + ";"  
-				+ address + ";" + houseNumber + ";" + postCode + ";"  + mobileNumber + ";" + getUserName() + ";" + getPassword() + ";");
-	}
+
+
 	//WRITE CUSTOMER TO FILE
 	public void writeCustomerToFile(){
 		String details = firstName + ";" + lastName + ";" + cprNumber + ";"  
