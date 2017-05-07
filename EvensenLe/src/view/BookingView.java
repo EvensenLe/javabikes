@@ -62,40 +62,16 @@ public class BookingView {
 		return menuChoice;
 	}
 
-
-
-	//CREATE MENU FOR BOOKING A BIKE IF LOGGED IN 
-	public void browseBike() {
-
-
-		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
-				+"                         BROWSING                          \n"
-				+"      You will now be able to browse available bikes       \n"
-				+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
-				+"");
-		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~NORMAL BIKES~~~~~~~~~~~~~~~~~~~~~~~~\n");
-		BikeDatabase.printNormalBikeDatabase();
-		System.out.println("");
-		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~ELECTRIC BIKES~~~~~~~~~~~~~~~~~~~~~~\n");
-		BikeDatabase.printElectricBikeDatabase();
-		System.out.println("");
-
-	}
-
 	public void bookBike() {
 
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n"
-				+"                         BIKE TYPE                          \n"
+				+"                       BROWSE BIKES                         \n"
 				+"        Type in the type of bike you wish to book           \n"
 				+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n"
 				+"");
 
 		//ASK WHAT THE USER WANTS TO DO USING A SWITCH STATEMENT
-		System.out.println("You will now have three options:\n"
-				          +" \n"
-				          +"[1] Normal bikes\n"
-				          +"[2] Electric bikes\n"
-				          +"\n");
+		
         Scanner input = new Scanner(System.in);
 
 		//CHECK USER INPUT 
@@ -103,12 +79,11 @@ public class BookingView {
 		boolean welcomeChoice = false;
 
 
-		do {   System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
-                                 +"                        BOOKING                            \n"
-                                 +"           Type in the bike ID to reserve bike             \n"
-                                 +"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
-                                 +"");
-
+		do {  System.out.println("You will now have two options:\n"
+		          +" \n"
+		          +"[1] Normal bikes\n"
+		          +"[2] Electric bikes\n"
+		          +"\n");
 		bikeChoice = input.nextLine();
 
 		//CHECK IF THE CHOICE INPUT ONLY MATCHES 1, 2 OR 3
@@ -125,16 +100,26 @@ public class BookingView {
 		while (choosing)
 			switch (menuChoiceInt) {
 			case 1: 
+				System.out.println("~~~~~~~~~~~~~~~~~~~~~~~NORMAL BIKES~~~~~~~~~~~~~~~~~~~~~~~~\n");
+				BikeDatabase.printNormalBikeDatabase();
 				BikeDatabase.normalBikeChosen();
 				choosing = false;
 				break;
 			case 2: 
+				System.out.println("~~~~~~~~~~~~~~~~~~~~~~~ELECTRIC BIKES~~~~~~~~~~~~~~~~~~~~~~\n");
+				BikeDatabase.printElectricBikeDatabase();
 				BikeDatabase.electricBikeChosen();
 				choosing = false;
 				break;
 			default: System.out.print("Error! Please write '1' or '2'");
 			break;
 			}
+		 System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+                 +"                        BOOKING                            \n"
+                 +"           Type in the bike ID to reserve bike             \n"
+                 +"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+                 +"");
+
 	}
 
 
@@ -215,7 +200,6 @@ public class BookingView {
 	}
 
 	public void printBooking() throws IOException {
-		browseBike();
 		bookBike();
 		pickUpBike();
 		CreditCardView.getCreditCardDetails(); 
