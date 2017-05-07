@@ -34,8 +34,8 @@ this.color = color;
 	}
 	
 	public String displayNormalBike() {
-		return ("Type: " + this.getType() + ", ID: " + this.getId() + ", Stock Available: " + this.getStockAvailable() + ", Price: " + this.getPrice() + 
-				", Gender: " + this.getGender() + ", Framesize: " + this.getFramesize() + ", Color: " + this.getColor());
+		return (System.lineSeparator() + "Type: " + this.getType() + System.lineSeparator() + "ID: " + this.getId() + System.lineSeparator() + "Stock Available: " + this.getStockAvailable() + System.lineSeparator() + "Price: " + this.getPrice() + System.lineSeparator() + 
+				"Gender: " + this.getGender() + System.lineSeparator() + "Framesize: " + this.getFramesize() + System.lineSeparator() + "Color: " + this.getColor());
 			}
 	
 }

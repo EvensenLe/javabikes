@@ -36,8 +36,8 @@ public class ElectricBike extends Bikes {
 	}
 	
 	public String displayElectricBike() {
-		return ("Type: " + this.getType() + ", ID: " + this.getId() + ", Stock Available: " + this.getStockAvailable() + ", Price: " + this.getPrice() + 
-				", Gender: " + this.getGender() + ", Battery Charge: " + this.getBatteryCharge() + ", KM Range: " + this.getKmRange());
+		return (System.lineSeparator() + "Type: " + this.getType() + System.lineSeparator() + "ID: " + this.getId() + System.lineSeparator() +"Stock Available: " + this.getStockAvailable() + System.lineSeparator() + "Price: " + this.getPrice() +System.lineSeparator() + 
+				"Gender: " + this.getGender() + System.lineSeparator()+ "Battery Charge: " + this.getBatteryCharge() + System.lineSeparator() + "KM Range: " + this.getKmRange());
 			}
 	
 }

@@ -103,7 +103,11 @@ public class BookingView {
 		boolean welcomeChoice = false;
 
 
-		do {System.out.println("Please type in the option number:");
+		do {   System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+                                 +"                        BOOKING                            \n"
+                                 +"           Type in the bike ID to reserve bike             \n"
+                                 +"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
+                                 +"");
 
 		bikeChoice = input.nextLine();
 
@@ -131,13 +135,6 @@ public class BookingView {
 			default: System.out.print("Error! Please write '1' or '2'");
 			break;
 			}
-
-
-		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
-		                 +"                        BOOKING                            \n"
-		                 +"           Type in the bike ID to reserve bike             \n"
-		                 +"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
-		                 +"");
 	}
 
 
@@ -206,7 +203,7 @@ public class BookingView {
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
 			              +"             Thank you for shopping with JavaBikes         \n"
 		                  +"                       See you again!                      \n"
-		                  +"                        JAVAIKES AS                        \n"
+		                  +"                        JAVABIKES AS                       \n"
         		          +"                     Københavnsgade 10                     \n"           
         		          +"                      1175 København                       \n"
         		          +"                     CVR: 102 203 999                      \n"
