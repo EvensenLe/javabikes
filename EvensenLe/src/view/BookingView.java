@@ -29,52 +29,37 @@ public class BookingView {
 		//ASK WHAT THE USER WANTS TO DO USING A SWITCH STATEMENT
 		
         Scanner input = new Scanner(System.in);
-
-		//CHECK USER INPUT 
-		String bikeChoice;
-		boolean welcomeChoice = false;
-
-
-		do {  System.out.println("You will now have two options:\n"
-		          +" \n"
+		
+			System.out.println("You will now have two options:\n"
+					+" \n"
 		          +"[1] Normal bikes\n"
-		          +"[2] Electric bikes\n"
-		          +"\n");
-		bikeChoice = input.nextLine();
+		          +"[2] Electric bikes\n");
+		
 
-		//CHECK IF THE CHOICE INPUT ONLY MATCHES 1, 2 OR 3
-		if (!bikeChoice.matches("^[12]$"))
-			System.out.println("Invalid input. Please try again.\n");
-		else
-			welcomeChoice = true;
-
-		} while (!welcomeChoice);
-
-		int menuChoiceInt = Integer.parseInt(bikeChoice);
-		boolean choosing = true;
-
-		while (choosing)
-			switch (menuChoiceInt) {
-			case 1: 
-				System.out.println("~~~~~~~~~~~~~~~~~~~~~~~NORMAL BIKES~~~~~~~~~~~~~~~~~~~~~~~~\n");
+		//CHECK IF THE CHOICE INPUT ONLY MATCHES 1 OR 2
+			
+		boolean choice = true;
+		while (choice) {
+		String bikeChoice = input.nextLine();
+			switch (bikeChoice) {
+			case "1": 
+				System.out.println("~~~~~~~~~~~~~~~~~~~~~~~NORMAL BIKES~~~~~~~~~~~~~~~~~~~~~~~~\n"
+				   +"           Type in the bike ID to reserve bike             \n"+"");
 				BikeDatabase.printNormalBikeDatabase();
 				BikeDatabase.normalBikeChosen();
-				choosing = false;
+				choice = false;
 				break;
-			case 2: 
-				System.out.println("~~~~~~~~~~~~~~~~~~~~~~~ELECTRIC BIKES~~~~~~~~~~~~~~~~~~~~~~\n");
+			case "2": 
+				System.out.println("~~~~~~~~~~~~~~~~~~~~~~~ELECTRIC BIKES~~~~~~~~~~~~~~~~~~~~~~\n"
+				   +"           Type in the bike ID to reserve bike             \n"+"");
 				BikeDatabase.printElectricBikeDatabase();
+				System.out.println();
 				BikeDatabase.electricBikeChosen();
-				choosing = false;
+				choice = false;
 				break;
 			default: System.out.print("Error! Please write '1' or '2'");
 			break;
-			}
-		 System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
-                 +"                        BOOKING                            \n"
-                 +"           Type in the bike ID to reserve bike             \n"
-                 +"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
-                 +"");
+			}}
 
 	}
 
@@ -92,22 +77,26 @@ public class BookingView {
 		                  +"'N' for Copenhagen Nørrebro\n"
 		                  +"\n"
 		                  +"Type in location here:\n"); 
-		String location = input.nextLine();
+		
 
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"); 
-
+		boolean choice = true;
+		while (choice) {
+			String location = input.nextLine();
 		switch (location) {
 		case "K": System.out.println("--> Your bike will be ready for pick-up at Copenhagen Central Station in 20 minutes");
+		choice = false;
 		break;
 		case "V": System.out.println("--> Your bike will be ready for pick-up at Istedgade, Vesterbro in 20 minutes");
+		choice = false;
 		break;
 		case "N": System.out.println("--> Your bike will be ready for pick-up at Ravnsborggade, Nørrebro in 20 minutes");
+		choice = false;
 		break;
 		default: System.out.println("Please follow the instructions above. Type in 'K', 'V', or 'N'");
 		break;
 		} 
-
-		return;
+		}
 	}
 
 
@@ -160,13 +149,8 @@ public class BookingView {
 		pickUpBike();
 		CreditCardView.getCreditCardDetails(); 
 		printReceipt();
-
-
 	}
 
 
-	void Invoice(Bikes currentBike, Customer currentCustomer){
-		Customer mrCustomer = currentCustomer;
 
-		currentBike.getId();
-	}}
+	}

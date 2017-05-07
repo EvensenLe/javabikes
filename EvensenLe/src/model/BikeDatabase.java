@@ -67,7 +67,7 @@ public class BikeDatabase {
 		public static void normalBikeChosen() 
 		{
 			Scanner input = new Scanner(System.in);
-			System.out.println("Type in the bike ID");
+			System.out.println("Type in the bike ID here:             ");
 			String checkId = input.next();
 			
 			for (NormalBike n: normalBikeList) 
@@ -90,7 +90,7 @@ public class BikeDatabase {
 		
 		public static void electricBikeChosen() {
 			Scanner input = new Scanner(System.in);
-			System.out.println("Type in the bike ID");
+			System.out.println("Type in the bike ID here:             ");
 			String checkId = input.next();
 			
 			for (ElectricBike e: electricBikeList) {
