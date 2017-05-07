@@ -7,21 +7,13 @@ import data.DataFiles;
 public class Customer {
 
 	private String firstName;
-
 	private String lastName;
-
 	private String cprNumber;
-
 	private String address;
-
 	private String houseNumber;
-
 	private String mobileNumber;
-
 	private String userName;
-
 	private String password;
-	
 	private String postCode;
 
 	

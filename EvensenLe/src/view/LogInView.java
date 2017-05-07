@@ -101,8 +101,3 @@ public class LogInView {
 			return loggedIn;	
 			
 }}
-
-
-
-	
-
