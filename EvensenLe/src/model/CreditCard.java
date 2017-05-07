@@ -2,11 +2,11 @@ package model;
 
 
 public class CreditCard {
-	
-//CLASS LOOKS OK 
-	
+
+	//CLASS LOOKS OK 
+
 	private String cardType, cardMonthYear, cardName, cardNumber, cardSecurityNumber;
-	
+
 	public String getCardType() {
 		return cardType;
 	}
@@ -37,5 +37,5 @@ public class CreditCard {
 	public void setCardSecurityNumber(String cardSecurityNumber) {
 		this.cardSecurityNumber = cardSecurityNumber;
 	}
-	
+
 }
