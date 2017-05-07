@@ -45,13 +45,10 @@ public class LogInView {
 		//DECLARE A SCANNER OBJECT REFERENCE AND CREATE AN OBJECT OF IT
 		Scanner input = new Scanner(System.in);
 
-		//VARIABLES = CREATED TO DETERMINE THE NUMBER OF TRIES A CUSTOMER HAS TO LOG IN 
-		//A COUNTER = COUNT THE NUMBER OF TRIES AND A SENTINEL VARIABLE
-		//USED TO BREAK THE LOOP IF THE USER SUCCESSFULLY LOGS IN
-
-		int numbersOfTries = 3;   //DETERMINES NUMBERS OF LOG-IN TRIES
-		int counterTries = 0;     //COUNTER
-		boolean loggedIn = false; //SENTINEL VALUE = BREAKS THE LOOP
+		//USER CAN ONLY LOG IN 3 TIMES
+		int numbersOfTries = 3;   
+		int counterTries = 0;     
+		boolean loggedIn = false; 
 
 		//DO WHILE LOOP 
 		//EXECUTES WITHIN CURLY BRACES
@@ -82,15 +79,16 @@ public class LogInView {
 					System.out.println("You are now logged in!\n");
 					System.out.println("Your customer info:\n" + customerList.get(i).displayCustomer());
 					loggedIn = true;
+					//DISPLAY USERS INFO
 				}
 			}
 			if(!loggedIn){
 				System.out.println("Your password and/or username is wrong. Please try again.");
 			}
-		//THE LOOP CONTINUES AS LONG AS THE COUNTER FOR TRIES IS LESS THAN THE ALLOWED NUMBER (3 IN THIS CASE) 
-		//AND WHILE THE USER IS NOT (!) LOGGED IN
+			//LOOP CONTINUES AS LONG AS IT'S LESS THAN THE ALLOWED NUMBER 3 
 		}while(counterTries < numbersOfTries && !loggedIn);
 
+		//TELL USER THEY CAN'T LOG OGIN BECAUSE OF EXCEEDED NUMBER OF TRIES
 		if (counterTries == numbersOfTries) { 
 			System.out.println("\nYou have exceeded the number of tries. Please try again after a few hours!");
 			System.exit(0);			}

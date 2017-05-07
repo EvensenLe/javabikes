@@ -10,7 +10,7 @@ public class CustomerView {
 
 	}
 
-
+		
 	public static Customer CustomerDetails(){
 
 		Scanner input = new Scanner(System.in);
@@ -117,11 +117,13 @@ public class CustomerView {
 			}
 
 		}
-
+		
+		//SET USERNAME AND PASSWORD
 		MrCustomer.setUserName();
 		MrCustomer.setPassword();
 
 
+		//DISPLAY FOR USER THEIR NEW USERNAME AND PASSWORD
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 		System.out.println(" CONGRATS! YOU HAVE SUCCESSFULLY REGISTERED AS A CUSTOMER. ");
 		System.out.println("        Below you find your password and username          ");

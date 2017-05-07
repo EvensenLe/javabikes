@@ -15,7 +15,8 @@ public class Bikes {
 		this.stockAvailable = stockAvailable;
 		this.gender = gender; 
 	}	
-
+	
+	//CONSTRUCTOR
 	public Bikes() {
 	}
 

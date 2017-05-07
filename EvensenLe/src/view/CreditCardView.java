@@ -51,10 +51,8 @@ public class CreditCardView {
 		String creditCardname = input.nextLine();
 		MrCredit.setCardName(creditCardname);
 
-
-
 		//ASK FOR CREDIT CARD NUMBER
-		//BOOLEAN
+		//BOOLEAN USED WITH WHILE LOOP
 		//IF ELSE STATEMENT 
 		System.out.println("Enter your card number (16 digits):");
 		boolean creditCardNumber = false;
@@ -78,7 +76,7 @@ public class CreditCardView {
 
 
 		//ASK FOR CREDIT CARD EXPIRATION DATE IN FORMAT MM/YY
-		//BOOLEAN
+		//BOOLEAN USED WITH WHILE LOOP
 		//IF ELSE STATEMENT 
 		System.out.println("Enter credit card month and year in format mm/yy:");
 
@@ -103,7 +101,7 @@ public class CreditCardView {
 
 
 		//ASK FOR CREDIT CARD SECURITY NUMBER CVC
-		//BOOLEAN
+		//BOOLEAN USED WITH WHILE LOOP
 		//IF ELSE STATEMENT 
 		System.out.println("Enter your credit card security number CVC (3 digits):");
 
@@ -127,7 +125,7 @@ public class CreditCardView {
 
 		}
 
-		confirmation = MrCredit.displayCreditCardInfo();
+		confirmation = MrCredit.displayCreditCard();
 
 		//RETURN CREDIT CARD DETAILS
 		return MrCredit;

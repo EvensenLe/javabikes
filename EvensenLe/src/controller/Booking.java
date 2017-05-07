@@ -1,11 +1,9 @@
 package controller;
 //AUTHORS; EMILIE F. EVENSEN & JULIA LEE
-//MAIN CLASS
 import model.Customer;
 import view.BookingView;
 import view.CustomerView;
 import view.LogInView;
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Booking {
@@ -16,13 +14,15 @@ public class Booking {
 	private static LogInView logIn = new LogInView();
 
 
-
-	public static void main(String[] args) throws IOException {
+	//MAIN CLASS
+	public static void main(String[] args) {
 
 
 		Scanner input = new Scanner(System.in);
 
 		//MAIN MENU
+		//SWITCH STATEMENT FOR CHOOSING MENU
+		//BOOLEAN TO GET OUT OF SWITCH
 		logIn.welcomeDetails();
 		boolean choice = true;
 		while (choice) {
@@ -31,8 +31,6 @@ public class Booking {
 			case "1": 
 				mrCustomer = CustomerView.CustomerDetails();
 				mrCustomer.writeCustomerToFile();
-				//mrCustomer.writeCustomerToReceipt();
-				//LogInView.customerHasToLogin();
 				booking.printBooking();
 				choice = false;
 				break;

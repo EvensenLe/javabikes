@@ -7,7 +7,7 @@ public class NormalBike extends Bikes {
 
 	public NormalBike(String type, String id, int price, int stockAvailable, String gender, int framesize, String color) 
 
-	{   //USING SUPER
+	{   //USING SUPER CLASS
 		super(type, id, price, stockAvailable, gender);
 
 		this.framesize = framesize;
@@ -15,7 +15,7 @@ public class NormalBike extends Bikes {
 
 
 	}
-
+	//GENERATE GETTERS AND SETTERS
 	public String getColor() {
 		return color;
 	}
@@ -32,7 +32,7 @@ public class NormalBike extends Bikes {
 	public void setFramesize(int framesize) {
 		this.framesize = framesize;
 	}
-
+	//STRING METHOD TO DISPLAY NORMAL BIKE DETAILS
 	public String displayNormalBike() {
 		return (System.lineSeparator() + "Type: " + this.getType() + System.lineSeparator() + "ID: " + this.getId() + System.lineSeparator() + "Stock Available: " + this.getStockAvailable() + System.lineSeparator() + "Price: " + this.getPrice() + System.lineSeparator() + 
 				"Gender: " + this.getGender() + System.lineSeparator() + "Framesize: " + this.getFramesize() + System.lineSeparator() + "Color: " + this.getColor());

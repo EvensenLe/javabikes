@@ -6,6 +6,7 @@ public class CreditCard {
 
 	private String cardType, cardMonthYear, cardName, cardNumber, cardSecurityNumber;
 
+	//CONSTRUCTOR
 	public CreditCard(){
 
 	}
@@ -20,6 +21,7 @@ public class CreditCard {
 
 	}
 
+	//GENERATE GETTERS AND SETTERS
 
 	public String getCardType() {
 		return cardType;
@@ -51,7 +53,8 @@ public class CreditCard {
 	public void setCardSecurityNumber(String cardSecurityNumber) {
 		this.cardSecurityNumber = cardSecurityNumber;
 	}
-	public String displayCreditCardInfo() {
+	//STRING METHOD TO DISPLAY CREDIT CARD DETAILS
+	public String displayCreditCard() {
 		return ("Name: " + this.getCardName() + System.lineSeparator() + "Card Number: " + this.getCardNumber().substring(0,4) + " XXXX XXXX XXXX" + System.lineSeparator());
 	}
 }

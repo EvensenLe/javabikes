@@ -1,6 +1,5 @@
 package view;
 
-import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -16,7 +15,7 @@ public class BookingView {
 	private static BikeDatabase bd = new BikeDatabase();
 	private static CreditCard cd = new CreditCard();
 
-	public void bookBike() {
+	private void bookBike() {
 
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n"
 				+"                       BROWSE BIKES                         \n"
@@ -35,6 +34,7 @@ public class BookingView {
 
 
 		//CHECK IF THE CHOICE INPUT ONLY MATCHES 1 OR 2
+		//PRINT OUT BIKES DEPENDING ON CHOICE
 		boolean choice = true;
 		while (choice) {
 			String bikeChoice = input.nextLine();
@@ -61,7 +61,7 @@ public class BookingView {
 	}
 
 	//ASK USER WHERE THEY WOULD LIKE TO PICK UP THE BIKE
-	public void pickUpBike() {
+	private void pickUpBike() {
 		Scanner input = new Scanner(System.in);		
 
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
@@ -74,9 +74,9 @@ public class BookingView {
 				+"'N' for Copenhagen Nørrebro\n"
 				+"\n"
 				+"Type in location here:\n"); 
-
-
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"); 
+		
+		//USE SWITCH STATEMENT
 		boolean choice = true;
 		while (choice) {
 			String location = input.nextLine();
@@ -97,7 +97,7 @@ public class BookingView {
 	}
 
 	//CREATE RECEIPT
-	public void printReceipt()  {
+	private void printReceipt()  {
 
 
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
@@ -143,7 +143,7 @@ public class BookingView {
 				+"~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 	}
 
-
+	//PUBLIC METHOD TO PRINT ALL IN BOOKINGVIEW CLASS OUT
 	public void printBooking() {
 		bookBike();
 		pickUpBike();

@@ -34,7 +34,7 @@ public class Customer {
 		this.getPassword();
 	}
 
-
+	//GENERATE GETTERS AND SETTERS
 	public String getFirstName() {
 		return firstName;
 	}
@@ -120,13 +120,13 @@ public class Customer {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-    //OVERRIDE
+	//OVERRIDE
 	@Override
 	public String toString(){
 		return (firstName + ";" + lastName + ";" + cprNumber + ";"  
 				+ address + ";" + houseNumber + ";" + postCode + ";"  + mobileNumber + ";" + getUserName() + ";" + getPassword() + ";");
 	}
-
+	//WRITE CUSTOMER TO FILE
 	public void writeCustomerToFile(){
 		String details = firstName + ";" + lastName + ";" + cprNumber + ";"  
 				+ address + ";" + houseNumber + ";" + postCode + ";"  + mobileNumber + ";" + getUserName() + ";" + getPassword() + ";";
@@ -134,7 +134,7 @@ public class Customer {
 
 	}
 
-
+	//STRING METHOD TO DISPLAY CUSTOMER DETAILS
 	public String displayCustomer() {
 		return ("Name: " + firstName + System.lineSeparator() + "Last Name: " + lastName + System.lineSeparator() + "CPR: " + cprNumber + System.lineSeparator() + "Address: "  
 				+ address + System.lineSeparator() + "HouseNumber: " + houseNumber + System.lineSeparator() + "PostCode: " + postCode + System.lineSeparator() + "Mobile: "  + mobileNumber + System.lineSeparator() + "Username: " + getUserName() + System.lineSeparator() + "Password: " + getPassword());

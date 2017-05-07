@@ -9,15 +9,15 @@ public class ElectricBike extends Bikes {
 	ElectricBike(String type, String id, int price, int stockAvailable, String gender, String batteryCharge, int kmRange) 
 
 	{
+		//USING SUPER CLASS
 		super(type, id, price, stockAvailable, gender);
 		this.batteryCharge = batteryCharge;
 		this.kmRange = kmRange;
 
 	}
+	
 
-	public ElectricBike() {
-	}
-
+	//GENERATE GETTERS AND SETTERS
 	public String getBatteryCharge() {
 		return batteryCharge;
 	}
@@ -34,6 +34,7 @@ public class ElectricBike extends Bikes {
 		this.kmRange = kmRange;
 	}
 
+	//STRING METHOD TO DISPLAY ELECTRIC BIKE DETAILS
 	public String displayElectricBike() {
 		return (System.lineSeparator() + "Type: " + this.getType() + System.lineSeparator() + "ID: " + this.getId() + System.lineSeparator() +"Stock Available: " + this.getStockAvailable() + System.lineSeparator() + "Price: " + this.getPrice() +System.lineSeparator() + 
 				"Gender: " + this.getGender() + System.lineSeparator()+ "Battery Charge: " + this.getBatteryCharge() + System.lineSeparator() + "KM Range: " + this.getKmRange());
