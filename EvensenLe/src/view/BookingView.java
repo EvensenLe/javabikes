@@ -7,6 +7,8 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.stream.Stream;
 import model.BikeDatabase;
+import model.Bikes;
+import model.Customer;
 
 
 public class BookingView {
