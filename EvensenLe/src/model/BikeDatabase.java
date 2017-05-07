@@ -40,15 +40,15 @@ public class BikeDatabase {
 		}
 		
 		public BikeDatabase(){
-			addNormalBike(new NormalBike("0", 199, 2, "Women", 54, "White"));
-			addNormalBike(new NormalBike("1", 199, 2, "Women", 56, "Black"));
-			addNormalBike(new NormalBike("2", 199, 2, "Male", 56, "Blue"));
-			addNormalBike(new NormalBike("3", 199, 2, "Male", 58, "Grey"));
+			addNormalBike(new NormalBike("Normal Bike", "0", 199, 2, "Women", 54, "White"));
+			addNormalBike(new NormalBike("Normal Bike", "1", 199, 2, "Women", 56, "Black"));
+			addNormalBike(new NormalBike("Normal Bike", "2", 199, 2, "Male", 56, "Blue"));
+			addNormalBike(new NormalBike("Normal Bike", "3", 199, 2, "Male", 58, "Grey"));
 			
-			addElectricBike(new ElectricBike("4", 209, 2, "Women", "100%", 54));
-			addElectricBike(new ElectricBike("5", 219, 2, "Women", "88%", 56));
-			addElectricBike(new ElectricBike("6", 259, 2, "Men", "95%", 56));
-			addElectricBike(new ElectricBike("7", 249, 2, "Men", "90%", 58));
+			addElectricBike(new ElectricBike("Electric Bike", "4", 209, 2, "Women", "100%", 54));
+			addElectricBike(new ElectricBike("Electric Bike", "5", 219, 2, "Women", "88%", 56));
+			addElectricBike(new ElectricBike("Electric Bike", "6", 259, 2, "Men", "95%", 56));
+			addElectricBike(new ElectricBike("Electric Bike", "7", 249, 2, "Men", "90%", 58));
 			
 		
 		}
@@ -80,13 +80,14 @@ public class BikeDatabase {
 			}
 		}
 		
-		public static String getBikeReceipt() {
+		public static String getNormalBikeReceipt() {
 			return bikeReceipt;
 		}
 		
-		public static void setBikeReceipt(String bikeReceipt) {
-			BikeDatabase.bikeReceipt = bikeReceipt;
+		public static void setNormalBikeReceipt(String normalBikeReceipt) {
+			BikeDatabase.bikeReceipt = normalBikeReceipt;
 		}
+		
 		public static void electricBikeChosen() {
 			Scanner input = new Scanner(System.in);
 			System.out.println("Type in the bike ID");
@@ -96,8 +97,9 @@ public class BikeDatabase {
 				
 				if (e.getId().equals(checkId))
 						System.out.println("Your bike chosen is: " + e.displayElectricBike());
-				
+				bikeReceipt = e.displayElectricBike();
 			}
 					}
+	
 
 }

@@ -191,10 +191,12 @@ public class BookingView {
 			stream.forEach(System.out::println);
 		
 		System.out.println(""
-				+"BIKE RESERVED: "
+				+""
+				+ "BIKE RESERVED: "
 				+ "");
 		
-        System.out.println(BikeDatabase.getBikeReceipt());
+        System.out.println(BikeDatabase.getNormalBikeReceipt());
+
         System.out.print(""
         		+ "Your bike is reserved for 24 hours which commenced on: ");
         Calendar cal = Calendar.getInstance();

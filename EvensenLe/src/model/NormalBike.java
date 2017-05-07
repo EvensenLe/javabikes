@@ -6,10 +6,10 @@ public class NormalBike extends Bikes {
 	private String color;
 	private int framesize;
 	
-	public NormalBike(String id, int price, int stockAvailable, String gender, int framesize, String color) 
+	public NormalBike(String type, String id, int price, int stockAvailable, String gender, int framesize, String color) 
 	
 	{
-		super(id, price, stockAvailable, gender);
+		super(type, id, price, stockAvailable, gender);
 this.framesize = framesize;
 this.color = color; 
 
@@ -34,7 +34,7 @@ this.color = color;
 	}
 	
 	public String displayNormalBike() {
-		return ("ID: " + this.getId() + ", Stock Available: " + this.getStockAvailable() + ", Price: " + this.getPrice() + 
+		return ("Type: " + this.getType() + ", ID: " + this.getId() + ", Stock Available: " + this.getStockAvailable() + ", Price: " + this.getPrice() + 
 				", Gender: " + this.getGender() + ", Framesize: " + this.getFramesize() + ", Color: " + this.getColor());
 			}
 	
