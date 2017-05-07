@@ -133,7 +133,6 @@ public class CustomerView {
 			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 			System.out.println("Your username is: " + MrCustomer.getUserName());
 			System.out.println("Your password is: " + MrCustomer.getPassword());
-						
 			
 			
 			

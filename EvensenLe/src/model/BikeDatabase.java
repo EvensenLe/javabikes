@@ -39,6 +39,14 @@ public class BikeDatabase {
 			
 		}
 		
+		public static String getNormalBikeReceipt() {
+			return bikeReceipt;
+		}
+		
+		public static void setNormalBikeReceipt(String normalBikeReceipt) {
+			BikeDatabase.bikeReceipt = normalBikeReceipt;
+		}
+		
 		public BikeDatabase(){
 			addNormalBike(new NormalBike("Normal Bike", "0", 199, 2, "Women", 54, "White"));
 			addNormalBike(new NormalBike("Normal Bike", "1", 199, 2, "Women", 56, "Black"));
@@ -80,13 +88,6 @@ public class BikeDatabase {
 			}
 		}
 		
-		public static String getNormalBikeReceipt() {
-			return bikeReceipt;
-		}
-		
-		public static void setNormalBikeReceipt(String normalBikeReceipt) {
-			BikeDatabase.bikeReceipt = normalBikeReceipt;
-		}
 		
 		public static void electricBikeChosen() {
 			Scanner input = new Scanner(System.in);

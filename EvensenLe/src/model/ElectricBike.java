@@ -16,7 +16,6 @@ public class ElectricBike extends Bikes {
 	}
 
 	public ElectricBike() {
-		// TODO Auto-generated constructor stub
 	}
 
 	public String getBatteryCharge() {
