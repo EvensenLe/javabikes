@@ -2,22 +2,21 @@ package view;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-
 import data.DataFiles;
 import model.Customer;
 
 public class LogInView {
 
-
+	//CREATE CUSTOMERLIST ARRAY
 	private static ArrayList<Customer> customerList;
 
-
+	//GET ALL CUSTOMER DETAILS FROM DATAFILES AND ADD TO ARRAY
 	public LogInView(){
 		customerList = DataFiles.getAllCustomerDetails();
 
 	}
 
-	//WELCOME DETAILS
+	//WELCOME DETAILS LOGO
 	public void welcomeDetails() {
 
 
@@ -46,18 +45,18 @@ public class LogInView {
 		Scanner input = new Scanner(System.in);
 
 		//USER CAN ONLY LOG IN 3 TIMES
+		//COUNTERTRIES STARTS AT 0
 		int numbersOfTries = 3;   
 		int counterTries = 0;     
 		boolean loggedIn = false; 
 
-		//DO WHILE LOOP 
-		//EXECUTES WITHIN CURLY BRACES
 
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 		System.out.println("          PLEASE LOG IN IN ORDER TO MAKE AN ORDER          ");
 		System.out.println("                 You have three attempts.                  ");
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
+		//DO WHILE LOOP 
 
 		do{
 			counterTries++;

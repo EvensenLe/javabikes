@@ -1,6 +1,6 @@
 package model;
 
-
+//EXTENDING BIKES CLASS
 public class ElectricBike extends Bikes {
 
 	private String batteryCharge; 
@@ -15,7 +15,7 @@ public class ElectricBike extends Bikes {
 		this.kmRange = kmRange;
 
 	}
-	
+
 
 	//GENERATE GETTERS AND SETTERS
 	public String getBatteryCharge() {

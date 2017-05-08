@@ -4,7 +4,6 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import model.BikeDatabase;
-import model.CreditCard;
 
 
 public class BookingView {
@@ -12,9 +11,9 @@ public class BookingView {
 	public BookingView() {
 	}
 
-	private static BikeDatabase bd = new BikeDatabase();
-	private static CreditCard cd = new CreditCard();
+	private static BikeDatabase bikedatabase = new BikeDatabase();
 
+	//
 	private void bookBike() {
 
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \n"
@@ -35,23 +34,25 @@ public class BookingView {
 
 		//CHECK IF THE CHOICE INPUT ONLY MATCHES 1 OR 2
 		//PRINT OUT BIKES DEPENDING ON CHOICE
+		//BOOLEAN TO GET OUT OF LOOP
 		boolean choice = true;
 		while (choice) {
 			String bikeChoice = input.nextLine();
 			switch (bikeChoice) {
-			case "1": 
+			case "1": //CASE 1 PRINTS OUT NORMAL BIKES
 				System.out.println("~~~~~~~~~~~~~~~~~~~~~~~NORMAL BIKES~~~~~~~~~~~~~~~~~~~~~~~~\n"
 						+"           Type in the bike ID to reserve bike             \n"+"");
 				BikeDatabase.printNormalBikeDatabase();
-				BikeDatabase.normalBikeChosen();
+				System.out.println();
+				BikeDatabase.normalBikeChosen(); //CHOOSE NORMAL BIKE
 				choice = false;
 				break;
-			case "2": 
+			case "2": //CASE 2 PRINTS OUT ELECTRIC BIKES
 				System.out.println("~~~~~~~~~~~~~~~~~~~~~~~ELECTRIC BIKES~~~~~~~~~~~~~~~~~~~~~~\n"
 						+"           Type in the bike ID to reserve bike             \n"+"");
 				BikeDatabase.printElectricBikeDatabase();
 				System.out.println();
-				BikeDatabase.electricBikeChosen();
+				BikeDatabase.electricBikeChosen(); //CHOOSE ELECTRIC BIKE
 				choice = false;
 				break;
 			default: System.out.print("Error! Please write '1' or '2'");
@@ -75,8 +76,9 @@ public class BookingView {
 				+"\n"
 				+"Type in location here:\n"); 
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"); 
-		
+
 		//USE SWITCH STATEMENT
+		//WHILE LOOP
 		boolean choice = true;
 		while (choice) {
 			String location = input.nextLine();
@@ -131,7 +133,7 @@ public class BookingView {
 		DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		Date date = new Date();
 		System.out.println(dateFormat.format(date));
-		System.out.println("");
+		System.out.println("");//DISPLAY COMPANY INFORMATION
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
 				+"             Thank you for shopping with JavaBikes         \n"
 				+"                       See you again!                      \n"

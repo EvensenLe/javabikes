@@ -6,17 +6,6 @@ import model.CreditCard;
 
 public class CreditCardView {
 
-	static 
-	String confirmation;
-
-	public static String getConfirmation() {
-		return confirmation;
-	}
-
-	public void setConfirmation(String confirmation) {
-		CreditCardView.confirmation = confirmation;
-	}
-
 
 	public static CreditCard getCreditCardDetails(){
 		Scanner input = new Scanner(System.in);
@@ -87,7 +76,7 @@ public class CreditCardView {
 			creditCardDetails = input.nextLine();
 
 			MrCredit.setCardMonthYear(creditCardDetails);
-			if (creditCardDetails.matches("^(\\d{2}/?\\d{2})$")) 
+			if (creditCardDetails.matches("^(\\d{2}/?\\d{2})$")) //REGEX CHECKS 2 DIGITS SLASH 2 DIGTS
 			{
 				monthAndYear = true; 
 			}
@@ -112,7 +101,7 @@ public class CreditCardView {
 			creditCardDetails = input.nextLine();
 
 			MrCredit.setCardSecurityNumber(creditCardDetails);
-			if (creditCardDetails.matches("^(\\d{3})$")) 
+			if (creditCardDetails.matches("^(\\d{3})$")) //REGEX TO CHECK 3 DIGITS
 
 			{
 				securityNumber = true; 
@@ -124,18 +113,23 @@ public class CreditCardView {
 			}			
 
 		}
-
+		//DISPLAY CREDIT CARD INFORMATION
 		confirmation = MrCredit.displayCreditCard();
 
 		//RETURN CREDIT CARD DETAILS
 		return MrCredit;
 
 	}
+	//GETTERS AND SETTERS TO GET CREDIT CARD INFORMATION
+	public static String confirmation;
 
-
-	public void printCreditCardDetails(CreditCard MrCredit) {
-		System.out.println(MrCredit.toString());
-
+	public static String getConfirmation() {
+		return confirmation;
 	}
+
+	public void setConfirmation(String confirmation) {
+		CreditCardView.confirmation = confirmation;
+	}
+
 
 }

@@ -1,7 +1,6 @@
 package view;
 
 import java.util.*;
-
 import model.Customer;
 
 public class CustomerView {
@@ -10,7 +9,7 @@ public class CustomerView {
 
 	}
 
-		
+
 	public static Customer CustomerDetails(){
 
 		Scanner input = new Scanner(System.in);
@@ -19,7 +18,7 @@ public class CustomerView {
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 		System.out.println("");
 
-		//GET CUSTOMER DETAILS
+		//CREATE OBJECT MRCUSTOMER
 		Customer MrCustomer = new Customer();
 		String details;
 
@@ -117,7 +116,7 @@ public class CustomerView {
 			}
 
 		}
-		
+
 		//SET USERNAME AND PASSWORD
 		MrCustomer.setUserName();
 		MrCustomer.setPassword();
@@ -131,15 +130,10 @@ public class CustomerView {
 		System.out.println("Your username is: " + MrCustomer.getUserName());
 		System.out.println("Your password is: " + MrCustomer.getPassword());
 
-
 		//RETURN CUSTOMER DETAILS
 		return MrCustomer;
 
-	}
-	public void printCustomerDetails(Customer MrCustomer) {
 
-		System.out.println(MrCustomer.toString());
-		return;
 	}
 
 

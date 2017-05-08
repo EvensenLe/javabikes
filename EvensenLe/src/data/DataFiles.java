@@ -7,11 +7,12 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
-
 import model.Customer;
 
+//DATAFILES CLASS FOR THE TXT FILE
 public class DataFiles {
 
+	//READS DETAILS OF FILE
 	public static Scanner readDetails(String file){
 		Scanner input = new Scanner(System.in);
 
@@ -30,14 +31,14 @@ public class DataFiles {
 		return input;
 	}
 
-	//CUSTOMER
+	//CUSTOMER FILE
 	public static Customer getCustomer(String line){
 		Customer customerFile = new Customer();
 
 		// FOR EVERYTIME THERE IS A ";" IT TURNS THE VALUES TO A STRING
 		String[] value = line.split(";");
 
-		// CHANGES THE STRING TYPE TO THE CORRECT FORMAT
+		// CHANGES THE STRING TYPE TO THE CORRECT FORMAT IN THE CORRECT POSITION
 		customerFile.setFirstName(value[0]);
 		customerFile.setLastName(value[1]);
 		customerFile.setCprNumber(value[2]);
@@ -59,9 +60,11 @@ public class DataFiles {
 
 
 		//CHECK EACH LINE
+		//PASSING EACH LINE TO THE METHOD 'GETCUSTOMER' WHICH RETURNS A CUSTOMER
+		//THEN ADD IT TO AN ARRAYLIST
 		while (input.hasNextLine()) {
-			customerList.add(getCustomer(input.nextLine()));//PASSING EACH LINE TO THE METHOD 'GETCUSTOMER' WHICH RETURNS A CUSTOMER
-		} 								                    //THEN ADD IT TO AN ARRAYLIST
+			customerList.add(getCustomer(input.nextLine()));
+		} 								                    
 
 		return customerList;
 	}
@@ -73,6 +76,7 @@ public class DataFiles {
 		try{
 			FileWriter fwriter = new FileWriter(file,true);
 			PrintWriter output = new java.io.PrintWriter(fwriter);
+
 			//WRITE FORMATTED OUTPUT TO THE FILE
 			output.println(input);
 			output.close();
@@ -88,7 +92,8 @@ public class DataFiles {
 			FileWriter fwriter = new FileWriter(file, true);
 			PrintWriter output = new java.io.PrintWriter(fwriter);
 
-			for(Customer str: input) { //WRITE FORMATTED OUTPUT TO THE FILE
+			//WRITE FORMATTED OUTPUT TO THE FILE
+			for(Customer str: input) { 
 				output.println(str);  
 
 

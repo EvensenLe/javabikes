@@ -6,11 +6,11 @@ public class CreditCard {
 
 	private String cardType, cardMonthYear, cardName, cardNumber, cardSecurityNumber;
 
-	//CONSTRUCTOR
+	//EMPTY CONSTRUCTOR
 	public CreditCard(){
 
 	}
-
+	//SPECIFIC CONSTRUCTOR
 	public CreditCard (String cardType, String cardMonthYear, String cardName, String cardNumber, String cardSecurityNumber) {
 
 		this.cardType = cardType;
@@ -53,6 +53,7 @@ public class CreditCard {
 	public void setCardSecurityNumber(String cardSecurityNumber) {
 		this.cardSecurityNumber = cardSecurityNumber;
 	}
+
 	//STRING METHOD TO DISPLAY CREDIT CARD DETAILS
 	public String displayCreditCard() {
 		return ("Name: " + this.getCardName() + System.lineSeparator() + "Card Number: " + this.getCardNumber().substring(0,4) + " XXXX XXXX XXXX" + System.lineSeparator());

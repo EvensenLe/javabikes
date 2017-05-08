@@ -1,5 +1,6 @@
 package model;
 
+//EXTENDING BIKES CLASS
 public class NormalBike extends Bikes {
 
 	private String color;
@@ -32,6 +33,7 @@ public class NormalBike extends Bikes {
 	public void setFramesize(int framesize) {
 		this.framesize = framesize;
 	}
+
 	//STRING METHOD TO DISPLAY NORMAL BIKE DETAILS
 	public String displayNormalBike() {
 		return (System.lineSeparator() + "Type: " + this.getType() + System.lineSeparator() + "ID: " + this.getId() + System.lineSeparator() + "Stock Available: " + this.getStockAvailable() + System.lineSeparator() + "Price: " + this.getPrice() + System.lineSeparator() + 
