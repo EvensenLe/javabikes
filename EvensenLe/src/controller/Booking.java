@@ -10,7 +10,7 @@ public class Booking {
 
 	private static Customer mrCustomer = new Customer();
 	private static BookingView booking = new BookingView();
-	//private static CustomerView cView = new CustomerView();
+	private static CustomerView cView = new CustomerView();
 	private static LogInView logIn = new LogInView();
 
 
